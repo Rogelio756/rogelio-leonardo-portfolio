@@ -1,3 +1,20 @@
+/* ============================= */
+/* ROOT VARIABLES */
+/* ============================= */
+
+:root {
+    --bg-color: #ffffff;
+    --text-primary: #111111;
+    --text-secondary: #555555;
+    --text-muted: #777777;
+    --divider-color: #e5e5e5;
+    --accent-color: #0f172a;
+}
+
+/* ============================= */
+/* RESET */
+/* ============================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -5,75 +22,282 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffff;
-    color: #111111;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
+/* ============================= */
+/* HERO SECTION */
+/* ============================= */
 
 .hero {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 10%;
+    padding-left: 12%;
+    padding-right: 8%;
+    max-width: 1000px;
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1.2s ease forwards;
 }
 
 .hero h1 {
-    font-size: 4rem;
-    line-height: 1.1;
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    line-height: 1.05;
     font-weight: 600;
+    letter-spacing: -1px;
 }
+
+/* ============================= */
+/* STATEMENT */
+/* ============================= */
 
 .statement {
     margin-top: 2rem;
-    font-size: 1.2rem;
-    color: #444;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    font-weight: 400;
+    color: var(--text-secondary);
+    max-width: 600px;
 }
 
+/* ============================= */
+/* LINKS */
+/* ============================= */
+
 .links {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
 }
 
 .links a {
     margin-right: 2rem;
     text-decoration: none;
-    color: #111;
+    color: var(--text-primary);
     font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
 }
+
+/* Subrayado elegante animado */
+
+.links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 1px;
+    background-color: var(--text-primary);
+    transition: width 0.3s ease;
+}
+
+.links a:hover::after {
+    width: 100%;
+}
+
+/* ============================= */
+/* DIVIDER */
+/* ============================= */
 
 .divider {
     margin-top: 4rem;
     width: 0;
     height: 1px;
-    background-color: #e5e5e5;
+    background-color: var(--divider-color);
     animation: expandLine 1.5s ease forwards;
 }
 
-@keyframes expandLine {
-    from {
-        width: 0;
+/* ============================= */
+/* CONSTRUCTION TEXT */
+/* ============================= */
+
+.construction {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 1.3s;
+}
+
+/* ============================= */
+/* ANIMATIONS */
+/* ============================= */
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
+
+@keyframes expandLine {
     to {
         width: 40%;
     }
 }
 
-.construction {
-    margin-top: 2rem;
-    font-size: 0.95rem;
-    color: #777;
-    opacity: 0;
-    animation: fadeIn 2s ease forwards;
-    animation-delay: 1.5s;
-}
-
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(8px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+    .hero {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    .links a {
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+}
+
+
+/* ============================= */
+/* TOP NAVIGATION */
+/* ============================= */
+
+.topbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: flex-end;
+    background: transparent;
+    z-index: 1000;
+}
+
+.hero {
+    padding-top: 6rem;
+}
+
+.nav-icons a {
+    margin-left: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-icons img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-icons a:hover img {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+.footer {
+    background-color: #0f172a;          /* Azul oscuro elegante */
+    color: #f8fafc;                     /* Texto claro premium */
+    padding: 3rem 10%;
+    margin-top: 6rem;
+    border-top: 1px solid #1e293b;      /* Línea estructural sutil */
+}
+
+/* Contenedor interno */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* Texto copyright */
+.footer-content p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #94a3b8;
+    letter-spacing: 0.3px;
+}
+
+/* Links */
+.footer-links a {
+    margin-left: 2rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #94a3b8;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Subrayado minimal animado */
+.footer-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1px;
+    background-color: #f8fafc;
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    .footer {
+        padding: 2.5rem 8%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-links a {
+        margin-left: 1.8rem;
+        color: #94a3b8;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+        color: #ffffff;
+        transform: translateY(-2px);
+    }
+
+    .footer-links svg {
+        display: block;
+    }
+
 }
