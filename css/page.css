@@ -1,0 +1,22 @@
+/* ============================= */
+/* PAGE — utilidades para páginas internas (multi-page) */
+/* ============================= */
+
+/* Active state en la nav: marca la página actual */
+.tb-nav a[aria-current="page"] {
+  color: var(--gold);
+}
+.tb-nav a[aria-current="page"] .tb-num {
+  opacity: 1;
+}
+
+/* Páginas internas: empuja el contenido por debajo de la topbar fija
+   El index (data-page="home") tiene su propio hero con padding-top calculado. */
+body[data-page]:not([data-page="home"]) main {
+  padding-top: var(--topbar-h);
+}
+
+/* En páginas internas la primera sección recibe un poco más de aire arriba */
+body[data-page]:not([data-page="home"]) main > section:first-child {
+  padding-top: clamp(60px, 9vh, 110px);
+}

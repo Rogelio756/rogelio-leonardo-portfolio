@@ -1,0 +1,96 @@
+/* ============================= */
+/* TRIPLE CARDS */
+/* ============================= */
+
+.triple {
+  background: var(--navy);
+  border-top: 1px solid var(--cobalt);
+  padding: 0;
+}
+
+.triple-grid {
+  max-width: 1480px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.triple-card {
+  padding: clamp(48px, 6vh, 72px) clamp(28px, 3vw, 44px);
+  border-right: 1px solid var(--cobalt);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  transition: background 0.25s;
+  cursor: pointer;
+  min-height: 280px;
+  position: relative;
+}
+.triple-card:last-child { border-right: 0; }
+.triple-card:hover,
+.triple-card:focus-visible { background: var(--navy-hover); }
+
+.triple-num {
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-family: var(--f-mono);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.triple-num::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.triple-title {
+  font-family: var(--f-mono);
+  font-weight: 700;
+  font-size: clamp(20px, 2vw, 26px);
+  color: var(--ghost);
+  letter-spacing: -0.01em;
+}
+
+.triple-desc {
+  font-size: 14px;
+  color: rgba(230, 237, 243, 0.7);
+  line-height: 1.6;
+  flex: 1;
+  text-wrap: pretty;
+}
+
+.triple-cta {
+  font-size: 11px;
+  color: rgba(230, 237, 243, 0.75);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-family: var(--f-mono);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.2s;
+}
+.triple-cta-arrow { transition: all 0.2s; }
+.triple-card:hover .triple-cta,
+.triple-card:focus-visible .triple-cta { color: var(--gold); }
+.triple-card:hover .triple-cta-arrow,
+.triple-card:focus-visible .triple-cta-arrow {
+  color: var(--gold);
+  transform: translateX(4px);
+}
+
+@media (max-width: 900px) {
+  .triple-grid { grid-template-columns: 1fr; }
+  .triple-card {
+    border-right: 0;
+    border-bottom: 1px solid var(--cobalt);
+    min-height: auto;
+  }
+  .triple-card:last-child { border-bottom: 0; }
+}

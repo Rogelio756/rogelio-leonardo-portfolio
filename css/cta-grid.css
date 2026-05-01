@@ -1,0 +1,114 @@
+/* ============================= */
+/* CTA GRID — landing exit grid */
+/* ============================= */
+
+.cta-grid-section {
+  background: var(--navy);
+  border-top: 1px solid var(--cobalt);
+  padding: clamp(64px, 9vh, 110px) var(--pad-x);
+}
+
+.cta-grid-inner {
+  max-width: 1480px;
+  margin: 0 auto;
+}
+
+.cta-grid-head {
+  margin-bottom: 40px;
+}
+.cta-grid-head .ch-tag {
+  font-size: 10px;
+  color: var(--gold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-family: var(--f-mono);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.cta-grid-head .ch-tag::before { content: "// "; opacity: 0.7; }
+.cta-grid-head h3 {
+  font-family: var(--f-mono);
+  font-weight: 700;
+  font-size: clamp(22px, 2.4vw, 30px);
+  color: var(--ghost);
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  max-width: 720px;
+}
+
+.cta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--cobalt);
+  border: 1px solid var(--cobalt);
+}
+
+.cta-card {
+  background: var(--navy-2);
+  padding: clamp(28px, 4vh, 42px) clamp(22px, 2.5vw, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 220px;
+  transition: background 0.25s, transform 0.25s;
+  position: relative;
+}
+.cta-card:hover,
+.cta-card:focus-visible {
+  background: var(--navy-hover);
+  transform: translateY(-2px);
+}
+.cta-card:focus-visible {
+  outline: 1px solid var(--gold);
+  outline-offset: -1px;
+}
+
+.cta-num {
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 0.14em;
+  font-family: var(--f-mono);
+  font-weight: 700;
+}
+
+.cta-title {
+  font-family: var(--f-mono);
+  font-weight: 700;
+  font-size: clamp(20px, 2vw, 26px);
+  color: var(--ghost);
+  letter-spacing: -0.01em;
+}
+
+.cta-desc {
+  font-size: 13.5px;
+  color: rgba(230, 237, 243, 0.7);
+  line-height: 1.55;
+  flex: 1;
+  text-wrap: pretty;
+}
+
+.cta-arrow {
+  font-size: 20px;
+  color: var(--gold);
+  align-self: flex-end;
+  transition: transform 0.25s;
+}
+.cta-card:hover .cta-arrow,
+.cta-card:focus-visible .cta-arrow {
+  transform: translateX(6px);
+}
+
+.cta-card-accent {
+  background: linear-gradient(180deg, var(--navy-2) 0%, var(--navy-3) 100%);
+  border-left: 1px solid var(--gold);
+}
+.cta-card-accent .cta-title { color: var(--gold); }
+
+@media (max-width: 1000px) {
+  .cta-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .cta-grid { grid-template-columns: 1fr; }
+  .cta-card { min-height: auto; }
+}
