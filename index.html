@@ -1,53 +1,783 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rogelio Mendez · Edge AI & Computer Vision Engineer</title>
+  <title>Rogelio Leonardo Méndez Macías (Roy) · Embedded Computer Vision & Edge AI Engineer</title>
 
-  <meta name="description" content="Rogelio Mendez — Edge AI & Computer Vision Engineer. Sistemas de visión artificial desplegados en hardware embebido (Raspberry Pi, Hailo-8). Papers en MCPR 2026.">
-  <meta name="author" content="Rogelio Leonardo Mendez Macias">
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Rogelio Leonardo Méndez Macías (Roy) — Embedded Computer Vision & Edge AI Engineer. INT8 Quantization & NPU Deployment (Hailo-8, IMX500) · YOLOv8 · PyTorch · ONNX · ADAS & Autonomous Systems. Published Author (Springer LNCS).">
+  <meta name="author" content="Rogelio Leonardo Méndez Macías">
+  <meta name="keywords" content="Edge AI, Computer Vision, Embedded Systems, Hailo-8, Sony IMX500, INT8 Quantization, YOLOv8, PyTorch, ADAS, Autonomous Systems, Springer LNCS">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Rogelio Mendez · Edge AI & Computer Vision Engineer">
-  <meta property="og:description" content="Sistemas de IA al filo del hardware. Visión artificial desplegada en Raspberry Pi 5 y Hailo-8.">
+  <meta property="og:title" content="Rogelio Leonardo Méndez Macías (Roy) · Embedded Computer Vision & Edge AI Engineer">
+  <meta property="og:description" content="INT8 Quantization & NPU Deployment (Hailo-8, IMX500) · YOLOv8 · PyTorch · ONNX · ADAS & Autonomous Systems. Published Author (Springer LNCS), 1st Place National Hackathon (IBM-judged).">
 
+  <!-- Google Fonts: DM Sans & Space Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/topbar.css">
-  <link rel="stylesheet" href="css/page.css">
-  <link rel="stylesheet" href="css/hero.css">
-  <link rel="stylesheet" href="css/carousel.css">
-  <link rel="stylesheet" href="css/cta-grid.css">
-  <link rel="stylesheet" href="css/footer.css">
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/portfolio.css">
 </head>
-<body data-page="home" data-screen-label="Landing">
+<body data-page="home">
 
-  <div data-include="partials/topbar.html"></div>
+  <!-- SITE HEADER / NAVIGATION -->
+  <header class="site-header" id="site-header">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand" id="nav-brand">
+        <span class="brand-dot"></span>
+        <span>Roy Méndez</span>
+        <span class="brand-alias">[NPU: ACTIVE]</span>
+      </a>
 
+      <!-- Navigation Links -->
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about" class="nav-link" data-i18n="nav_about" id="link-about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-i18n="nav_skills" id="link-skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-i18n="nav_projects" id="link-projects">Projects</a></li>
+        <li><a href="#publications" class="nav-link" data-i18n="nav_publications" id="link-publications">Publications</a></li>
+        <li><a href="#awards" class="nav-link" data-i18n="nav_awards" id="link-awards">Awards</a></li>
+        <li><a href="#experience" class="nav-link" data-i18n="nav_experience" id="link-experience">Experience</a></li>
+        <li><a href="#education" class="nav-link" data-i18n="nav_education" id="link-education">Education</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav_contact" id="link-contact">Contact</a></li>
+      </ul>
+
+      <!-- Action Controls: Language Toggle & Mobile Button -->
+      <div class="nav-actions">
+        <div class="lang-toggle" role="group" aria-label="Language Selector" id="lang-switcher">
+          <button class="lang-btn active" data-lang="en" id="btn-lang-en">EN</button>
+          <button class="lang-btn" data-lang="es" id="btn-lang-es">ES</button>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Menu">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
   <main id="main">
-    <div data-include="partials/hero.html"></div>
-    <div data-include="partials/carousel.html"></div>
-    <div data-include="partials/cta-grid.html"></div>
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Left Column: Title, Tagline, Badges & CTAs -->
+          <div class="hero-content">
+            <div class="hero-edge-badge">
+              <span class="brand-dot"></span>
+              <span data-i18n="hero_status">EDGE NPU DEPLOYED</span>
+            </div>
+
+            <div class="hero-title-group">
+              <h1>
+                <span data-i18n="hero_title">Rogelio Leonardo Méndez Macías</span>
+                <span class="hero-alias" data-i18n="hero_alias">(Roy)</span>
+              </h1>
+              <div class="hero-subtitle" data-i18n="hero_subtitle">
+                Embedded Computer Vision & Edge AI Engineer
+              </div>
+            </div>
+
+            <div class="hero-tagline" data-i18n="hero_tagline">
+              INT8 Quantization & NPU Deployment (Hailo-8, IMX500) · YOLOv8 · PyTorch · ONNX · ADAS & Autonomous Systems
+            </div>
+
+            <!-- Achievement Badges (Row under tagline) -->
+            <div class="achievement-row" id="achievement-badges">
+              <div class="badge-item">
+                <span class="badge-dot"></span>
+                <span data-i18n="badge_1">Published Author (Springer LNCS)</span>
+              </div>
+              <div class="badge-item">
+                <span class="badge-dot"></span>
+                <span data-i18n="badge_2">1st Place National Hackathon (IBM-judged)</span>
+              </div>
+              <div class="badge-item">
+                <span class="badge-dot"></span>
+                <span data-i18n="badge_3">Falling Walls Lab Finalist</span>
+              </div>
+            </div>
+
+            <!-- Hero CTAs -->
+            <div class="hero-cta-group">
+              <a href="#cv" class="btn-primary trigger-cv-modal" id="btn-hero-cv">
+                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span data-i18n="cta_download_cv">Download CV</span>
+              </a>
+              <a href="#projects" class="btn-secondary" id="btn-hero-projects">
+                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+                <span data-i18n="cta_view_projects">View Projects</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Hardware Telemetry Board -->
+          <div class="hero-telemetry" id="hero-telemetry">
+            <div class="telemetry-header">
+              <div class="telemetry-title">
+                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                </svg>
+                <span data-i18n="telemetry_title">HARDWARE PIPELINE METRICS</span>
+              </div>
+              <div class="telemetry-status">
+                <span class="brand-dot"></span>
+                <span data-i18n="telemetry_status">SYSTEM OPTIMAL</span>
+              </div>
+            </div>
+
+            <div class="telemetry-metrics">
+              <div class="metric-box">
+                <div class="metric-value"><span data-i18n="metric_hailo_val">30–58</span> <span class="metric-unit" data-i18n="metric_hailo_unit">FPS</span></div>
+                <div class="metric-label" data-i18n="metric_hailo_label">Hailo-8 Edge Perception</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-value"><span data-i18n="metric_lat_val">230</span> <span class="metric-unit" data-i18n="metric_lat_unit">ms</span></div>
+                <div class="metric-label" data-i18n="metric_lat_label">End-to-End Latency</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-value"><span data-i18n="metric_comp_val">88%</span> <span class="metric-unit" data-i18n="metric_comp_unit">INT8</span></div>
+                <div class="metric-label" data-i18n="metric_comp_label">Model Compression</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-value"><span data-i18n="metric_ocr_val">>93%</span> <span class="metric-unit" data-i18n="metric_ocr_unit">Acc.</span></div>
+                <div class="metric-label" data-i18n="metric_ocr_label">Central OCR Precision</div>
+              </div>
+            </div>
+
+            <div class="telemetry-footnote">
+              <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span data-i18n="telemetry_footnote">Verified in hardware benchmarks & Springer LNCS peer-reviewed paper</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT SECTION -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label" data-i18n="sec_about_label">PROFILE // BACKGROUND</div>
+          <h2 class="section-title" data-i18n="sec_about_title">About Me</h2>
+        </div>
+
+        <div class="about-card" id="about-card">
+          <p class="about-text" data-i18n="about_p1">
+            Electronics Engineering student at UAM Azcapotzalco (graduating Dec 2026), specializing in embedded computer vision and edge AI for real-time perception systems. My research on on-device vehicle perception was peer-reviewed and published in Springer LNCS at MCPR 2026, and I recently won 1st place in a national AI hackathon judged by IBM. My background in control theory and queueing theory shapes how I design real-time embedded systems, not just how I train models. Currently a finalist at Falling Walls Lab, competing to represent Mexico.
+          </p>
+
+          <div class="about-highlights">
+            <div class="about-highlight-item">
+              <span class="highlight-icon">⚡</span>
+              <span data-i18n="about_hl_1">Specialized in Edge AI, NPU Deployment & Real-time Vision</span>
+            </div>
+            <div class="about-highlight-item">
+              <span class="highlight-icon">🏆</span>
+              <span data-i18n="about_hl_2">Springer LNCS Author & 1st Place National Hackathon Winner</span>
+            </div>
+            <div class="about-highlight-item">
+              <span class="highlight-icon">📐</span>
+              <span data-i18n="about_hl_3">Strong engineering foundation in Control & Queueing Theory</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SKILLS SECTION (4 Grouped Categories as Chips) -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label" data-i18n="sec_skills_label">SYSTEM ARCHITECTURE // TOOLCHAIN</div>
+          <h2 class="section-title" data-i18n="sec_skills_title">Technical Skills</h2>
+        </div>
+
+        <div class="skills-grid" id="skills-grid">
+          
+          <!-- Category 1: Edge AI & Model Optimization -->
+          <div class="skill-category-card" id="skill-cat-1">
+            <div class="category-header">
+              <div class="category-icon">🧠</div>
+              <h3 class="category-title" data-i18n="cat_1_title">Edge AI & Model Optimization</h3>
+            </div>
+            <div class="chips-container">
+              <span class="skill-chip">YOLOv8</span>
+              <span class="skill-chip">PyTorch</span>
+              <span class="skill-chip">PyTorch Geometric</span>
+              <span class="skill-chip">OpenCV</span>
+              <span class="skill-chip">SegFormer</span>
+              <span class="skill-chip">ONNX</span>
+              <span class="skill-chip">INT8 Quantization</span>
+              <span class="skill-chip">HEF Compilation</span>
+              <span class="skill-chip">Hailo-8 NPU</span>
+              <span class="skill-chip">Sony IMX500</span>
+              <span class="skill-chip">CUDA</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Embedded Systems & MLOps -->
+          <div class="skill-category-card" id="skill-cat-2">
+            <div class="category-header">
+              <div class="category-icon">⚙️</div>
+              <h3 class="category-title" data-i18n="cat_2_title">Embedded Systems & MLOps</h3>
+            </div>
+            <div class="chips-container">
+              <span class="skill-chip">Raspberry Pi 5 (Linux)</span>
+              <span class="skill-chip">Docker</span>
+              <span class="skill-chip">MQTT</span>
+              <span class="skill-chip">REST APIs</span>
+              <span class="skill-chip">Frigate NVR</span>
+              <span class="skill-chip">Node-RED</span>
+              <span class="skill-chip">InfluxDB</span>
+              <span class="skill-chip">Grafana</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Systems Fundamentals (Differentiator) -->
+          <div class="skill-category-card" id="skill-cat-3">
+            <div class="category-header differentiator">
+              <div class="category-icon">🔬</div>
+              <h3 class="category-title" data-i18n="cat_3_title">Systems Fundamentals (differentiator)</h3>
+            </div>
+            <div class="chips-container">
+              <span class="skill-chip">Control Theory (BIBO stability, transfer functions)</span>
+              <span class="skill-chip">Queueing Theory</span>
+              <span class="skill-chip">PID / Ziegler-Nichols tuning</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Languages & Tools -->
+          <div class="skill-category-card" id="skill-cat-4">
+            <div class="category-header">
+              <div class="category-icon">💻</div>
+              <h3 class="category-title" data-i18n="cat_4_title">Languages & Tools</h3>
+            </div>
+            <div class="chips-container">
+              <span class="skill-chip">Python (Advanced)</span>
+              <span class="skill-chip">MATLAB</span>
+              <span class="skill-chip">NumPy</span>
+              <span class="skill-chip">Pandas</span>
+              <span class="skill-chip">SQL</span>
+              <span class="skill-chip">LaTeX</span>
+              <span class="skill-chip">Jupyter</span>
+              <span class="skill-chip">Git/GitHub</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FEATURED PROJECTS SECTION -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label" data-i18n="sec_projects_label">APPLIED RESEARCH & EMBEDDED DEPLOYMENTS</div>
+          <h2 class="section-title" data-i18n="sec_projects_title">Featured Projects</h2>
+        </div>
+
+        <div class="projects-list" id="projects-list">
+
+          <!-- PROJECT 1: Cognitive ADAS System (with Embedded YouTube Video) -->
+          <article class="project-card" id="project-1">
+            <div class="project-card-layout with-media">
+              <div class="project-details">
+                <div class="project-num-badge">
+                  <span>PROJECT 01 // THESIS & SPRINGER PUBLICATION</span>
+                </div>
+                <h3 class="project-title" data-i18n="p1_title">Cognitive ADAS System (Thesis, UAM Azcapotzalco, 2025-2026)</h3>
+
+                <div class="project-block">
+                  <span class="project-block-title" data-i18n="lbl_prob_sol">Problem & Architecture:</span>
+                  <p class="project-block-text" data-i18n="p1_prob">
+                    Three-layer distributed architecture for vehicle perception — edge perception on Hailo-8 (30-58 FPS), central OCR layer (>93% precision), and an LLM+TTS cognitive layer, coordinated over an MQTT backbone.
+                  </p>
+                </div>
+
+                <div class="project-block">
+                  <span class="project-block-title" data-i18n="lbl_stack">Stack & Hardware:</span>
+                  <div class="stack-chips">
+                    <span class="stack-chip">Hailo-8 NPU</span>
+                    <span class="stack-chip">INT8 quantization</span>
+                    <span class="stack-chip">OCR</span>
+                    <span class="stack-chip">LLM</span>
+                    <span class="stack-chip">TTS</span>
+                    <span class="stack-chip">MQTT</span>
+                  </div>
+                </div>
+
+                <div class="project-block result-box">
+                  <span class="project-block-title" data-i18n="lbl_result">Key Results:</span>
+                  <p class="project-block-text" data-i18n="p1_res">
+                    230ms end-to-end latency, 88% model compression, zero operational failures. This project is the basis of a peer-reviewed publication in Springer LNCS (MCPR 2026) and of a Falling Walls Lab finalist pitch.
+                  </p>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://youtu.be/n2k4fdbCWAk" target="_blank" rel="noopener noreferrer" class="btn-project-link primary-action" id="p1-yt-link">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    <span data-i18n="btn_watch_demo">Watch MCPR Demo</span>
+                  </a>
+                  <a href="https://doi.org/10.1007/978-3-032-28393-1_22" target="_blank" rel="noopener noreferrer" class="btn-project-link">
+                    <span>Springer LNCS Paper</span>
+                    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Media Embed with Click-to-Play -->
+              <div class="project-media">
+                <div class="video-container" data-video-id="n2k4fdbCWAk" id="video-p1">
+                  <div class="video-thumbnail" tabindex="0" role="button" aria-label="Play MCPR 2026 Presentation Video">
+                    <div class="video-play-overlay">
+                      <div class="play-circle">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      </div>
+                      <span class="play-caption">Play MCPR 2026 Demo</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: FloodSense -->
+          <article class="project-card" id="project-2">
+            <div class="project-card-layout">
+              <div class="project-details">
+                <div class="project-num-badge">
+                  <span>PROJECT 02 // 1ST PLACE IBM HACKATHON & ADIP INCUBATION</span>
+                </div>
+                <h3 class="project-title" data-i18n="p2_title">FloodSense</h3>
+
+                <div class="project-block">
+                  <span class="project-block-title" data-i18n="lbl_prob_sol">Problem & Architecture:</span>
+                  <p class="project-block-text" data-i18n="p2_prob">
+                    Real-time hydrological intelligence system built in 48 hours for a national AI hackathon. 3-agent architecture: an XGBoost flood classifier, a risk regressor, and an alert-generation layer powered by IBM watsonx/Granite.
+                  </p>
+                </div>
+
+                <div class="project-block">
+                  <span class="project-block-title" data-i18n="lbl_stack">Stack & Hardware:</span>
+                  <div class="stack-chips">
+                    <span class="stack-chip">XGBoost</span>
+                    <span class="stack-chip">IBM watsonx</span>
+                    <span class="stack-chip">Granite</span>
+                  </div>
+                </div>
+
+                <div class="project-block result-box">
+                  <span class="project-block-title" data-i18n="lbl_result">Key Results:</span>
+                  <p class="project-block-text" data-i18n="p2_res">
+                    ROC-AUC 0.86 (classifier), R²=0.999 (regressor); covers 532 zones across 16 Mexico City boroughs with 6-hour anticipation, trained on 591,706 historical flood records from CONAGUA (1877-2024). Won 1st place (IBM-judged) and was selected for ADIP I+D+i incubation.
+                  </p>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://floodsense.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-project-link primary-action" id="p2-live-link">
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                    <span data-i18n="btn_live_demo">Live Demo (floodsense.vercel.app)</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: AI-Powered Road Risk Intelligence (with Embedded Video & GitHub) -->
+          <article class="project-card" id="project-3">
+            <div class="project-card-layout with-media">
+              <div class="project-details">
+                <div class="project-num-badge">
+                  <span>PROJECT 03 // SAMSUNG INNOVATION CAMPUS 2025-2026</span>
+                </div>
+                <h3 class="project-title" data-i18n="p3_title">AI-Powered Road Risk Intelligence (Samsung Innovation Campus, 2025-2026 cohort)</h3>
+
+                <div class="project-block">
+                  <span class="project-block-title" data-i18n="lbl_prob_sol">Problem & Architecture:</span>
+                  <p class="project-block-text" data-i18n="p3_prob">
+                    A 5-stage pipeline for road risk modeling built with a 3-person team split across detection, segmentation, and temporal risk modeling.
+                  </p>
+                </div>
+
+                <div class="project-block">
+                  <span class="project-block-title" data-i18n="lbl_stack">Stack & Hardware:</span>
+                  <div class="stack-chips">
+                    <span class="stack-chip">YOLOv8n</span>
+                    <span class="stack-chip">SegFormer-B0</span>
+                    <span class="stack-chip">GCNEncoder</span>
+                    <span class="stack-chip">RiskLSTM</span>
+                    <span class="stack-chip">Bayesian Neural Networks / MC Dropout</span>
+                  </div>
+                </div>
+
+                <div class="project-block result-box">
+                  <span class="project-block-title" data-i18n="lbl_result">Key Results:</span>
+                  <p class="project-block-text" data-i18n="p3_res">
+                    Individually designed and validated the RiskLSTM strategy — Pearson r=0.916 on 61,345 BDD100K images plus 925 real-world BDDA dashcam clips.
+                  </p>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://github.com/Rogelio756/Equipo8-Grupo8-SIC-2025-" target="_blank" rel="noopener noreferrer" class="btn-project-link primary-action" id="p3-gh-link">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                    <span data-i18n="btn_view_github">GitHub (SIC-2025)</span>
+                  </a>
+                  <a href="https://youtu.be/okWomtA6sG8" target="_blank" rel="noopener noreferrer" class="btn-project-link" id="p3-yt-link">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    <span data-i18n="btn_watch_pres">Presentation Video</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Media Embed with Click-to-Play -->
+              <div class="project-media">
+                <div class="video-container" data-video-id="okWomtA6sG8" id="video-p3">
+                  <div class="video-thumbnail" tabindex="0" role="button" aria-label="Play Samsung Innovation Campus Road Risk Video">
+                    <div class="video-play-overlay">
+                      <div class="play-circle">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      </div>
+                      <span class="play-caption">Play Presentation Video</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 4: IoT Plant-Care System for Horticulture (with Embedded Video) -->
+          <article class="project-card" id="project-4">
+            <div class="project-card-layout with-media">
+              <div class="project-details">
+                <div class="project-num-badge">
+                  <span>PROJECT 04 // SAMSUNG INNOVATION CAMPUS 2024 & SANTANDER RETO</span>
+                </div>
+                <h3 class="project-title" data-i18n="p4_title">IoT Plant-Care System for Horticulture (Samsung Innovation Campus, 2024 cohort)</h3>
+
+                <div class="project-block">
+                  <span class="project-block-title" data-i18n="lbl_prob_sol">Problem & Architecture:</span>
+                  <p class="project-block-text" data-i18n="p4_prob">
+                    An IoT system for horticultural plant care, built with a cross-institutional team including classmates from IPN (Instituto Politécnico Nacional).
+                  </p>
+                </div>
+
+                <div class="project-block">
+                  <span class="project-block-title" data-i18n="lbl_stack">Stack & Hardware:</span>
+                  <div class="stack-chips">
+                    <span class="stack-chip">IoT Sensors</span>
+                    <span class="stack-chip">Microcontrollers</span>
+                    <span class="stack-chip">Cloud/Telemetry Dashboard</span>
+                    <span class="stack-chip">Embedded Hardware</span>
+                  </div>
+                </div>
+
+                <div class="project-block result-box">
+                  <span class="project-block-title" data-i18n="lbl_result">Key Results:</span>
+                  <p class="project-block-text" data-i18n="p4_res">
+                    Presented in front of Samsung's senior leadership and submitted to the Santander Reto Universitario challenge.
+                  </p>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://youtu.be/k8NVMMZ8zes" target="_blank" rel="noopener noreferrer" class="btn-project-link primary-action" id="p4-yt-link">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    <span data-i18n="btn_watch_video">Watch Video (YouTube)</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Media Embed with Click-to-Play -->
+              <div class="project-media">
+                <div class="video-container" data-video-id="k8NVMMZ8zes" id="video-p4">
+                  <div class="video-thumbnail" tabindex="0" role="button" aria-label="Play IoT Plant-Care Video">
+                    <div class="video-play-overlay">
+                      <div class="play-circle">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      </div>
+                      <span class="play-caption">Play Project Video</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. PUBLICATIONS SECTION (Academic Citation Format) -->
+    <section class="section" id="publications">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label" data-i18n="sec_publications_label">PEER-REVIEWED SCIENTIFIC RESEARCH</div>
+          <h2 class="section-title" data-i18n="sec_publications_title">Publications</h2>
+        </div>
+
+        <div class="citation-card" id="citation-card">
+          <div class="citation-header">
+            <div class="citation-badge">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+              <span data-i18n="pub_badge">SPRINGER LNCS · MCPR 2026</span>
+            </div>
+
+            <div class="citation-actions">
+              <button class="btn-project-link" id="btn-copy-citation">
+                <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                <span data-i18n="pub_copy_btn">Copy Citation</span>
+              </button>
+              <button class="btn-project-link" id="btn-copy-bibtex">
+                <span>BibTeX</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Academic Citation Block -->
+          <div class="citation-content" id="academic-citation-text">
+            <span class="citation-author-highlight">Méndez-Macías, R.L.</span>, Villegas-Cortez, J., Ferreyra Ramírez, A., Zúñiga-López, A., Cordero-Sánchez, S. 
+            <span class="citation-title-highlight">"Embedded System for Vehicle Environment Perception and License Plate Recognition (LPR) Using Computer Vision and Deep Learning."</span> 
+            In: <em>Pattern Recognition. MCPR 2026</em>, Lecture Notes in Computer Science, vol. 16623. Springer, Cham (2026), pp. 247–258.
+          </div>
+
+          <div class="citation-meta">
+            <a href="https://doi.org/10.1007/978-3-032-28393-1_22" target="_blank" rel="noopener noreferrer" class="citation-doi" id="doi-link">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+              <span>DOI: https://doi.org/10.1007/978-3-032-28393-1_22</span>
+            </a>
+
+            <div class="citation-presentation" data-i18n="pub_note">
+              Presented at MCPR 2026 (18th Mexican Conference on Pattern Recognition, organized by INAOE), Ciudad Juárez, Chihuahua, June 2026.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. AWARDS & RECOGNITION SECTION (Separate Section) -->
+    <section class="section" id="awards">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label" data-i18n="sec_awards_label">HONORS // HACKATHONS // CONGRESSES</div>
+          <h2 class="section-title" data-i18n="sec_awards_title">Awards & Recognition</h2>
+        </div>
+
+        <div class="awards-list" id="awards-list">
+          
+          <!-- Award 1 -->
+          <div class="award-item" id="award-1">
+            <div class="award-icon-box">🏆</div>
+            <div class="award-text" data-i18n="award_1" data-i18n-html="true">
+              <strong>Finalist, Falling Walls Lab (Mexico City)</strong> — competing to represent Mexico, presenting the ADAS project
+            </div>
+          </div>
+
+          <!-- Award 2 -->
+          <div class="award-item" id="award-2">
+            <div class="award-icon-box">🥇</div>
+            <div class="award-text" data-i18n="award_2" data-i18n-html="true">
+              <strong>1st Place, Hackathon Concienc.IA 2026</strong> (Young AI Leaders CDMX Hub × Tec de Monterrey CCM, IBM-judged) — FloodSense
+            </div>
+          </div>
+
+          <!-- Award 3 -->
+          <div class="award-item" id="award-3">
+            <div class="award-icon-box">🎖️</div>
+            <div class="award-text" data-i18n="award_3" data-i18n-html="true">
+              <strong>MUTVI Recognition</strong> — UAM International Multidisciplinary Colloquium on Information Visualization, oral presentation "El copiloto que nunca duerme"
+            </div>
+          </div>
+
+          <!-- Award 4 -->
+          <div class="award-item" id="award-4">
+            <div class="award-icon-box">🎙️</div>
+            <div class="award-text" data-i18n="award_4" data-i18n-html="true">
+              <strong>Presenter, NEO International Congress (2025)</strong> — distributed AI architecture and real-time perception pipelines
+            </div>
+          </div>
+
+          <!-- Award 5 -->
+          <div class="award-item" id="award-5">
+            <div class="award-icon-box">🌟</div>
+            <div class="award-text" data-i18n="award_5" data-i18n-html="true">
+              <strong>Presented IoT project in front of Samsung senior executive leadership</strong> — Santander Reto Universitario (2024)
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. PROFESSIONAL EXPERIENCE SECTION -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label" data-i18n="sec_experience_label">INDUSTRY // TRACK RECORD</div>
+          <h2 class="section-title" data-i18n="sec_experience_title">Professional Experience</h2>
+        </div>
+
+        <div class="exp-card" id="exp-card">
+          <div class="exp-header">
+            <div>
+              <h3 class="exp-company" data-i18n="exp_company">Grupo Modelo (AB InBev)</h3>
+              <div class="exp-role" data-i18n="exp_role">Data Engineering & Process Digitalization Intern</div>
+            </div>
+            <div class="exp-date" data-i18n="exp_date">May – Nov 2023</div>
+          </div>
+
+          <p class="exp-desc" data-i18n="exp_desc">
+            Built Python + SQL automation pipelines that reduced reporting workload by 5+ hours/week; self-initiated a PPE-detection computer vision prototype for industrial safety, beyond assigned scope.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. EDUCATION SECTION -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label" data-i18n="sec_education_label">ACADEMIC BACKGROUND // PROGRAM</div>
+          <h2 class="section-title" data-i18n="sec_education_title">Education</h2>
+        </div>
+
+        <div class="education-grid" id="education-grid">
+          
+          <!-- Education 1 -->
+          <div class="edu-card" id="edu-1">
+            <div class="edu-institution" data-i18n="edu_1_inst">Universidad Autónoma Metropolitana — Azcapotzalco, Mexico City</div>
+            <h3 class="edu-degree" data-i18n="edu_1_title">B.Sc. Electronics Engineering</h3>
+            <div class="edu-meta" data-i18n="edu_1_meta">Expected: December 2026</div>
+            <div class="edu-specialization" data-i18n="edu_1_spec">Specialization: Edge AI, Computer Vision, Embedded Systems.</div>
+          </div>
+
+          <!-- Education 2 -->
+          <div class="edu-card" id="edu-2">
+            <div class="edu-institution" data-i18n="edu_2_inst">Samsung Electronics & SIC Mexico</div>
+            <h3 class="edu-degree" data-i18n="edu_2_title">Samsung Innovation Campus</h3>
+            <div class="edu-meta" data-i18n="edu_2_meta">Two cohorts (2024 and 2025-2026)</div>
+            <div class="edu-specialization" data-i18n="edu_2_spec">Applied Deep Learning, Computer Vision pipelines, IoT & embedded architectures.</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. CONTACT / FOOTER SECTION -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label" data-i18n="sec_contact_label">COMMUNICATIONS // CONNECT</div>
+          <h2 class="section-title" data-i18n="sec_contact_title">Get In Touch</h2>
+        </div>
+
+        <div class="contact-card" id="contact-card">
+          <p class="about-text" data-i18n="contact_sub">
+            Available for embedded vision engineering, edge AI research collaborations, and full-time engineering roles starting late 2026.
+          </p>
+
+          <div class="contact-grid">
+            
+            <!-- Email Link -->
+            <a href="mailto:rogelioleonardo18@gmail.com" class="contact-link-card" id="contact-email">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <div class="contact-info-label">Direct Email</div>
+                <div class="contact-info-val">rogelioleonardo18@gmail.com</div>
+              </div>
+            </a>
+
+            <!-- LinkedIn Link -->
+            <a href="https://linkedin.com/in/rogelio-leonardo-mendez-macias" target="_blank" rel="noopener noreferrer" class="contact-link-card" id="contact-linkedin">
+              <div class="contact-icon">💼</div>
+              <div>
+                <div class="contact-info-label">LinkedIn</div>
+                <div class="contact-info-val">rogelio-leonardo-mendez-macias</div>
+              </div>
+            </a>
+
+            <!-- GitHub Link -->
+            <a href="https://github.com/Rogelio756" target="_blank" rel="noopener noreferrer" class="contact-link-card" id="contact-github">
+              <div class="contact-icon">🐙</div>
+              <div>
+                <div class="contact-info-label">GitHub</div>
+                <div class="contact-info-val">github.com/Rogelio756</div>
+              </div>
+            </a>
+
+            <!-- ORCID Link -->
+            <a href="https://orcid.org/0009-0007-9163-3549" target="_blank" rel="noopener noreferrer" class="contact-link-card" id="contact-orcid">
+              <div class="contact-icon">🆔</div>
+              <div>
+                <div class="contact-info-label">ORCID Identifier</div>
+                <div class="contact-info-val">0009-0007-9163-3549</div>
+              </div>
+            </a>
+
+          </div>
+
+          <div class="hero-cta-group" style="margin-top: 32px;">
+            <a href="#cv" class="btn-primary trigger-cv-modal" id="btn-footer-cv">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <span data-i18n="contact_cv_btn">Download CV (PDF)</span>
+            </a>
+            <button class="btn-secondary" id="btn-copy-email">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+              </svg>
+              <span data-i18n="contact_copy_email">Copy Email</span>
+            </button>
+          </div>
+        </div>
+
+        <footer class="site-footer">
+          <p>© 2026 Rogelio Leonardo Méndez Macías · Embedded Computer Vision & Edge AI Engineer</p>
+        </footer>
+      </div>
+    </section>
+
   </main>
 
-  <div data-include="partials/footer.html"></div>
+  <!-- CV MODAL -->
+  <div class="modal-overlay" id="cv-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <button class="modal-close close-modal" aria-label="Close modal">✕</button>
+      <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); margin-bottom: 6px;">[RESUME DOWNLOAD]</div>
+      <h3 id="modal-title" style="font-size: 1.3rem; margin-bottom: 8px; color: #FFFFFF;" data-i18n="cv_modal_title">Curriculum Vitae (PDF)</h3>
+      <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 24px; line-height: 1.6;" data-i18n="cv_modal_desc">
+        Rogelio Leonardo Méndez Macías — Embedded Computer Vision & Edge AI Engineer.
+      </p>
 
-  <noscript>
-    <p style="padding:24px;color:#fff;background:#0A1628;font-family:sans-serif">
-      Este portafolio requiere JavaScript para cargarse. Activa JS o visita
-      <a href="https://github.com/Rogelio756" style="color:#C49A3C">github.com/Rogelio756</a>.
-    </p>
-  </noscript>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <a href="mailto:rogelioleonardo18@gmail.com?subject=CV%20Request%20-%20Rogelio%20Leonardo%20Mendez" class="btn-primary" style="justify-content: center;" id="modal-download-en">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          <span data-i18n="cv_modal_btn_en">Download English CV</span>
+        </a>
+        <a href="mailto:rogelioleonardo18@gmail.com?subject=Solicitud%20de%20CV%20-%20Rogelio%20Leonardo%20Mendez" class="btn-secondary" style="justify-content: center;" id="modal-download-es">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          <span data-i18n="cv_modal_btn_es">Download Spanish CV</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
-  <script src="js/data.js"></script>
-  <script src="js/i18n.js"></script>
-  <script src="js/sections/carousel.js"></script>
-  <script src="js/sections/reveal.js"></script>
-  <script src="js/include.js"></script>
-  <script src="js/main.js"></script>
+  <!-- Scripts -->
+  <script src="js/portfolio.js"></script>
 </body>
 </html>
