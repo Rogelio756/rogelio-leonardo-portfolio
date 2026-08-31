@@ -5,311 +5,13 @@
  * Citation Copying, Mobile Navigation, CV Modal.
  */
 
-const I18N_DATA = {
-  en: {
-    // Topbar & Nav
-    nav_about: "About",
-    nav_skills: "Skills",
-    nav_projects: "Projects",
-    nav_publications: "Publications",
-    nav_awards: "Awards",
-    nav_experience: "Experience",
-    nav_education: "Education",
-    nav_contact: "Contact",
-    nav_cv: "CV",
+(function() {
+'use strict';
 
-    // Hero
-    hero_status: "EDGE NPU DEPLOYED",
-    hero_title: "Rogelio Leonardo Méndez Macías",
-    hero_alias: "(Roy)",
-    hero_subtitle: "Embedded Computer Vision & Edge AI Engineer",
-    hero_tagline: "INT8 Quantization & NPU Deployment (Hailo-8, IMX500) · YOLOv8 · PyTorch · ONNX · ADAS & Autonomous Systems",
-    badge_1: "Published Author (Springer LNCS)",
-    badge_2: "1st Place National Hackathon (IBM-judged)",
-    badge_3: "Falling Walls Lab Finalist",
-    cta_download_cv: "Download CV",
-    cta_view_projects: "View Projects",
-
-    // Telemetry Box
-    telemetry_title: "HARDWARE PIPELINE METRICS",
-    telemetry_status: "SYSTEM OPTIMAL",
-    metric_hailo_val: "30–58",
-    metric_hailo_unit: "FPS",
-    metric_hailo_label: "Hailo-8 Edge Perception",
-    metric_lat_val: "230",
-    metric_lat_unit: "ms",
-    metric_lat_label: "End-to-End Latency",
-    metric_comp_val: "88%",
-    metric_comp_unit: "INT8",
-    metric_comp_label: "Model Compression",
-    metric_ocr_val: ">93%",
-    metric_ocr_unit: "Acc.",
-    metric_ocr_label: "Central OCR Precision",
-    telemetry_footnote: "Verified in hardware benchmarks & Springer LNCS peer-reviewed paper",
-
-    // Section Titles
-    sec_about_label: "PROFILE // BACKGROUND",
-    sec_about_title: "About Me",
-    sec_skills_label: "SYSTEM ARCHITECTURE // TOOLCHAIN",
-    sec_skills_title: "Technical Skills",
-    sec_projects_label: "APPLIED RESEARCH & EMBEDDED DEPLOYMENTS",
-    sec_projects_title: "Featured Projects",
-    sec_publications_label: "PEER-REVIEWED SCIENTIFIC RESEARCH",
-    sec_publications_title: "Publications",
-    sec_awards_label: "HONORS // HACKATHONS // CONGRESSES",
-    sec_awards_title: "Awards & Recognition",
-    sec_experience_label: "INDUSTRY // TRACK RECORD",
-    sec_experience_title: "Professional Experience",
-    sec_education_label: "ACADEMIC BACKGROUND // PROGRAMS",
-    sec_education_title: "Education",
-    sec_contact_label: "COMMUNICATIONS // CONNECT",
-    sec_contact_title: "Get In Touch",
-
-    // About Content
-    about_p1: "Electronics Engineering student at UAM Azcapotzalco (graduating Dec 2026), specializing in embedded computer vision and edge AI for real-time perception systems. My research on on-device vehicle perception was peer-reviewed and published in Springer LNCS at MCPR 2026, and I recently won 1st place in a national AI hackathon judged by IBM. My background in control theory and queueing theory shapes how I design real-time embedded systems, not just how I train models. Currently a finalist at Falling Walls Lab, competing to represent Mexico.",
-    about_hl_1: "Specialized in Edge AI, NPU Deployment & Real-time Vision",
-    about_hl_2: "Springer LNCS Author & 1st Place National Hackathon Winner",
-    about_hl_3: "Strong engineering foundation in Control & Queueing Theory",
-
-    // Skills Categories
-    cat_1_title: "Edge AI & Model Optimization",
-    cat_2_title: "Embedded Systems & MLOps",
-    cat_3_title: "Systems Fundamentals (differentiator)",
-    cat_4_title: "Languages & Tools",
-
-    // Projects Common Labels
-    lbl_prob_sol: "Problem & Architecture:",
-    lbl_stack: "Stack & Hardware:",
-    lbl_result: "Key Results:",
-    lbl_links: "Links & Artifacts:",
-    btn_watch_demo: "Watch MCPR Demo",
-    btn_live_demo: "Live Demo",
-    btn_view_github: "View on GitHub",
-    btn_watch_pres: "Presentation Video",
-    btn_watch_video: "Watch Video",
-
-    // Project 1
-    p1_title: "Cognitive ADAS System (Thesis, UAM Azcapotzalco, 2025-2026)",
-    p1_prob: "Three-layer distributed architecture for vehicle perception — edge perception on Hailo-8 (30-58 FPS), central OCR layer (>93% precision), and an LLM+TTS cognitive layer, coordinated over an MQTT backbone.",
-    p1_res: "230ms end-to-end latency, 88% model compression, zero operational failures. This project is the basis of a peer-reviewed publication in Springer LNCS (MCPR 2026) and of a Falling Walls Lab finalist pitch.",
-
-    // Project 2
-    p2_title: "FloodSense",
-    p2_prob: "Real-time hydrological intelligence system built in 48 hours for a national AI hackathon. 3-agent architecture: an XGBoost flood classifier, a risk regressor, and an alert-generation layer powered by IBM watsonx/Granite.",
-    p2_res: "ROC-AUC 0.86 (classifier), R²=0.999 (regressor); covers 532 zones across 16 Mexico City boroughs with 6-hour anticipation, trained on 591,706 historical flood records from CONAGUA (1877-2024). Won 1st place (IBM-judged) and was selected for ADIP I+D+i incubation.",
-
-    // Project 3
-    p3_title: "AI-Powered Road Risk Intelligence (Samsung Innovation Campus, 2025-2026 cohort)",
-    p3_prob: "A 5-stage pipeline for road risk modeling built with a 3-person team split across detection, segmentation, and temporal risk modeling.",
-    p3_res: "Individually designed and validated the RiskLSTM strategy — Pearson r=0.916 on 61,345 BDD100K images plus 925 real-world BDDA dashcam clips.",
-
-    // Project 4
-    p4_title: "IoT Plant-Care System for Horticulture (Samsung Innovation Campus, 2024 cohort)",
-    p4_prob: "An IoT system for horticultural plant care, built with a cross-institutional team including classmates from IPN (Instituto Politécnico Nacional).",
-    p4_res: "Presented in front of Samsung's senior leadership and submitted to the Santander Reto Universitario challenge.",
-
-    // Publication
-    pub_badge: "SPRINGER LNCS · MCPR 2026",
-    pub_note: "Presented at MCPR 2026 (18th Mexican Conference on Pattern Recognition, organized by INAOE), Ciudad Juárez, Chihuahua, June 2026.",
-    pub_copy_btn: "Copy Citation",
-    pub_copied_btn: "Copied!",
-
-    // Awards Items
-    award_1: "<strong>Finalist, Falling Walls Lab (Mexico City)</strong> — competing to represent Mexico, presenting the ADAS project",
-    award_2: "<strong>1st Place, Hackathon Concienc.IA 2026</strong> (Young AI Leaders CDMX Hub × Tec de Monterrey CCM, IBM-judged) — FloodSense",
-    award_3: "<strong>MUTVI Recognition</strong> — UAM International Multidisciplinary Colloquium on Information Visualization, oral presentation \"El copiloto que nunca duerme\"",
-    award_4: "<strong>Presenter, NEO International Congress (2025)</strong> — distributed AI architecture and real-time perception pipelines",
-    award_5: "<strong>Presented IoT project in front of Samsung senior executive leadership</strong> — Santander Reto Universitario (2024)",
-
-    // Experience
-    exp_company: "Grupo Modelo (AB InBev)",
-    exp_role: "Data Engineering & Process Digitalization Intern",
-    exp_date: "May – Nov 2023",
-    exp_desc: "Built Python + SQL automation pipelines that reduced reporting workload by 5+ hours/week; self-initiated a PPE-detection computer vision prototype for industrial safety, beyond assigned scope.",
-
-    // Education
-    edu_1_title: "B.Sc. Electronics Engineering",
-    edu_1_inst: "Universidad Autónoma Metropolitana — Azcapotzalco, Mexico City",
-    edu_1_meta: "Expected: December 2026",
-    edu_1_spec: "Specialization: Edge AI, Computer Vision, Embedded Systems.",
-    edu_2_title: "Samsung Innovation Campus",
-    edu_2_inst: "Samsung Electronics & SIC Mexico",
-    edu_2_meta: "Two cohorts (2024 and 2025-2026)",
-    edu_2_spec: "Applied Deep Learning, Computer Vision pipelines, IoT & embedded architectures.",
-
-    // Contact
-    contact_sub: "Available for embedded vision engineering, edge AI research collaborations, and full-time engineering roles starting late 2026.",
-    contact_cv_btn: "Download CV (PDF)",
-    contact_copy_email: "Copy Email",
-
-    // Modals & Notices
-    cv_modal_title: "Curriculum Vitae (PDF)",
-    cv_modal_desc: "Rogelio Leonardo Méndez Macías — Embedded Computer Vision & Edge AI Engineer.",
-    cv_modal_btn_en: "Download English CV",
-    cv_modal_btn_es: "Download Spanish CV",
-    cv_modal_preview: "Preview PDF in New Window",
-    toast_copied: "Copied to clipboard!"
-  },
-
-  es: {
-    // Topbar & Nav
-    nav_about: "Acerca de",
-    nav_skills: "Habilidades",
-    nav_projects: "Proyectos",
-    nav_publications: "Publicaciones",
-    nav_awards: "Reconocimientos",
-    nav_experience: "Experiencia",
-    nav_education: "Educación",
-    nav_contact: "Contacto",
-    nav_cv: "CV",
-
-    // Hero
-    hero_status: "EDGE NPU DESPLEGADA",
-    hero_title: "Rogelio Leonardo Méndez Macías",
-    hero_alias: "(Roy)",
-    hero_subtitle: "Ingeniero en Visión Computacional Embebida y Edge AI",
-    hero_tagline: "Cuantización INT8 y Despliegue en NPUs (Hailo-8, IMX500) · YOLOv8 · PyTorch · ONNX · ADAS y Sistemas Autónomos",
-    badge_1: "Autor Publicado (Springer LNCS)",
-    badge_2: "1.er Lugar Hackathon Nacional (Juez IBM)",
-    badge_3: "Finalista Falling Walls Lab",
-    cta_download_cv: "Descargar CV",
-    cta_view_projects: "Ver Proyectos",
-
-    // Telemetry Box
-    telemetry_title: "MÉTRICAS DE HARDWARE & DESPLIEGUE",
-    telemetry_status: "SISTEMA ÓPTIMO",
-    metric_hailo_val: "30–58",
-    metric_hailo_unit: "FPS",
-    metric_hailo_label: "Percepción Edge Hailo-8",
-    metric_lat_val: "230",
-    metric_lat_unit: "ms",
-    metric_lat_label: "Latencia End-to-End",
-    metric_comp_val: "88%",
-    metric_comp_unit: "INT8",
-    metric_comp_label: "Compresión de Modelo",
-    metric_ocr_val: ">93%",
-    metric_ocr_unit: "Prec.",
-    metric_ocr_label: "Precisión OCR Central",
-    telemetry_footnote: "Verificado en banco de hardware y publicación arbitrada en Springer LNCS",
-
-    // Section Titles
-    sec_about_label: "PERFIL // TRAYECTORIA",
-    sec_about_title: "Acerca de Mí",
-    sec_skills_label: "ARQUITECTURA DE SISTEMAS // HERRAMIENTAS",
-    sec_skills_title: "Habilidades Técnicas",
-    sec_projects_label: "INVESTIGACIÓN APLICADA Y DESPLIEGUE EMBEBIDO",
-    sec_projects_title: "Proyectos Destacados",
-    sec_publications_label: "INVESTIGACIÓN CIENTÍFICA ARBITRADA",
-    sec_publications_title: "Publicaciones",
-    sec_awards_label: "DISTINCIONES // HACKATHONS // CONGRESOS",
-    sec_awards_title: "Premios y Reconocimientos",
-    sec_experience_label: "INDUSTRIA // EXPERIENCIA",
-    sec_experience_title: "Experiencia Profesional",
-    sec_education_label: "FORMACIÓN ACADÉMICA // PROGRAMAS",
-    sec_education_title: "Educación",
-    sec_contact_label: "COMUNICACIÓN // ENLACES",
-    sec_contact_title: "Contacto",
-
-    // About Content
-    about_p1: "Estudiante de Ingeniería Electrónica en la UAM Azcapotzalco (egreso dic 2026), especializado en visión computacional embebida y edge AI para sistemas de percepción en tiempo real. Mi investigación sobre percepción vehicular en el dispositivo fue arbitrada y publicada en Springer LNCS en MCPR 2026, y recientemente gané el primer lugar en un hackathon nacional de IA juzgado por IBM. Mi formación en teoría de control y teoría de colas define cómo diseño sistemas embebidos en tiempo real, no solo cómo entreno modelos. Actualmente soy finalista en Falling Walls Lab, compitiendo por representar a México.",
-    about_hl_1: "Especialista en Edge AI, Despliegue en NPUs y Visión en Tiempo Real",
-    about_hl_2: "Autor en Springer LNCS y Ganador de 1.er Lugar en Hackathon Nacional",
-    about_hl_3: "Sólida formación en Teoría de Control y Teoría de Colas",
-
-    // Skills Categories
-    cat_1_title: "Edge AI & Optimización de Modelos",
-    cat_2_title: "Sistemas Embebidos & MLOps",
-    cat_3_title: "Fundamentos de Sistemas (Diferenciador)",
-    cat_4_title: "Lenguajes & Herramientas",
-
-    // Projects Common Labels
-    lbl_prob_sol: "Problema y Arquitectura:",
-    lbl_stack: "Stack y Hardware:",
-    lbl_result: "Resultados Clave:",
-    lbl_links: "Enlaces y Materiales:",
-    btn_watch_demo: "Ver Demo MCPR",
-    btn_live_demo: "Demo en Vivo",
-    btn_view_github: "Ver en GitHub",
-    btn_watch_pres: "Video de Presentación",
-    btn_watch_video: "Ver Video",
-
-    // Project 1
-    p1_title: "Sistema ADAS Cognitivo (Tesis, UAM Azcapotzalco, 2025-2026)",
-    p1_prob: "Arquitectura distribuida en tres capas para percepción vehicular — percepción en el borde con Hailo-8 (30-58 FPS), capa OCR central (>93% precisión), y una capa cognitiva LLM+TTS coordinadas mediante un backbone MQTT.",
-    p1_res: "Latencia end-to-end de 230ms, 88% de compresión de modelo, cero fallos operacionales. Este proyecto es la base de una publicación arbitrada en Springer LNCS (MCPR 2026) y de la propuesta finalista en Falling Walls Lab.",
-
-    // Project 2
-    p2_title: "FloodSense",
-    p2_prob: "Sistema de inteligencia hidrológica en tiempo real desarrollado en 48 horas para un hackathon nacional de IA. Arquitectura de 3 agentes: clasificador de inundaciones XGBoost, regresor de riesgo y capa generadora de alertas con IBM watsonx/Granite.",
-    p2_res: "ROC-AUC 0.86 (clasificador), R²=0.999 (regresor); cobertura de 532 zonas en las 16 alcaldías de la CDMX con 6 horas de anticipación, entrenado con 591,706 registros históricos de inundación de CONAGUA (1877-2024). Ganador del 1.er lugar (evaluado por IBM) y seleccionado para incubación ADIP I+D+i.",
-
-    // Project 3
-    p3_title: "Inteligencia de Riesgo Vial con IA (Samsung Innovation Campus, cohorte 2025-2026)",
-    p3_prob: "Pipeline de 5 etapas para modelado de riesgo vial desarrollado con un equipo de 3 personas distribuido en detección, segmentación y modelado temporal de riesgo.",
-    p3_res: "Diseñé y validé individualmente la estrategia RiskLSTM — coeficiente de Pearson r=0.916 en 61,345 imágenes de BDD100K más 925 clips reales de dashcam BDDA.",
-
-    // Project 4
-    p4_title: "Sistema IoT de Cuidado de Plantas para Horticultura (Samsung Innovation Campus, cohorte 2024)",
-    p4_prob: "Sistema IoT para el cuidado hortícola de plantas, desarrollado en equipo interinstitucional incluyendo compañeros del IPN (Instituto Politécnico Nacional).",
-    p4_res: "Presentado ante el liderazgo ejecutivo sénior de Samsung y postulado al desafío Santander Reto Universitario.",
-
-    // Publication
-    pub_badge: "SPRINGER LNCS · MCPR 2026",
-    pub_note: "Presentado en MCPR 2026 (18.ª Conferencia Mexicana sobre Reconocimiento de Patrones, organizada por el INAOE), Ciudad Juárez, Chihuahua, junio 2026.",
-    pub_copy_btn: "Copiar Cita",
-    pub_copied_btn: "¡Copiado!",
-
-    // Awards Items
-    award_1: "<strong>Finalista, Falling Walls Lab (Ciudad de México)</strong> — compitiendo por representar a México, presentando el proyecto ADAS",
-    award_2: "<strong>1.er Lugar, Hackathon Concienc.IA 2026</strong> (Young AI Leaders CDMX Hub × Tec de Monterrey CCM, evaluación IBM) — FloodSense",
-    award_3: "<strong>Reconocimiento MUTVI</strong> — Coloquio Internacional Multidisciplinario de Visualización de Información de la UAM, ponencia oral \"El copiloto que nunca duerme\"",
-    award_4: "<strong>Ponente, Congreso Internacional NEO (2025)</strong> — arquitectura de IA distribuida y pipelines de percepción en tiempo real",
-    award_5: "<strong>Presentación de proyecto IoT ante la alta dirección ejecutiva de Samsung</strong> — Santander Reto Universitario (2024)",
-
-    // Experience
-    exp_company: "Grupo Modelo (AB InBev)",
-    exp_role: "Becario de Ingeniería de Datos y Digitalización de Procesos",
-    exp_date: "Mayo – Noviembre 2023",
-    exp_desc: "Desarrollé pipelines de automatización con Python y SQL que redujeron la carga de reportes en más de 5 horas/semana; inicié por iniciativa propia un prototipo de visión artificial para detección de EPP en seguridad industrial, más allá del alcance asignado.",
-
-    // Education
-    edu_1_title: "Licenciatura en Ingeniería Electrónica",
-    edu_1_inst: "Universidad Autónoma Metropolitana — Azcapotzalco, Ciudad de México",
-    edu_1_meta: "Egreso previsto: Diciembre 2026",
-    edu_1_spec: "Especialización: Edge AI, Visión Computacional, Sistemas Embebidos.",
-    edu_2_title: "Samsung Innovation Campus",
-    edu_2_inst: "Samsung Electronics & SIC México",
-    edu_2_meta: "Dos cohortes (2024 y 2025-2026)",
-    edu_2_spec: "Deep Learning aplicado, pipelines de Visión Artificial, IoT y arquitecturas embebidas.",
-
-    // Contact
-    contact_sub: "Disponible para ingeniería en visión embebida, colaboraciones de investigación en Edge AI y oportunidades laborales de tiempo completo a partir de finales de 2026.",
-    contact_cv_btn: "Descargar CV (PDF)",
-    contact_copy_email: "Copiar Correo",
-
-    // Modals & Notices
-    cv_modal_title: "Curriculum Vitae (PDF)",
-    cv_modal_desc: "Rogelio Leonardo Méndez Macías — Ingeniero en Visión Computacional Embebida y Edge AI.",
-    cv_modal_btn_en: "Descargar CV en Inglés",
-    cv_modal_btn_es: "Descargar CV en Español",
-    cv_modal_preview: "Ver PDF en Nueva Pestaña",
-    toast_copied: "¡Copiado al portapapeles!"
-  }
-};
-
-const BIBTEX_CITATION = `@inproceedings{mendez2026embedded,
-  author    = {M{\\'e}ndez-Mac{\\'\\i}as, Rogelio Leonardo and Villegas-Cortez, Juan and Ferreyra Ram{\\'\\i}rez, Axel and Z{\\'u}{\\~n}iga-L{\\'o}pez, Arturo and Cordero-S{\\'a}nchez, Salvador},
-  title     = {Embedded System for Vehicle Environment Perception and License Plate Recognition (LPR) Using Computer Vision and Deep Learning},
-  booktitle = {Pattern Recognition. MCPR 2026},
-  series    = {Lecture Notes in Computer Science},
-  volume    = {16623},
-  pages     = {247--258},
-  publisher = {Springer, Cham},
-  year      = {2026},
-  doi       = {10.1007/978-3-032-28393-1_22}
-}`;
-
-const PLAIN_CITATION = `Méndez-Macías, R.L., Villegas-Cortez, J., Ferreyra Ramírez, A., Zúñiga-López, A., Cordero-Sánchez, S. "Embedded System for Vehicle Environment Perception and License Plate Recognition (LPR) Using Computer Vision and Deep Learning." In: Pattern Recognition. MCPR 2026, Lecture Notes in Computer Science, vol. 16623. Springer, Cham (2026), pp. 247–258. DOI: https://doi.org/10.1007/978-3-032-28393-1_22`;
+// I18N_DATA and Citations are sourced from js/content.js (Single Source of Truth)
+const I18N_DATA = window.I18N_DATA || {};
+const BIBTEX_CITATION = window.BIBTEX_CITATION || '';
+const PLAIN_CITATION = window.PLAIN_CITATION || '';
 
 let currentLang = 'en';
 
@@ -338,9 +40,9 @@ function setLanguage(lang) {
 
   // Update dynamic meta tags
   if (lang === 'es') {
-    document.title = "Rogelio Leonardo Méndez Macías (Roy) · Ingeniero en Visión Computacional Embebida y Edge AI";
+    document.title = "Rogelio Leonardo Mendez Macias · Ingeniero en Visión Computacional Embebida y Edge AI";
   } else {
-    document.title = "Rogelio Leonardo Méndez Macías (Roy) · Embedded Computer Vision & Edge AI Engineer";
+    document.title = "Rogelio Leonardo Mendez Macias · Embedded Computer Vision & Edge AI Engineer";
   }
 }
 
@@ -484,6 +186,146 @@ function setupEmailCopy() {
   }
 }
 
+// Projects Compact Deck & Spotlight Modal Controller
+function setupProjectsCarousel() {
+  const miniCards = document.querySelectorAll('.project-mini-card');
+  const overlay = document.getElementById('project-detail-overlay');
+  const modalBody = document.getElementById('project-modal-body');
+  const closeBtn = document.getElementById('project-detail-close-btn');
+  const backdrop = document.getElementById('project-detail-backdrop');
+  const fullStore = document.getElementById('project-full-store');
+  const prevBtn = document.getElementById('carousel-prev-btn');
+  const nextBtn = document.getElementById('carousel-next-btn');
+  const currentIndexEl = document.getElementById('carousel-current-index');
+  const totalCountEl = document.getElementById('carousel-total-count');
+
+  if (!miniCards.length || !overlay || !modalBody || !fullStore) return;
+
+  let currentActiveIndex = 0;
+  const totalCards = miniCards.length;
+
+  if (totalCountEl) {
+    totalCountEl.textContent = String(totalCards).padStart(2, '0');
+  }
+
+  function openProjectModal(index) {
+    if (index < 0) index = 0;
+    if (index >= totalCards) index = totalCards - 1;
+    currentActiveIndex = index;
+
+    if (currentIndexEl) {
+      currentIndexEl.textContent = String(currentActiveIndex + 1).padStart(2, '0');
+    }
+
+    // Get project card template from store
+    const fullCard = document.getElementById(`project-full-${index}`);
+    if (!fullCard) return;
+
+    // Clone and inject into modal body
+    modalBody.innerHTML = '';
+    const clonedCard = fullCard.cloneNode(true);
+    clonedCard.style.display = 'block';
+    modalBody.appendChild(clonedCard);
+
+    // Re-initialize video handlers inside the cloned card
+    setupVideoEmbeds();
+
+    // Re-apply current language translations to cloned elements
+    if (I18N_DATA[currentLang]) {
+      clonedCard.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (I18N_DATA[currentLang][key] !== undefined) {
+          if (el.getAttribute('data-i18n-html') === 'true') {
+            el.innerHTML = I18N_DATA[currentLang][key];
+          } else {
+            el.textContent = I18N_DATA[currentLang][key];
+          }
+        }
+      });
+    }
+
+    // Show overlay with transition
+    overlay.classList.add('active');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+
+    // Update active state in mini cards
+    miniCards.forEach((c, idx) => {
+      if (idx === index) {
+        c.style.borderColor = 'var(--accent-cyan)';
+      } else {
+        c.style.borderColor = '';
+      }
+    });
+
+    if (prevBtn) prevBtn.disabled = currentActiveIndex === 0;
+    if (nextBtn) nextBtn.disabled = currentActiveIndex === totalCards - 1;
+  }
+
+  function closeProjectModal() {
+    overlay.classList.remove('active');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    modalBody.innerHTML = '';
+  }
+
+  // Click on Mini Cards
+  miniCards.forEach((card, idx) => {
+    card.addEventListener('click', () => {
+      openProjectModal(idx);
+    });
+
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openProjectModal(idx);
+      }
+    });
+  });
+
+  // Close triggers
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeProjectModal);
+  }
+  if (backdrop) {
+    backdrop.addEventListener('click', closeProjectModal);
+  }
+
+  // Prev / Next Navigation buttons
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      if (overlay.classList.contains('active')) {
+        openProjectModal(currentActiveIndex - 1);
+      } else {
+        openProjectModal(0);
+      }
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      if (overlay.classList.contains('active')) {
+        openProjectModal(currentActiveIndex + 1);
+      } else {
+        openProjectModal(0);
+      }
+    });
+  }
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (!overlay.classList.contains('active')) return;
+
+    if (e.key === 'Escape') {
+      closeProjectModal();
+    } else if (e.key === 'ArrowLeft' && currentActiveIndex > 0) {
+      openProjectModal(currentActiveIndex - 1);
+    } else if (e.key === 'ArrowRight' && currentActiveIndex < totalCards - 1) {
+      openProjectModal(currentActiveIndex + 1);
+    }
+  });
+}
+
 // Scroll spy for active navigation item
 function setupScrollSpy() {
   const sections = document.querySelectorAll('section[id]');
@@ -509,6 +351,485 @@ function setupScrollSpy() {
   }, { passive: true });
 }
 
+// ==========================================================================
+// ANIMATED PCB CIRCUIT BOARD BACKGROUND (Canvas)
+// Tron Legacy-style cyan-blue glow (#00D9FF) with deep blue traces (#0A2E4D)
+// ==========================================================================
+function setupCircuitBackground() {
+  const canvas = document.getElementById('circuit-bg-canvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d', { alpha: true });
+  if (!ctx) return;
+
+  let width = 0;
+  let height = 0;
+  let dpr = 1;
+  let animationFrameId = null;
+  let lastTime = 0;
+  let isReducedMotion = false;
+
+  // Circuit Data structures
+  let traces = [];
+  let particles = [];
+
+  const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  isReducedMotion = mediaQuery.matches;
+
+  if (mediaQuery.addEventListener) {
+    mediaQuery.addEventListener('change', (e) => {
+      isReducedMotion = e.matches;
+      if (isReducedMotion) {
+        if (animationFrameId) cancelAnimationFrame(animationFrameId);
+        renderStatic();
+      } else {
+        lastTime = performance.now();
+        loop(lastTime);
+      }
+    });
+  }
+
+  function resize() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    width = window.innerWidth;
+    height = window.innerHeight;
+
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.scale(dpr, dpr);
+
+    initCircuitNetwork();
+
+    if (isReducedMotion) {
+      renderStatic();
+    }
+  }
+
+  function initCircuitNetwork() {
+    traces = [];
+    particles = [];
+
+    // Density of channels based on width
+    const isMobile = width < 768;
+    const channelStep = isMobile ? 55 : 68;
+    const numChannels = Math.floor(width / channelStep);
+
+    // Generate PCB traces
+    for (let c = 0; c <= numChannels; c++) {
+      const baseChannelX = c * channelStep + (channelStep * 0.2);
+      const traceType = Math.random();
+
+      if (traceType > 0.12) { // 88% of channels get traces
+        const isBundle = Math.random() < 0.4 && !isMobile;
+        const bundleCount = isBundle ? 2 : 1;
+        const bundleSpacing = 14;
+
+        const startY = Math.random() < 0.35 ? 0 : Math.random() * (height * 0.28);
+        const totalHeight = height - startY;
+
+        // Generate right-angle polyline points (Tron Manhattan geometry)
+        const numBends = 2 + Math.floor(Math.random() * 4); // 2 to 5 right-angle jogs
+        const bendYInterval = totalHeight / (numBends + 1);
+
+        const jogs = [];
+        let currOffset = 0;
+        for (let b = 1; b <= numBends; b++) {
+          const bendY = startY + b * bendYInterval + (Math.random() - 0.5) * (bendYInterval * 0.45);
+          const jogDistance = (Math.random() < 0.5 ? 1 : -1) * (18 + Math.floor(Math.random() * 3) * 18);
+          currOffset += jogDistance;
+          jogs.push({ y: bendY, offset: currOffset });
+        }
+        const endY = startY + totalHeight + 40;
+
+        for (let bIdx = 0; bIdx < bundleCount; bIdx++) {
+          const offsetX = bIdx * bundleSpacing;
+          const points = [];
+
+          let currX = baseChannelX + offsetX;
+          let currY = startY;
+
+          points.push({ x: currX, y: currY });
+
+          for (let j = 0; j < jogs.length; j++) {
+            const jog = jogs[j];
+            // Vertical segment down to bend Y
+            points.push({ x: currX, y: jog.y });
+            // Horizontal 90-degree step
+            currX = baseChannelX + offsetX + jog.offset;
+            points.push({ x: currX, y: jog.y });
+            currY = jog.y;
+          }
+
+          // Final segment down to end pad
+          points.push({ x: currX, y: endY });
+
+          // Compute segment lengths
+          let totalLen = 0;
+          const segments = [];
+          for (let p = 0; p < points.length - 1; p++) {
+            const p1 = points[p];
+            const p2 = points[p + 1];
+            const len = Math.hypot(p2.x - p1.x, p2.y - p1.y);
+            segments.push({
+              p1,
+              p2,
+              len,
+              startDist: totalLen
+            });
+            totalLen += len;
+          }
+
+          // Tron Legacy energy pulses: continuous traveling light trails
+          const numPulses = 1 + (Math.random() < 0.55 ? 1 : 0);
+          const pulses = [];
+          for (let i = 0; i < numPulses; i++) {
+            const pulseTrailLength = 55 + Math.random() * 65;
+            pulses.push({
+              dist: (i * (totalLen / numPulses)) + Math.random() * 50, // Staggered starting points & timing
+              speed: 40 + Math.random() * 45, // Tron energy trail speed
+              length: pulseTrailLength,
+              alpha: 0.85 + Math.random() * 0.15,
+              width: 2.0 + Math.random() * 0.8,
+              delay: Math.random() * 2.0, // Asynchronous start delay
+              cooldown: 0
+            });
+          }
+
+          traces.push({
+            points,
+            segments,
+            totalLen,
+            pulses,
+            hasTerminalPad: Math.random() < 0.85,
+            padRadius: 3.8 + Math.random() * 1.5,
+            lineWidth: 1.2 + (Math.random() < 0.3 ? 0.6 : 0),
+            colorAlpha: 0.45 + Math.random() * 0.25
+          });
+        }
+      }
+    }
+
+    // Secondary horizontal cross-bus traces
+    const numCross = isMobile ? 4 : 10;
+    for (let i = 0; i < numCross; i++) {
+      const y = Math.random() * height;
+      const startX = Math.random() * (width * 0.65);
+      const len = 70 + Math.random() * 160;
+      const points = [
+        { x: startX, y: y },
+        { x: startX + len, y: y }
+      ];
+      const segments = [{
+        p1: points[0],
+        p2: points[1],
+        len: len,
+        startDist: 0
+      }];
+      traces.push({
+        points,
+        segments,
+        totalLen: len,
+        pulses: [{
+          dist: Math.random() * len,
+          speed: 30 + Math.random() * 35,
+          length: 45,
+          alpha: 0.8,
+          width: 1.8,
+          delay: Math.random() * 1.5,
+          cooldown: 0
+        }],
+        hasTerminalPad: true,
+        padRadius: 3.5,
+        lineWidth: 1.0,
+        colorAlpha: 0.4
+      });
+    }
+
+    // Ambient floating Tron micro-particles (ion drift)
+    const particleCount = isMobile ? 16 : 28;
+    for (let p = 0; p < particleCount; p++) {
+      particles.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        radius: 1.0 + Math.random() * 2.2,
+        speedY: 0.18 + Math.random() * 0.38,
+        speedX: (Math.random() - 0.5) * 0.15,
+        phase: Math.random() * Math.PI * 2,
+        alpha: 0.25 + Math.random() * 0.55,
+        pulseSpeed: 0.02 + Math.random() * 0.03
+      });
+    }
+  }
+
+  function getPointAlongPolyline(segments, totalLen, dist) {
+    if (dist <= 0) return segments[0].p1;
+    if (dist >= totalLen) return segments[segments.length - 1].p2;
+
+    for (let i = 0; i < segments.length; i++) {
+      const seg = segments[i];
+      if (dist <= seg.startDist + seg.len) {
+        const segDist = dist - seg.startDist;
+        const ratio = seg.len === 0 ? 0 : segDist / seg.len;
+        return {
+          x: seg.p1.x + (seg.p2.x - seg.p1.x) * ratio,
+          y: seg.p1.y + (seg.p2.y - seg.p1.y) * ratio
+        };
+      }
+    }
+    return segments[segments.length - 1].p2;
+  }
+
+  // Draw smooth polyline segment between distance d1 and d2
+  function drawSubPolyline(ctx, segments, totalLen, dStart, dEnd) {
+    if (dStart >= dEnd || dEnd <= 0 || dStart >= totalLen) return;
+
+    const clampedStart = Math.max(0, dStart);
+    const clampedEnd = Math.min(totalLen, dEnd);
+
+    ctx.beginPath();
+    let started = false;
+
+    for (let i = 0; i < segments.length; i++) {
+      const seg = segments[i];
+      const segStartDist = seg.startDist;
+      const segEndDist = seg.startDist + seg.len;
+
+      // Check if current segment intersects [clampedStart, clampedEnd]
+      if (segEndDist >= clampedStart && segStartDist <= clampedEnd) {
+        const localStart = Math.max(0, clampedStart - segStartDist);
+        const localEnd = Math.min(seg.len, clampedEnd - segStartDist);
+
+        const r1 = seg.len === 0 ? 0 : localStart / seg.len;
+        const r2 = seg.len === 0 ? 0 : localEnd / seg.len;
+
+        const pStart = {
+          x: seg.p1.x + (seg.p2.x - seg.p1.x) * r1,
+          y: seg.p1.y + (seg.p2.y - seg.p1.y) * r1
+        };
+        const pEnd = {
+          x: seg.p1.x + (seg.p2.x - seg.p1.x) * r2,
+          y: seg.p1.y + (seg.p2.y - seg.p1.y) * r2
+        };
+
+        if (!started) {
+          ctx.moveTo(pStart.x, pStart.y);
+          started = true;
+        }
+        ctx.lineTo(pEnd.x, pEnd.y);
+      }
+    }
+
+    ctx.stroke();
+  }
+
+  function drawCircuitLayer(dt, isAnimating) {
+    ctx.clearRect(0, 0, width, height);
+
+    // 1. Draw Unlit Base Traces (#0A2E4D deep blue)
+    ctx.lineCap = 'square';
+    ctx.lineJoin = 'miter';
+
+    for (let i = 0; i < traces.length; i++) {
+      const trace = traces[i];
+      const pts = trace.points;
+      if (pts.length < 2) continue;
+
+      ctx.beginPath();
+      ctx.moveTo(pts[0].x, pts[0].y);
+      for (let p = 1; p < pts.length; p++) {
+        ctx.lineTo(pts[p].x, pts[p].y);
+      }
+      // Deep blue base trace line (#0A2E4D with subtle glow alpha)
+      ctx.strokeStyle = `rgba(10, 46, 77, ${trace.colorAlpha})`;
+      ctx.lineWidth = trace.lineWidth;
+      ctx.stroke();
+
+      // Draw junction node pads & solder terminals in deep/mid blue
+      for (let p = 0; p < pts.length; p++) {
+        const pt = pts[p];
+        const isEnd = (p === 0 || p === pts.length - 1);
+        if (isEnd && trace.hasTerminalPad) {
+          // Terminal Pad (Outer Ring + Core)
+          ctx.beginPath();
+          ctx.arc(pt.x, pt.y, trace.padRadius, 0, Math.PI * 2);
+          ctx.strokeStyle = 'rgba(10, 68, 115, 0.85)';
+          ctx.lineWidth = 1.2;
+          ctx.stroke();
+
+          ctx.beginPath();
+          ctx.arc(pt.x, pt.y, trace.padRadius * 0.45, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(0, 217, 255, 0.4)';
+          ctx.fill();
+        } else if (!isEnd && Math.random() < 0.18) {
+          // Small Via Node
+          ctx.beginPath();
+          ctx.arc(pt.x, pt.y, 1.8, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(10, 68, 115, 0.7)';
+          ctx.fill();
+        }
+      }
+    }
+
+    // If static only, render static glowing nodes and stop
+    if (!isAnimating) {
+      for (let i = 0; i < traces.length; i += 2) {
+        const trace = traces[i];
+        if (trace.points.length > 0) {
+          const pt = trace.points[0];
+          ctx.beginPath();
+          ctx.arc(pt.x, pt.y, 2.5, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(0, 217, 255, 0.6)';
+          ctx.fill();
+        }
+      }
+      return;
+    }
+
+    // 2. Draw Tron Legacy Energy Pulses & Light Trails (#00D9FF Cyan-Blue)
+    ctx.shadowColor = '#00D9FF';
+    ctx.shadowBlur = 10;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'miter';
+
+    for (let i = 0; i < traces.length; i++) {
+      const trace = traces[i];
+      for (let p = 0; p < trace.pulses.length; p++) {
+        const pulse = trace.pulses[p];
+
+        if (pulse.delay > 0) {
+          pulse.delay -= dt;
+          continue;
+        }
+
+        // Advance pulse distance along trace geometry
+        pulse.dist += pulse.speed * dt;
+
+        // When pulse finishes its track, fade out and re-arm with asynchronous delay
+        if (pulse.dist - pulse.length > trace.totalLen) {
+          pulse.dist = 0;
+          pulse.delay = Math.random() * 2.5; // Random pause before next energy flow
+          pulse.speed = 35 + Math.random() * 45; // Vary speed on next run
+          continue;
+        }
+
+        const headDist = pulse.dist;
+        const tailDist = Math.max(0, pulse.dist - pulse.length);
+
+        if (headDist <= 0 || tailDist >= trace.totalLen) continue;
+
+        // Calculate opacity fade as pulse reaches start/end of path
+        let opacityMultiplier = 1.0;
+        if (headDist < 40) {
+          opacityMultiplier = Math.max(0.1, headDist / 40);
+        } else if (headDist > trace.totalLen - 40) {
+          opacityMultiplier = Math.max(0.1, (trace.totalLen - headDist) / 40);
+        }
+
+        // Draw multiple gradient segments for light trail fading effect
+        const numTrailSteps = 3;
+        const stepLen = pulse.length / numTrailSteps;
+
+        for (let s = 0; s < numTrailSteps; s++) {
+          const sStart = Math.max(0, pulse.dist - (numTrailSteps - s) * stepLen);
+          const sEnd = Math.max(0, pulse.dist - (numTrailSteps - s - 1) * stepLen);
+          if (sStart >= sEnd) continue;
+
+          const stepAlpha = (0.2 + (s + 1) * 0.25) * pulse.alpha * opacityMultiplier;
+          ctx.strokeStyle = `rgba(0, 217, 255, ${stepAlpha})`;
+          ctx.lineWidth = pulse.width * (0.65 + s * 0.15);
+
+          drawSubPolyline(ctx, trace.segments, trace.totalLen, sStart, sEnd);
+        }
+
+        // Bright energy head along right-angle path
+        const clampedHeadDist = Math.min(headDist, trace.totalLen);
+        const headPt = getPointAlongPolyline(trace.segments, trace.totalLen, clampedHeadDist);
+
+        ctx.beginPath();
+        ctx.arc(headPt.x, headPt.y, pulse.width + 1.2, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${0.9 * opacityMultiplier})`;
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(headPt.x, headPt.y, pulse.width + 3.0, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(0, 217, 255, ${0.45 * opacityMultiplier})`;
+        ctx.fill();
+      }
+    }
+
+    ctx.shadowBlur = 0; // Reset shadow for performance
+
+    // 3. Draw Floating Micro-Particles (Soft Ambient Ion Drift)
+    for (let i = 0; i < particles.length; i++) {
+      const part = particles[i];
+      part.y -= part.speedY;
+      part.phase += part.pulseSpeed;
+      part.x += Math.sin(part.phase) * part.speedX;
+
+      if (part.y < -10) {
+        part.y = height + 10;
+        part.x = Math.random() * width;
+      }
+      if (part.x < -10) part.x = width + 10;
+      if (part.x > width + 10) part.x = -10;
+
+      const currentAlpha = part.alpha * (0.5 + 0.5 * Math.sin(part.phase));
+      ctx.beginPath();
+      ctx.arc(part.x, part.y, part.radius, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(0, 217, 255, ${currentAlpha})`;
+      ctx.fill();
+    }
+  }
+
+  function renderStatic() {
+    drawCircuitLayer(0, false);
+  }
+
+  function loop(currentTime) {
+    if (isReducedMotion) {
+      renderStatic();
+      return;
+    }
+
+    if (!lastTime) lastTime = currentTime;
+    const dt = Math.min((currentTime - lastTime) / 1000, 0.1); // Clamp dt to prevent jumping
+    lastTime = currentTime;
+
+    if (!document.hidden) {
+      drawCircuitLayer(dt, true);
+    }
+
+    animationFrameId = requestAnimationFrame(loop);
+  }
+
+  // Handle Resize with Debounce
+  let resizeTimeout = null;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      resize();
+    }, 150);
+  }, { passive: true });
+
+  // Handle Visibility change
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden && !isReducedMotion) {
+      lastTime = performance.now();
+    }
+  });
+
+  // Initial setup
+  resize();
+  if (!isReducedMotion) {
+    lastTime = performance.now();
+    animationFrameId = requestAnimationFrame(loop);
+  }
+}
+
 // Initialize on DOM Ready
 document.addEventListener('DOMContentLoaded', () => {
   // Check stored language or default to en
@@ -523,6 +844,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   setLanguage(savedLang);
+  setupCircuitBackground();
+  setupProjectsCarousel();
   setupVideoEmbeds();
   setupCitationCopy();
   setupModals();
@@ -530,3 +853,5 @@ document.addEventListener('DOMContentLoaded', () => {
   setupEmailCopy();
   setupScrollSpy();
 });
+
+})();

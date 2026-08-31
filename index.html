@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rogelio Leonardo Méndez Macías (Roy) · Embedded Computer Vision & Edge AI Engineer</title>
+  <title>Rogelio Leonardo Mendez Macias · Embedded Computer Vision & Edge AI Engineer</title>
 
   <!-- SEO & Social Meta Tags -->
-  <meta name="description" content="Rogelio Leonardo Méndez Macías (Roy) — Embedded Computer Vision & Edge AI Engineer. INT8 Quantization & NPU Deployment (Hailo-8, IMX500) · YOLOv8 · PyTorch · ONNX · ADAS & Autonomous Systems. Published Author (Springer LNCS).">
-  <meta name="author" content="Rogelio Leonardo Méndez Macías">
+  <meta name="description" content="Rogelio Leonardo Mendez Macias — Embedded Computer Vision & Edge AI Engineer. INT8 Quantization & NPU Deployment (Hailo-8, IMX500) · YOLOv8 · PyTorch · ONNX · ADAS & Autonomous Systems. Published Author (Springer LNCS).">
+  <meta name="author" content="Rogelio Leonardo Mendez Macias">
   <meta name="keywords" content="Edge AI, Computer Vision, Embedded Systems, Hailo-8, Sony IMX500, INT8 Quantization, YOLOv8, PyTorch, ADAS, Autonomous Systems, Springer LNCS">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Rogelio Leonardo Méndez Macías (Roy) · Embedded Computer Vision & Edge AI Engineer">
+  <meta property="og:title" content="Rogelio Leonardo Mendez Macias · Embedded Computer Vision & Edge AI Engineer">
   <meta property="og:description" content="INT8 Quantization & NPU Deployment (Hailo-8, IMX500) · YOLOv8 · PyTorch · ONNX · ADAS & Autonomous Systems. Published Author (Springer LNCS), 1st Place National Hackathon (IBM-judged).">
 
   <!-- Google Fonts: DM Sans & Space Mono -->
@@ -24,12 +24,15 @@
 </head>
 <body data-page="home">
 
+  <!-- BACKGROUND ANIMATED CIRCUIT TRACES (Canvas) -->
+  <canvas id="circuit-bg-canvas" class="circuit-bg-canvas" aria-hidden="true"></canvas>
+
   <!-- SITE HEADER / NAVIGATION -->
   <header class="site-header" id="site-header">
     <div class="nav-container">
       <a href="#hero" class="nav-brand" id="nav-brand">
         <span class="brand-dot"></span>
-        <span>Roy Méndez</span>
+        <span>Rogelio Mendez</span>
         <span class="brand-alias">[NPU: ACTIVE]</span>
       </a>
 
@@ -78,8 +81,7 @@
 
             <div class="hero-title-group">
               <h1>
-                <span data-i18n="hero_title">Rogelio Leonardo Méndez Macías</span>
-                <span class="hero-alias" data-i18n="hero_alias">(Roy)</span>
+                <span data-i18n="hero_title">Rogelio Leonardo Mendez Macias</span>
               </h1>
               <div class="hero-subtitle" data-i18n="hero_subtitle">
                 Embedded Computer Vision & Edge AI Engineer
@@ -178,9 +180,27 @@
         </div>
 
         <div class="about-card" id="about-card">
-          <p class="about-text" data-i18n="about_p1">
-            Electronics Engineering student at UAM Azcapotzalco (graduating Dec 2026), specializing in embedded computer vision and edge AI for real-time perception systems. My research on on-device vehicle perception was peer-reviewed and published in Springer LNCS at MCPR 2026, and I recently won 1st place in a national AI hackathon judged by IBM. My background in control theory and queueing theory shapes how I design real-time embedded systems, not just how I train models. Currently a finalist at Falling Walls Lab, competing to represent Mexico.
-          </p>
+          <div class="about-content-layout">
+            <div class="about-photo-wrapper">
+              <div class="about-photo-frame">
+                <img 
+                  src="/assets/images/roy_profile.jpg" 
+                  alt="Rogelio Leonardo Mendez Macias - Embedded Computer Vision & Edge AI Engineer" 
+                  class="about-photo-img" 
+                  referrerpolicy="no-referrer"
+                />
+                <div class="about-photo-status" title="NPU System: Active">
+                  <span class="brand-dot"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-bio-wrapper">
+              <p class="about-text" data-i18n="about_p1">
+                Electronics Engineering student at UAM Azcapotzalco (graduating Dec 2026), specializing in embedded computer vision and edge AI for real-time perception systems. My research on on-device vehicle perception was peer-reviewed and published in Springer LNCS at MCPR 2026, and I recently won 1st place in a national AI hackathon judged by IBM. My background in control theory and queueing theory shapes how I design real-time embedded systems, not just how I train models. Currently a finalist at Falling Walls Lab, competing to represent Mexico.
+              </p>
+            </div>
+          </div>
 
           <div class="about-highlights">
             <div class="about-highlight-item">
@@ -287,15 +307,118 @@
     <!-- 4. FEATURED PROJECTS SECTION -->
     <section class="section" id="projects">
       <div class="container">
-        <div class="section-head">
-          <div class="section-label" data-i18n="sec_projects_label">APPLIED RESEARCH & EMBEDDED DEPLOYMENTS</div>
-          <h2 class="section-title" data-i18n="sec_projects_title">Featured Projects</h2>
+        <div class="section-head projects-section-head">
+          <div>
+            <div class="section-label" data-i18n="sec_projects_label">APPLIED RESEARCH & EMBEDDED DEPLOYMENTS</div>
+            <h2 class="section-title" data-i18n="sec_projects_title">Featured Projects</h2>
+          </div>
+          <div class="carousel-nav-controls" id="projects-carousel-controls" aria-label="Project carousel navigation">
+            <button class="carousel-nav-btn prev" id="carousel-prev-btn" aria-label="Previous project">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <div class="carousel-counter" id="carousel-counter">
+              <span id="carousel-current-index">01</span> / <span id="carousel-total-count">04</span>
+            </div>
+            <button class="carousel-nav-btn next" id="carousel-next-btn" aria-label="Next project">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
         </div>
 
-        <div class="projects-list" id="projects-list">
+        <div class="projects-carousel-wrapper" id="projects-carousel-wrapper">
+          <div class="projects-card-grid" id="projects-list">
 
-          <!-- PROJECT 1: Cognitive ADAS System (with Embedded YouTube Video) -->
-          <article class="project-card" id="project-1">
+          <!-- PROJECT 1: Cognitive ADAS System -->
+          <div class="project-mini-card" id="project-mini-0" data-project-index="0" role="button" tabindex="0" aria-label="View Project: Cognitive ADAS System">
+            <div class="mini-card-badge" data-i18n="mini_p1_badge">PROJECT 01 // THESIS & SPRINGER</div>
+            <h3 class="mini-card-title" data-i18n="mini_p1_title">Cognitive ADAS System</h3>
+            <p class="mini-card-sub" data-i18n="mini_p1_sub">Hailo-8 NPU · Distributed Perception · OCR & LLM</p>
+            <div class="mini-card-tags">
+              <span class="mini-tag">Hailo-8 NPU</span>
+              <span class="mini-tag">INT8</span>
+              <span class="mini-tag">MQTT</span>
+              <span class="mini-tag video-tag">▶ Video Demo</span>
+            </div>
+            <div class="mini-card-footer">
+              <span class="mini-card-cta" data-i18n="mini_cta_explore">Explore Project &amp; Video</span>
+              <span class="mini-card-arrow">→</span>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: FloodSense -->
+          <div class="project-mini-card" id="project-mini-1" data-project-index="1" role="button" tabindex="0" aria-label="View Project: FloodSense">
+            <div class="mini-card-badge" data-i18n="mini_p2_badge">PROJECT 02 // 1ST PLACE IBM HACKATHON</div>
+            <h3 class="mini-card-title">FloodSense</h3>
+            <p class="mini-card-sub" data-i18n="mini_p2_sub">XGBoost & IBM watsonx / Granite · Real-time Hydrology</p>
+            <div class="mini-card-tags">
+              <span class="mini-tag">XGBoost</span>
+              <span class="mini-tag">watsonx</span>
+              <span class="mini-tag">Granite</span>
+              <span class="mini-tag live-tag">● Live Demo</span>
+            </div>
+            <div class="mini-card-footer">
+              <span class="mini-card-cta" data-i18n="mini_cta_live">Explore Project &amp; Demo</span>
+              <span class="mini-card-arrow">→</span>
+            </div>
+          </div>
+
+          <!-- PROJECT 3: Road Risk Intelligence -->
+          <div class="project-mini-card" id="project-mini-2" data-project-index="2" role="button" tabindex="0" aria-label="View Project: AI Road Risk Intelligence">
+            <div class="mini-card-badge" data-i18n="mini_p3_badge">PROJECT 03 // SAMSUNG INNOVATION CAMPUS</div>
+            <h3 class="mini-card-title" data-i18n="mini_p3_title">AI Road Risk Intelligence</h3>
+            <p class="mini-card-sub" data-i18n="mini_p3_sub">RiskLSTM & YOLOv8 · BDD100K / BDDA · Temporal Modeling</p>
+            <div class="mini-card-tags">
+              <span class="mini-tag">YOLOv8n</span>
+              <span class="mini-tag">RiskLSTM</span>
+              <span class="mini-tag">PyTorch</span>
+              <span class="mini-tag video-tag">▶ Video Demo</span>
+            </div>
+            <div class="mini-card-footer">
+              <span class="mini-card-cta" data-i18n="mini_cta_explore">Explore Project &amp; Video</span>
+              <span class="mini-card-arrow">→</span>
+            </div>
+          </div>
+
+          <!-- PROJECT 4: IoT Plant-Care -->
+          <div class="project-mini-card" id="project-mini-3" data-project-index="3" role="button" tabindex="0" aria-label="View Project: IoT Plant-Care System">
+            <div class="mini-card-badge" data-i18n="mini_p4_badge">PROJECT 04 // SAMSUNG INNOVATION 2024</div>
+            <h3 class="mini-card-title" data-i18n="mini_p4_title">IoT Plant-Care System</h3>
+            <p class="mini-card-sub" data-i18n="mini_p4_sub">Dual-MCU & Telemetry · Horticulture Automation</p>
+            <div class="mini-card-tags">
+              <span class="mini-tag">IoT Sensors</span>
+              <span class="mini-tag">Microcontrollers</span>
+              <span class="mini-tag">Telemetry</span>
+              <span class="mini-tag video-tag">▶ Video Demo</span>
+            </div>
+            <div class="mini-card-footer">
+              <span class="mini-card-cta" data-i18n="mini_cta_explore">Explore Project &amp; Video</span>
+              <span class="mini-card-arrow">→</span>
+            </div>
+          </div>
+
+          </div> <!-- /.projects-card-grid -->
+        </div> <!-- /.projects-carousel-wrapper -->
+
+        <!-- FULL DETAIL MODAL OVERLAY (Highlights selected project and blurs background) -->
+        <div class="project-detail-overlay" id="project-detail-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+          <div class="project-detail-backdrop" id="project-detail-backdrop"></div>
+          <div class="project-detail-container">
+            <button class="project-detail-close-btn" id="project-detail-close-btn" aria-label="Close Project View">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+              <span>ESC / Close</span>
+            </button>
+
+            <!-- Active Project Article Container -->
+            <div id="project-modal-body" class="project-modal-body">
+              <!-- Dynamically populated or toggled with full project articles -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Hidden store of full project articles -->
+        <div id="project-full-store" style="display: none;">
+          <!-- PROJECT 1: Cognitive ADAS System -->
+          <article class="project-card full-detail-card" id="project-full-0">
             <div class="project-card-layout with-media">
               <div class="project-details">
                 <div class="project-num-badge">
@@ -358,7 +481,7 @@
           </article>
 
           <!-- PROJECT 2: FloodSense -->
-          <article class="project-card" id="project-2">
+          <article class="project-card full-detail-card" id="project-full-1">
             <div class="project-card-layout">
               <div class="project-details">
                 <div class="project-num-badge">
@@ -390,17 +513,17 @@
                 </div>
 
                 <div class="project-actions">
-                  <a href="https://floodsense.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-project-link primary-action" id="p2-live-link">
+                  <a href="https://floodsensetec.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-project-link primary-action" id="p2-live-link">
                     <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-                    <span data-i18n="btn_live_demo">Live Demo (floodsense.vercel.app)</span>
+                    <span data-i18n="btn_live_demo">Live Demo</span>
                   </a>
                 </div>
               </div>
             </div>
           </article>
 
-          <!-- PROJECT 3: AI-Powered Road Risk Intelligence (with Embedded Video & GitHub) -->
-          <article class="project-card" id="project-3">
+          <!-- PROJECT 3: AI-Powered Road Risk Intelligence -->
+          <article class="project-card full-detail-card" id="project-full-2">
             <div class="project-card-layout with-media">
               <div class="project-details">
                 <div class="project-num-badge">
@@ -436,7 +559,7 @@
                 <div class="project-actions">
                   <a href="https://github.com/Rogelio756/Equipo8-Grupo8-SIC-2025-" target="_blank" rel="noopener noreferrer" class="btn-project-link primary-action" id="p3-gh-link">
                     <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                    <span data-i18n="btn_view_github">GitHub (SIC-2025)</span>
+                    <span data-i18n="btn_view_github">View on GitHub</span>
                   </a>
                   <a href="https://youtu.be/okWomtA6sG8" target="_blank" rel="noopener noreferrer" class="btn-project-link" id="p3-yt-link">
                     <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
@@ -461,8 +584,8 @@
             </div>
           </article>
 
-          <!-- PROJECT 4: IoT Plant-Care System for Horticulture (with Embedded Video) -->
-          <article class="project-card" id="project-4">
+          <!-- PROJECT 4: IoT Plant-Care System for Horticulture -->
+          <article class="project-card full-detail-card" id="project-full-3">
             <div class="project-card-layout with-media">
               <div class="project-details">
                 <div class="project-num-badge">
@@ -497,7 +620,7 @@
                 <div class="project-actions">
                   <a href="https://youtu.be/k8NVMMZ8zes" target="_blank" rel="noopener noreferrer" class="btn-project-link primary-action" id="p4-yt-link">
                     <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                    <span data-i18n="btn_watch_video">Watch Video (YouTube)</span>
+                    <span data-i18n="btn_watch_video">Watch Video</span>
                   </a>
                 </div>
               </div>
@@ -517,8 +640,8 @@
               </div>
             </div>
           </article>
-
         </div>
+
       </div>
     </section>
 
@@ -651,7 +774,7 @@
     <section class="section" id="education">
       <div class="container">
         <div class="section-head">
-          <div class="section-label" data-i18n="sec_education_label">ACADEMIC BACKGROUND // PROGRAM</div>
+          <div class="section-label" data-i18n="sec_education_label">ACADEMIC BACKGROUND // PROGRAMS</div>
           <h2 class="section-title" data-i18n="sec_education_title">Education</h2>
         </div>
 
@@ -747,7 +870,7 @@
         </div>
 
         <footer class="site-footer">
-          <p>© 2026 Rogelio Leonardo Méndez Macías · Embedded Computer Vision & Edge AI Engineer</p>
+          <p>© 2026 Rogelio Leonardo Mendez Macias · Embedded Computer Vision & Edge AI Engineer</p>
         </footer>
       </div>
     </section>
@@ -761,7 +884,7 @@
       <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); margin-bottom: 6px;">[RESUME DOWNLOAD]</div>
       <h3 id="modal-title" style="font-size: 1.3rem; margin-bottom: 8px; color: #FFFFFF;" data-i18n="cv_modal_title">Curriculum Vitae (PDF)</h3>
       <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 24px; line-height: 1.6;" data-i18n="cv_modal_desc">
-        Rogelio Leonardo Méndez Macías — Embedded Computer Vision & Edge AI Engineer.
+        Rogelio Leonardo Mendez Macias — Embedded Computer Vision & Edge AI Engineer.
       </p>
 
       <div style="display: flex; flex-direction: column; gap: 12px;">
@@ -778,6 +901,7 @@
   </div>
 
   <!-- Scripts -->
+  <script src="js/content.js"></script>
   <script src="js/portfolio.js"></script>
 </body>
 </html>

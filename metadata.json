@@ -1,6 +1,6 @@
 {
   "name": "Rogelio Mendez Portfolio",
-  "description": "Portfolio of Rogelio Leonardo Mendez Macias (Roy), Embedded Computer Vision & Edge AI Engineer showcasing edge perception systems, Springer LNCS research, and embedded deep learning projects.",
+  "description": "Portfolio of Rogelio Leonardo Mendez Macias, Embedded Computer Vision & Edge AI Engineer showcasing edge perception systems, Springer LNCS research, and embedded deep learning projects.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
