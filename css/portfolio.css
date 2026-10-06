@@ -1361,6 +1361,7 @@ img {
 
 .citation-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -1429,6 +1430,17 @@ img {
   color: #FFFFFF;
   display: block;
   margin-bottom: 6px;
+}
+
+.award-link {
+  color: var(--accent-cyan);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.award-link:hover {
+  text-decoration: underline;
 }
 
 /* ==========================================================================

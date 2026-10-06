@@ -82,7 +82,7 @@
     lbl_stack: "Stack & Hardware:",
     lbl_result: "Key Results:",
     lbl_links: "Links & Artifacts:",
-    btn_watch_demo: "Watch MCPR Demo",
+    btn_watch_demo: "Watch Live Demo",
     btn_live_demo: "Live Demo",
     btn_view_github: "View on GitHub",
     btn_watch_pres: "Presentation Video",
@@ -128,12 +128,14 @@
     pub_badge: "SPRINGER LNCS · MCPR 2026",
     pub_note: "Presented at MCPR 2026 (18th Mexican Conference on Pattern Recognition, organized by INAOE), Ciudad Juárez, Chihuahua, June 2026.",
     pub_copy_btn: "Copy Citation",
+    pub_springer_btn: "Read on Springer",
+    pub_talk_btn: "MUTVI 2026 Talk",
     pub_copied_btn: "Copied!",
 
     // Awards Items
     award_1: "<strong>Finalist, Falling Walls Lab (Mexico City)</strong> — competing to represent Mexico, presenting the ADAS project",
     award_2: "<strong>1st Place, Hackathon Concienc.IA 2026</strong> (Young AI Leaders CDMX Hub × Tec de Monterrey CCM, IBM-judged) — FloodSense",
-    award_3: "<strong>MUTVI Recognition</strong> — UAM International Multidisciplinary Colloquium on Information Visualization, oral presentation \"El copiloto que nunca duerme\"",
+    award_3: "<strong>MUTVI Recognition</strong> — UAM International Multidisciplinary Colloquium on Information Visualization, oral presentation \"El copiloto que nunca duerme\" · <a href=\"https://youtu.be/nesc0EuF2kk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"award-link\">Watch talk ↗</a>",
     award_4: "<strong>Presenter, NEO International Congress (2025)</strong> — distributed AI architecture and real-time perception pipelines",
     award_5: "<strong>Presented IoT project in front of Samsung senior executive leadership</strong> — Santander Reto Universitario (2024)",
 
@@ -243,7 +245,7 @@
     lbl_stack: "Stack y Hardware:",
     lbl_result: "Resultados Clave:",
     lbl_links: "Enlaces y Materiales:",
-    btn_watch_demo: "Ver Demo MCPR",
+    btn_watch_demo: "Ver Demo en Vivo",
     btn_live_demo: "Demo en Vivo",
     btn_view_github: "Ver en GitHub",
     btn_watch_pres: "Video de Presentación",
@@ -289,12 +291,14 @@
     pub_badge: "SPRINGER LNCS · MCPR 2026",
     pub_note: "Presentado en MCPR 2026 (18.ª Conferencia Mexicana sobre Reconocimiento de Patrones, organizada por el INAOE), Ciudad Juárez, Chihuahua, junio 2026.",
     pub_copy_btn: "Copiar Cita",
+    pub_springer_btn: "Leer en Springer",
+    pub_talk_btn: "Ponencia MUTVI 2026",
     pub_copied_btn: "¡Copiado!",
 
     // Awards Items
     award_1: "<strong>Finalista, Falling Walls Lab (Ciudad de México)</strong> — compitiendo por representar a México, presentando el proyecto ADAS",
     award_2: "<strong>1.er Lugar, Hackathon Concienc.IA 2026</strong> (Young AI Leaders CDMX Hub × Tec de Monterrey CCM, evaluación IBM) — FloodSense",
-    award_3: "<strong>Reconocimiento MUTVI</strong> — Coloquio Internacional Multidisciplinario de Visualización de Información de la UAM, ponencia oral \"El copiloto que nunca duerme\"",
+    award_3: "<strong>Reconocimiento MUTVI</strong> — Coloquio Internacional Multidisciplinario de Visualización de Información de la UAM, ponencia oral \"El copiloto que nunca duerme\" · <a href=\"https://youtu.be/nesc0EuF2kk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"award-link\">Ver ponencia ↗</a>",
     award_4: "<strong>Ponente, Congreso Internacional NEO (2025)</strong> — arquitectura de IA distribuida y pipelines de percepción en tiempo real",
     award_5: "<strong>Presentación de proyecto IoT ante la alta dirección ejecutiva de Samsung</strong> — Santander Reto Universitario (2024)",
 
