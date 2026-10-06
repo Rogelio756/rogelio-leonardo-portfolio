@@ -118,13 +118,13 @@ body::before {
   height: 100vh;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.24; /* Calibrated within 15-25% range for high legibility */
+  opacity: 0.38; /* High enough to read on low-contrast laptop and phone panels, still behind the text */
   transition: opacity 0.5s ease;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .circuit-bg-canvas {
-    opacity: 0.18;
+    opacity: 0.32;
   }
 }
 

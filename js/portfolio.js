@@ -362,7 +362,7 @@ function setupScrollSpy() {
 
 // ==========================================================================
 // ANIMATED PCB CIRCUIT BOARD BACKGROUND (Canvas)
-// Tron Legacy-style cyan-blue glow (#00D9FF) with deep blue traces (#0A2E4D)
+// Tron Legacy-style cyan-blue glow (#00D9FF) with blue traces (#165C8C)
 // ==========================================================================
 function setupCircuitBackground() {
   const canvas = document.getElementById('circuit-bg-canvas');
@@ -638,7 +638,7 @@ function setupCircuitBackground() {
   function drawCircuitLayer(dt, isAnimating) {
     ctx.clearRect(0, 0, width, height);
 
-    // 1. Draw Unlit Base Traces (#0A2E4D deep blue)
+    // 1. Draw Unlit Base Traces (#165C8C blue)
     ctx.lineCap = 'square';
     ctx.lineJoin = 'miter';
 
@@ -652,8 +652,8 @@ function setupCircuitBackground() {
       for (let p = 1; p < pts.length; p++) {
         ctx.lineTo(pts[p].x, pts[p].y);
       }
-      // Deep blue base trace line (#0A2E4D with subtle glow alpha)
-      ctx.strokeStyle = `rgba(10, 46, 77, ${trace.colorAlpha})`;
+      // Base trace line: bright enough to read on low-contrast laptop/phone screens
+      ctx.strokeStyle = `rgba(22, 92, 140, ${trace.colorAlpha})`;
       ctx.lineWidth = trace.lineWidth;
       ctx.stroke();
 
@@ -665,7 +665,7 @@ function setupCircuitBackground() {
           // Terminal Pad (Outer Ring + Core)
           ctx.beginPath();
           ctx.arc(pt.x, pt.y, trace.padRadius, 0, Math.PI * 2);
-          ctx.strokeStyle = 'rgba(10, 68, 115, 0.85)';
+          ctx.strokeStyle = 'rgba(34, 118, 178, 0.85)';
           ctx.lineWidth = 1.2;
           ctx.stroke();
 
@@ -677,14 +677,21 @@ function setupCircuitBackground() {
           // Small Via Node
           ctx.beginPath();
           ctx.arc(pt.x, pt.y, 1.8, 0, Math.PI * 2);
-          ctx.fillStyle = 'rgba(10, 68, 115, 0.7)';
+          ctx.fillStyle = 'rgba(34, 118, 178, 0.7)';
           ctx.fill();
         }
       }
     }
 
-    // If static only, render static glowing nodes and stop
+    // If static only, render frozen energized segments plus glowing nodes and stop
     if (!isAnimating) {
+      ctx.lineCap = 'round';
+      ctx.strokeStyle = 'rgba(0, 217, 255, 0.55)';
+      for (let i = 0; i < traces.length; i += 3) {
+        const trace = traces[i];
+        ctx.lineWidth = 1.8;
+        drawSubPolyline(ctx, trace.segments, trace.totalLen, trace.totalLen * 0.2, trace.totalLen * 0.42);
+      }
       for (let i = 0; i < traces.length; i += 2) {
         const trace = traces[i];
         if (trace.points.length > 0) {
