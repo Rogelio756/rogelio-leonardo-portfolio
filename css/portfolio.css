@@ -1051,11 +1051,7 @@ img {
   gap: 0;
 }
 
-@media (min-width: 900px) {
-  .project-card-layout.with-media {
-    grid-template-columns: 1.15fr 0.85fr;
-  }
-}
+/* Video sits below the text, full width, so it reads larger */
 
 .project-details {
   padding: 32px;
@@ -1175,18 +1171,16 @@ img {
 /* Media / Video Embed Section */
 .project-media {
   background: var(--bg-surface-1);
-  border-left: 1px solid var(--border-subtle);
-  padding: 24px;
+  border-top: 1px solid var(--border-subtle);
+  padding: 24px 32px 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 280px;
 }
 
-@media (max-width: 899px) {
+@media (max-width: 600px) {
   .project-media {
-    border-left: none;
-    border-top: 1px solid var(--border-subtle);
+    padding: 16px;
   }
 }
 
