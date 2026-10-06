@@ -162,9 +162,9 @@
 
     // Modals & Notices
     cv_modal_title: "Curriculum Vitae (PDF)",
-    cv_modal_desc: "Rogelio Leonardo Mendez Macias — Embedded Computer Vision & Edge AI Engineer.",
-    cv_modal_btn_en: "Download English CV",
-    cv_modal_btn_es: "Download Spanish CV",
+    cv_modal_desc: "Rogelio Leonardo Mendez Macias — Embedded Computer Vision & Edge AI Engineer. English version.",
+    cv_modal_btn_view: "View CV (PDF)",
+    cv_modal_btn_download: "Download PDF",
     cv_modal_preview: "Preview PDF in New Window",
     toast_copied: "Copied to clipboard!",
 
@@ -371,9 +371,9 @@
 
     // Modals & Notices
     cv_modal_title: "Curriculum Vitae (PDF)",
-    cv_modal_desc: "Rogelio Leonardo Mendez Macias — Ingeniero en Visión Computacional Embebida y Edge AI.",
-    cv_modal_btn_en: "Descargar CV en Inglés",
-    cv_modal_btn_es: "Descargar CV en Español",
+    cv_modal_desc: "Rogelio Leonardo Mendez Macias — Ingeniero en Visión Computacional Embebida y Edge AI. Versión en inglés.",
+    cv_modal_btn_view: "Ver CV (PDF)",
+    cv_modal_btn_download: "Descargar PDF",
     cv_modal_preview: "Ver PDF en Nueva Pestaña",
     toast_copied: "¡Copiado al portapapeles!",
 
