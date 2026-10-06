@@ -385,16 +385,14 @@ function setupCircuitBackground() {
   const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
   isReducedMotion = mediaQuery.matches;
 
+  // Reduced motion keeps the effect alive but calmer: slower pulses, half of them, no flicker.
+  // Many Windows laptops and phones report this preference by default (battery saver,
+  // "Animation effects" off), so freezing the canvas would hide the effect for most visitors.
+  const REDUCED_SPEED = 0.4;
+
   if (mediaQuery.addEventListener) {
     mediaQuery.addEventListener('change', (e) => {
       isReducedMotion = e.matches;
-      if (isReducedMotion) {
-        if (animationFrameId) cancelAnimationFrame(animationFrameId);
-        renderStatic();
-      } else {
-        lastTime = performance.now();
-        loop(lastTime);
-      }
     });
   }
 
@@ -412,10 +410,6 @@ function setupCircuitBackground() {
     ctx.scale(dpr, dpr);
 
     initCircuitNetwork();
-
-    if (isReducedMotion) {
-      renderStatic();
-    }
   }
 
   function initCircuitNetwork() {
@@ -635,7 +629,7 @@ function setupCircuitBackground() {
     ctx.stroke();
   }
 
-  function drawCircuitLayer(dt, isAnimating) {
+  function drawCircuitLayer(dt) {
     ctx.clearRect(0, 0, width, height);
 
     // 1. Draw Unlit Base Traces (#165C8C blue)
@@ -673,7 +667,7 @@ function setupCircuitBackground() {
           ctx.arc(pt.x, pt.y, trace.padRadius * 0.45, 0, Math.PI * 2);
           ctx.fillStyle = 'rgba(0, 217, 255, 0.4)';
           ctx.fill();
-        } else if (!isEnd && Math.random() < 0.18) {
+        } else if (!isEnd && (isReducedMotion ? (i + p) % 6 === 0 : Math.random() < 0.18)) {
           // Small Via Node
           ctx.beginPath();
           ctx.arc(pt.x, pt.y, 1.8, 0, Math.PI * 2);
@@ -681,28 +675,6 @@ function setupCircuitBackground() {
           ctx.fill();
         }
       }
-    }
-
-    // If static only, render frozen energized segments plus glowing nodes and stop
-    if (!isAnimating) {
-      ctx.lineCap = 'round';
-      ctx.strokeStyle = 'rgba(0, 217, 255, 0.55)';
-      for (let i = 0; i < traces.length; i += 3) {
-        const trace = traces[i];
-        ctx.lineWidth = 1.8;
-        drawSubPolyline(ctx, trace.segments, trace.totalLen, trace.totalLen * 0.2, trace.totalLen * 0.42);
-      }
-      for (let i = 0; i < traces.length; i += 2) {
-        const trace = traces[i];
-        if (trace.points.length > 0) {
-          const pt = trace.points[0];
-          ctx.beginPath();
-          ctx.arc(pt.x, pt.y, 2.5, 0, Math.PI * 2);
-          ctx.fillStyle = 'rgba(0, 217, 255, 0.6)';
-          ctx.fill();
-        }
-      }
-      return;
     }
 
     // 2. Draw Tron Legacy Energy Pulses & Light Trails (#00D9FF Cyan-Blue)
@@ -714,6 +686,7 @@ function setupCircuitBackground() {
     for (let i = 0; i < traces.length; i++) {
       const trace = traces[i];
       for (let p = 0; p < trace.pulses.length; p++) {
+        if (isReducedMotion && (i + p) % 2 === 1) continue;
         const pulse = trace.pulses[p];
 
         if (pulse.delay > 0) {
@@ -782,9 +755,10 @@ function setupCircuitBackground() {
     // 3. Draw Floating Micro-Particles (Soft Ambient Ion Drift)
     for (let i = 0; i < particles.length; i++) {
       const part = particles[i];
-      part.y -= part.speedY;
-      part.phase += part.pulseSpeed;
-      part.x += Math.sin(part.phase) * part.speedX;
+      const drift = isReducedMotion ? REDUCED_SPEED : 1;
+      part.y -= part.speedY * drift;
+      part.phase += part.pulseSpeed * drift;
+      part.x += Math.sin(part.phase) * part.speedX * drift;
 
       if (part.y < -10) {
         part.y = height + 10;
@@ -801,22 +775,14 @@ function setupCircuitBackground() {
     }
   }
 
-  function renderStatic() {
-    drawCircuitLayer(0, false);
-  }
-
   function loop(currentTime) {
-    if (isReducedMotion) {
-      renderStatic();
-      return;
-    }
-
     if (!lastTime) lastTime = currentTime;
-    const dt = Math.min((currentTime - lastTime) / 1000, 0.1); // Clamp dt to prevent jumping
+    let dt = Math.min((currentTime - lastTime) / 1000, 0.1); // Clamp dt to prevent jumping
+    if (isReducedMotion) dt *= REDUCED_SPEED;
     lastTime = currentTime;
 
     if (!document.hidden) {
-      drawCircuitLayer(dt, true);
+      drawCircuitLayer(dt);
     }
 
     animationFrameId = requestAnimationFrame(loop);
@@ -833,17 +799,15 @@ function setupCircuitBackground() {
 
   // Handle Visibility change
   document.addEventListener('visibilitychange', () => {
-    if (!document.hidden && !isReducedMotion) {
+    if (!document.hidden) {
       lastTime = performance.now();
     }
   });
 
   // Initial setup
   resize();
-  if (!isReducedMotion) {
-    lastTime = performance.now();
-    animationFrameId = requestAnimationFrame(loop);
-  }
+  lastTime = performance.now();
+  animationFrameId = requestAnimationFrame(loop);
 }
 
 // Scroll Reveal: fade cards up as they enter the viewport, staggered within each grid
