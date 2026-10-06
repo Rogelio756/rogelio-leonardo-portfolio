@@ -50,12 +50,12 @@
 
       <!-- Action Controls: Language Toggle & Mobile Button -->
       <div class="nav-actions">
-        <div class="lang-toggle" role="group" aria-label="Language Selector" id="lang-switcher">
+        <div class="lang-toggle" role="group" aria-label="Language Selector" data-i18n-aria="aria_lang_selector" id="lang-switcher">
           <button class="lang-btn active" data-lang="en" id="btn-lang-en">EN</button>
           <button class="lang-btn" data-lang="es" id="btn-lang-es">ES</button>
         </div>
 
-        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Menu">
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Menu" data-i18n-aria="aria_toggle_menu">
           <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
           </svg>
@@ -185,11 +185,11 @@
               <div class="about-photo-frame">
                 <img 
                   src="assets/images/roy_profile.jpg" 
-                  alt="Rogelio Leonardo Mendez Macias - Embedded Computer Vision & Edge AI Engineer" 
+                  alt="Rogelio Leonardo Mendez Macias - Embedded Computer Vision & Edge AI Engineer" data-i18n-alt="alt_profile_photo" 
                   class="about-photo-img" 
                   referrerpolicy="no-referrer"
                 />
-                <div class="about-photo-status" title="NPU System: Active">
+                <div class="about-photo-status" title="NPU System: Active" data-i18n-title="title_npu_status">
                   <span class="brand-dot"></span>
                 </div>
               </div>
@@ -243,8 +243,8 @@
               <span class="skill-chip">OpenCV</span>
               <span class="skill-chip">SegFormer</span>
               <span class="skill-chip">ONNX</span>
-              <span class="skill-chip">INT8 Quantization</span>
-              <span class="skill-chip">HEF Compilation</span>
+              <span class="skill-chip" data-i18n="skill_int8">INT8 Quantization</span>
+              <span class="skill-chip" data-i18n="skill_hef">HEF Compilation</span>
               <span class="skill-chip">Hailo-8 NPU</span>
               <span class="skill-chip">Sony IMX500</span>
               <span class="skill-chip">CUDA</span>
@@ -261,7 +261,7 @@
               <span class="skill-chip">Raspberry Pi 5 (Linux)</span>
               <span class="skill-chip">Docker</span>
               <span class="skill-chip">MQTT</span>
-              <span class="skill-chip">REST APIs</span>
+              <span class="skill-chip" data-i18n="skill_rest">REST APIs</span>
               <span class="skill-chip">Frigate NVR</span>
               <span class="skill-chip">Node-RED</span>
               <span class="skill-chip">InfluxDB</span>
@@ -276,9 +276,9 @@
               <h3 class="category-title" data-i18n="cat_3_title">Systems Fundamentals (differentiator)</h3>
             </div>
             <div class="chips-container">
-              <span class="skill-chip">Control Theory (BIBO stability, transfer functions)</span>
-              <span class="skill-chip">Queueing Theory</span>
-              <span class="skill-chip">PID / Ziegler-Nichols tuning</span>
+              <span class="skill-chip" data-i18n="skill_control">Control Theory (BIBO stability, transfer functions)</span>
+              <span class="skill-chip" data-i18n="skill_queueing">Queueing Theory</span>
+              <span class="skill-chip" data-i18n="skill_pid">PID / Ziegler-Nichols tuning</span>
             </div>
           </div>
 
@@ -289,7 +289,7 @@
               <h3 class="category-title" data-i18n="cat_4_title">Languages & Tools</h3>
             </div>
             <div class="chips-container">
-              <span class="skill-chip">Python (Advanced)</span>
+              <span class="skill-chip" data-i18n="skill_python">Python (Advanced)</span>
               <span class="skill-chip">MATLAB</span>
               <span class="skill-chip">NumPy</span>
               <span class="skill-chip">Pandas</span>
@@ -312,14 +312,14 @@
             <div class="section-label" data-i18n="sec_projects_label">APPLIED RESEARCH & EMBEDDED DEPLOYMENTS</div>
             <h2 class="section-title" data-i18n="sec_projects_title">Featured Projects</h2>
           </div>
-          <div class="carousel-nav-controls" id="projects-carousel-controls" aria-label="Project carousel navigation">
-            <button class="carousel-nav-btn prev" id="carousel-prev-btn" aria-label="Previous project">
+          <div class="carousel-nav-controls" id="projects-carousel-controls" aria-label="Project carousel navigation" data-i18n-aria="aria_carousel_nav">
+            <button class="carousel-nav-btn prev" id="carousel-prev-btn" aria-label="Previous project" data-i18n-aria="aria_prev_project">
               <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
             </button>
             <div class="carousel-counter" id="carousel-counter">
               <span id="carousel-current-index">01</span> / <span id="carousel-total-count">04</span>
             </div>
-            <button class="carousel-nav-btn next" id="carousel-next-btn" aria-label="Next project">
+            <button class="carousel-nav-btn next" id="carousel-next-btn" aria-label="Next project" data-i18n-aria="aria_next_project">
               <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </button>
           </div>
@@ -329,7 +329,7 @@
           <div class="projects-card-grid" id="projects-list">
 
           <!-- PROJECT 1: Cognitive ADAS System -->
-          <div class="project-mini-card" id="project-mini-0" data-project-index="0" role="button" tabindex="0" aria-label="View Project: Cognitive ADAS System">
+          <div class="project-mini-card" id="project-mini-0" data-project-index="0" role="button" tabindex="0" aria-label="View Project: Cognitive ADAS System" data-i18n-aria="aria_view_p1">
             <div class="mini-card-badge" data-i18n="mini_p1_badge">PROJECT 01 // THESIS & SPRINGER</div>
             <h3 class="mini-card-title" data-i18n="mini_p1_title">Cognitive ADAS System</h3>
             <p class="mini-card-sub" data-i18n="mini_p1_sub">Hailo-8 NPU · Distributed Perception · OCR & LLM</p>
@@ -337,7 +337,7 @@
               <span class="mini-tag">Hailo-8 NPU</span>
               <span class="mini-tag">INT8</span>
               <span class="mini-tag">MQTT</span>
-              <span class="mini-tag video-tag">▶ Video Demo</span>
+              <span class="mini-tag video-tag" data-i18n="tag_video_demo">▶ Video Demo</span>
             </div>
             <div class="mini-card-footer">
               <span class="mini-card-cta" data-i18n="mini_cta_explore">Explore Project &amp; Video</span>
@@ -346,7 +346,7 @@
           </div>
 
           <!-- PROJECT 2: FloodSense -->
-          <div class="project-mini-card" id="project-mini-1" data-project-index="1" role="button" tabindex="0" aria-label="View Project: FloodSense">
+          <div class="project-mini-card" id="project-mini-1" data-project-index="1" role="button" tabindex="0" aria-label="View Project: FloodSense" data-i18n-aria="aria_view_p2">
             <div class="mini-card-badge" data-i18n="mini_p2_badge">PROJECT 02 // 1ST PLACE IBM HACKATHON</div>
             <h3 class="mini-card-title">FloodSense</h3>
             <p class="mini-card-sub" data-i18n="mini_p2_sub">XGBoost & IBM watsonx / Granite · Real-time Hydrology</p>
@@ -354,7 +354,7 @@
               <span class="mini-tag">XGBoost</span>
               <span class="mini-tag">watsonx</span>
               <span class="mini-tag">Granite</span>
-              <span class="mini-tag live-tag">● Live Demo</span>
+              <span class="mini-tag live-tag" data-i18n="tag_live_demo">● Live Demo</span>
             </div>
             <div class="mini-card-footer">
               <span class="mini-card-cta" data-i18n="mini_cta_live">Explore Project &amp; Demo</span>
@@ -363,7 +363,7 @@
           </div>
 
           <!-- PROJECT 3: Road Risk Intelligence -->
-          <div class="project-mini-card" id="project-mini-2" data-project-index="2" role="button" tabindex="0" aria-label="View Project: AI Road Risk Intelligence">
+          <div class="project-mini-card" id="project-mini-2" data-project-index="2" role="button" tabindex="0" aria-label="View Project: AI Road Risk Intelligence" data-i18n-aria="aria_view_p3">
             <div class="mini-card-badge" data-i18n="mini_p3_badge">PROJECT 03 // SAMSUNG INNOVATION CAMPUS</div>
             <h3 class="mini-card-title" data-i18n="mini_p3_title">AI Road Risk Intelligence</h3>
             <p class="mini-card-sub" data-i18n="mini_p3_sub">RiskLSTM & YOLOv8 · BDD100K / BDDA · Temporal Modeling</p>
@@ -371,7 +371,7 @@
               <span class="mini-tag">YOLOv8n</span>
               <span class="mini-tag">RiskLSTM</span>
               <span class="mini-tag">PyTorch</span>
-              <span class="mini-tag video-tag">▶ Video Demo</span>
+              <span class="mini-tag video-tag" data-i18n="tag_video_demo">▶ Video Demo</span>
             </div>
             <div class="mini-card-footer">
               <span class="mini-card-cta" data-i18n="mini_cta_explore">Explore Project &amp; Video</span>
@@ -380,15 +380,15 @@
           </div>
 
           <!-- PROJECT 4: IoT Plant-Care -->
-          <div class="project-mini-card" id="project-mini-3" data-project-index="3" role="button" tabindex="0" aria-label="View Project: IoT Plant-Care System">
+          <div class="project-mini-card" id="project-mini-3" data-project-index="3" role="button" tabindex="0" aria-label="View Project: IoT Plant-Care System" data-i18n-aria="aria_view_p4">
             <div class="mini-card-badge" data-i18n="mini_p4_badge">PROJECT 04 // SAMSUNG INNOVATION 2024</div>
             <h3 class="mini-card-title" data-i18n="mini_p4_title">IoT Plant-Care System</h3>
             <p class="mini-card-sub" data-i18n="mini_p4_sub">Dual-MCU & Telemetry · Horticulture Automation</p>
             <div class="mini-card-tags">
-              <span class="mini-tag">IoT Sensors</span>
-              <span class="mini-tag">Microcontrollers</span>
-              <span class="mini-tag">Telemetry</span>
-              <span class="mini-tag video-tag">▶ Video Demo</span>
+              <span class="mini-tag" data-i18n="tag_iot_sensors">IoT Sensors</span>
+              <span class="mini-tag" data-i18n="tag_microcontrollers">Microcontrollers</span>
+              <span class="mini-tag" data-i18n="tag_telemetry">Telemetry</span>
+              <span class="mini-tag video-tag" data-i18n="tag_video_demo">▶ Video Demo</span>
             </div>
             <div class="mini-card-footer">
               <span class="mini-card-cta" data-i18n="mini_cta_explore">Explore Project &amp; Video</span>
@@ -403,9 +403,9 @@
         <div class="project-detail-overlay" id="project-detail-overlay" aria-hidden="true" role="dialog" aria-modal="true">
           <div class="project-detail-backdrop" id="project-detail-backdrop"></div>
           <div class="project-detail-container">
-            <button class="project-detail-close-btn" id="project-detail-close-btn" aria-label="Close Project View">
+            <button class="project-detail-close-btn" id="project-detail-close-btn" aria-label="Close Project View" data-i18n-aria="aria_close_project">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
-              <span>ESC / Close</span>
+              <span data-i18n="modal_close_label">ESC / Close</span>
             </button>
 
             <!-- Active Project Article Container -->
@@ -422,7 +422,7 @@
             <div class="project-card-layout with-media">
               <div class="project-details">
                 <div class="project-num-badge">
-                  <span>PROJECT 01 // THESIS & SPRINGER PUBLICATION</span>
+                  <span data-i18n="p1_badge">PROJECT 01 // THESIS & SPRINGER PUBLICATION</span>
                 </div>
                 <h3 class="project-title" data-i18n="p1_title">Cognitive ADAS System (Thesis, UAM Azcapotzalco, 2025-2026)</h3>
 
@@ -437,7 +437,7 @@
                   <span class="project-block-title" data-i18n="lbl_stack">Stack & Hardware:</span>
                   <div class="stack-chips">
                     <span class="stack-chip">Hailo-8 NPU</span>
-                    <span class="stack-chip">INT8 quantization</span>
+                    <span class="stack-chip" data-i18n="skill_int8">INT8 quantization</span>
                     <span class="stack-chip">OCR</span>
                     <span class="stack-chip">LLM</span>
                     <span class="stack-chip">TTS</span>
@@ -458,7 +458,7 @@
                     <span data-i18n="btn_watch_demo">Watch Live Demo</span>
                   </a>
                   <a href="https://doi.org/10.1007/978-3-032-28393-1_22" target="_blank" rel="noopener noreferrer" class="btn-project-link">
-                    <span>Springer LNCS Paper</span>
+                    <span data-i18n="btn_springer_paper">Springer LNCS Paper</span>
                     <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                   </a>
                   <a href="https://github.com/Rogelio756/camaxtli-adas" target="_blank" rel="noopener noreferrer" class="btn-project-link" id="p1-gh-link">
@@ -471,12 +471,12 @@
               <!-- Media Embed with Click-to-Play -->
               <div class="project-media">
                 <div class="video-container" data-video-id="n2k4fdbCWAk" id="video-p1">
-                  <div class="video-thumbnail" tabindex="0" role="button" aria-label="Play CAMAXTLI Live Demo Video">
+                  <div class="video-thumbnail" tabindex="0" role="button" aria-label="Play CAMAXTLI Live Demo Video" data-i18n-aria="aria_play_p1">
                     <div class="video-play-overlay">
                       <div class="play-circle">
                         <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                       </div>
-                      <span class="play-caption">Play Live Demo</span>
+                      <span class="play-caption" data-i18n="play_live_demo">Play Live Demo</span>
                     </div>
                   </div>
                 </div>
@@ -489,7 +489,7 @@
             <div class="project-card-layout">
               <div class="project-details">
                 <div class="project-num-badge">
-                  <span>PROJECT 02 // 1ST PLACE IBM HACKATHON & ADIP INCUBATION</span>
+                  <span data-i18n="p2_badge">PROJECT 02 // 1ST PLACE IBM HACKATHON & ADIP INCUBATION</span>
                 </div>
                 <h3 class="project-title" data-i18n="p2_title">FloodSense</h3>
 
@@ -535,7 +535,7 @@
             <div class="project-card-layout with-media">
               <div class="project-details">
                 <div class="project-num-badge">
-                  <span>PROJECT 03 // SAMSUNG INNOVATION CAMPUS 2025-2026</span>
+                  <span data-i18n="p3_badge">PROJECT 03 // SAMSUNG INNOVATION CAMPUS 2025-2026</span>
                 </div>
                 <h3 class="project-title" data-i18n="p3_title">AI-Powered Road Risk Intelligence (Samsung Innovation Campus, 2025-2026 cohort)</h3>
 
@@ -553,7 +553,7 @@
                     <span class="stack-chip">SegFormer-B0</span>
                     <span class="stack-chip">GCNEncoder</span>
                     <span class="stack-chip">RiskLSTM</span>
-                    <span class="stack-chip">Bayesian Neural Networks / MC Dropout</span>
+                    <span class="stack-chip" data-i18n="stack_bnn">Bayesian Neural Networks / MC Dropout</span>
                   </div>
                 </div>
 
@@ -579,12 +579,12 @@
               <!-- Media Embed with Click-to-Play -->
               <div class="project-media">
                 <div class="video-container" data-video-id="okWomtA6sG8" id="video-p3">
-                  <div class="video-thumbnail" tabindex="0" role="button" aria-label="Play Samsung Innovation Campus Road Risk Video">
+                  <div class="video-thumbnail" tabindex="0" role="button" aria-label="Play Samsung Innovation Campus Road Risk Video" data-i18n-aria="aria_play_p3">
                     <div class="video-play-overlay">
                       <div class="play-circle">
                         <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                       </div>
-                      <span class="play-caption">Play Presentation Video</span>
+                      <span class="play-caption" data-i18n="play_presentation">Play Presentation Video</span>
                     </div>
                   </div>
                 </div>
@@ -597,7 +597,7 @@
             <div class="project-card-layout with-media">
               <div class="project-details">
                 <div class="project-num-badge">
-                  <span>PROJECT 04 // SAMSUNG INNOVATION CAMPUS 2024 & SANTANDER RETO</span>
+                  <span data-i18n="p4_badge">PROJECT 04 // SAMSUNG INNOVATION CAMPUS 2024 & SANTANDER RETO</span>
                 </div>
                 <h3 class="project-title" data-i18n="p4_title">IoT Plant-Care System for Horticulture (Samsung Innovation Campus, 2024 cohort)</h3>
 
@@ -611,10 +611,10 @@
                 <div class="project-block">
                   <span class="project-block-title" data-i18n="lbl_stack">Stack & Hardware:</span>
                   <div class="stack-chips">
-                    <span class="stack-chip">IoT Sensors</span>
-                    <span class="stack-chip">Microcontrollers</span>
-                    <span class="stack-chip">Cloud/Telemetry Dashboard</span>
-                    <span class="stack-chip">Embedded Hardware</span>
+                    <span class="stack-chip" data-i18n="tag_iot_sensors">IoT Sensors</span>
+                    <span class="stack-chip" data-i18n="tag_microcontrollers">Microcontrollers</span>
+                    <span class="stack-chip" data-i18n="stack_cloud_dashboard">Cloud/Telemetry Dashboard</span>
+                    <span class="stack-chip" data-i18n="stack_embedded_hw">Embedded Hardware</span>
                   </div>
                 </div>
 
@@ -636,12 +636,12 @@
               <!-- Media Embed with Click-to-Play -->
               <div class="project-media">
                 <div class="video-container" data-video-id="k8NVMMZ8zes" id="video-p4">
-                  <div class="video-thumbnail" tabindex="0" role="button" aria-label="Play IoT Plant-Care Video">
+                  <div class="video-thumbnail" tabindex="0" role="button" aria-label="Play IoT Plant-Care Video" data-i18n-aria="aria_play_p4">
                     <div class="video-play-overlay">
                       <div class="play-circle">
                         <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                       </div>
-                      <span class="play-caption">Play Project Video</span>
+                      <span class="play-caption" data-i18n="play_project_video">Play Project Video</span>
                     </div>
                   </div>
                 </div>
@@ -835,7 +835,7 @@
             <a href="mailto:rogelioleonardo18@gmail.com" class="contact-link-card" id="contact-email">
               <div class="contact-icon">✉️</div>
               <div>
-                <div class="contact-info-label">Direct Email</div>
+                <div class="contact-info-label" data-i18n="contact_lbl_email">Direct Email</div>
                 <div class="contact-info-val">rogelioleonardo18@gmail.com</div>
               </div>
             </a>
@@ -862,7 +862,7 @@
             <a href="https://orcid.org/0009-0007-9163-3549" target="_blank" rel="noopener noreferrer" class="contact-link-card" id="contact-orcid">
               <div class="contact-icon">🆔</div>
               <div>
-                <div class="contact-info-label">ORCID Identifier</div>
+                <div class="contact-info-label" data-i18n="contact_lbl_orcid">ORCID Identifier</div>
                 <div class="contact-info-val">0009-0007-9163-3549</div>
               </div>
             </a>
@@ -886,7 +886,7 @@
         </div>
 
         <footer class="site-footer">
-          <p>© 2026 Rogelio Leonardo Mendez Macias · Embedded Computer Vision & Edge AI Engineer</p>
+          <p data-i18n="footer_text">© 2026 Rogelio Leonardo Mendez Macias · Embedded Computer Vision & Edge AI Engineer</p>
         </footer>
       </div>
     </section>
@@ -896,8 +896,8 @@
   <!-- CV MODAL -->
   <div class="modal-overlay" id="cv-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal-box">
-      <button class="modal-close close-modal" aria-label="Close modal">✕</button>
-      <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); margin-bottom: 6px;">[RESUME DOWNLOAD]</div>
+      <button class="modal-close close-modal" aria-label="Close modal" data-i18n-aria="aria_close_modal">✕</button>
+      <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); margin-bottom: 6px;" data-i18n="cv_modal_eyebrow">[RESUME DOWNLOAD]</div>
       <h3 id="modal-title" style="font-size: 1.3rem; margin-bottom: 8px; color: #FFFFFF;" data-i18n="cv_modal_title">Curriculum Vitae (PDF)</h3>
       <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 24px; line-height: 1.6;" data-i18n="cv_modal_desc">
         Rogelio Leonardo Mendez Macias — Embedded Computer Vision & Edge AI Engineer.

@@ -38,6 +38,15 @@ function setLanguage(lang) {
     }
   });
 
+  // Update translated attributes (screen-reader labels, image alt text, tooltips)
+  const I18N_ATTRS = { 'data-i18n-aria': 'aria-label', 'data-i18n-alt': 'alt', 'data-i18n-title': 'title' };
+  Object.entries(I18N_ATTRS).forEach(([dataAttr, attr]) => {
+    document.querySelectorAll(`[${dataAttr}]`).forEach(el => {
+      const value = I18N_DATA[lang][el.getAttribute(dataAttr)];
+      if (value !== undefined) el.setAttribute(attr, value);
+    });
+  });
+
   // Update dynamic meta tags
   if (lang === 'es') {
     document.title = "Rogelio Leonardo Mendez Macias · Ingeniero en Visión Computacional Embebida y Edge AI";
