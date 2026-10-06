@@ -27,8 +27,11 @@
   --accent-emerald: #10B981;
   --accent-purple: #818CF8;
   
-  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-mono: "Space Mono", "JetBrains Mono", Consolas, monospace;
+  --text-secondary: #CBD5E1;
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Space Grotesk", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", Consolas, monospace;
   
   --nav-height: 68px;
   --container-max: 1240px;
@@ -36,6 +39,20 @@
   --radius-md: 10px;
   --radius-lg: 14px;
   --radius-pill: 9999px;
+  --radius-full: 9999px;
+  --radius-card: 16px;
+  --radius-badge: 6px;
+
+  /* Frosted glass surfaces */
+  --glass-fill: linear-gradient(180deg, rgba(186, 214, 247, 0.05) 0%, rgba(186, 214, 247, 0.015) 100%), rgba(9, 15, 27, 0.62);
+  --glass-edge: rgba(186, 215, 247, 0.12);
+  --glass-edge-hover: rgba(56, 189, 248, 0.38);
+  --glass-shadow: inset 0 1px 0 rgba(216, 236, 248, 0.09), inset 0 24px 48px rgba(168, 216, 245, 0.025), 0 24px 40px -16px rgba(2, 6, 14, 0.75);
+  --glass-shadow-hover: inset 0 1px 0 rgba(216, 236, 248, 0.14), inset 0 24px 48px rgba(168, 216, 245, 0.04), 0 28px 48px -16px rgba(2, 6, 14, 0.85), 0 0 28px -6px rgba(56, 189, 248, 0.22);
+  --gradient-heading: linear-gradient(180deg, #F1F7FD 0%, #B9D6F5 100%);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   
   --shadow-card: 0 8px 32px -8px rgba(0, 0, 0, 0.55);
   --shadow-glow-cyan: 0 0 25px -5px rgba(56, 189, 248, 0.25);
@@ -1703,6 +1720,380 @@ img {
 .toast-msg.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ==========================================================================
+   DESIGN REFRESH: TYPOGRAPHY, GLASS SURFACES, PILL BUTTONS & MOTION
+   Inspired by the AuthKit style reference (DESIGN.md). Palette and the
+   animated circuit background are intentionally unchanged.
+   ========================================================================== */
+
+/* --- Typography ---------------------------------------------------------- */
+html {
+  letter-spacing: -0.01em;
+}
+
+.hero-title-group h1,
+.section-title,
+.project-title,
+.mini-card-title,
+.exp-company,
+.edu-degree,
+.category-title,
+.hero-subtitle,
+#modal-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+/* Luminous gradient on the largest headings only */
+.hero-title-group h1,
+.section-title {
+  background: var(--gradient-heading);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.hero-title-group h1 {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  line-height: 1.12;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  letter-spacing: -0.01em;
+}
+
+.category-title {
+  font-size: 1rem;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.mini-card-title {
+  font-size: 1.2rem;
+}
+
+/* Eyebrow labels: tracked mono caps with a fading hairline */
+.section-label {
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  font-feature-settings: "tnum" on;
+  margin-bottom: 14px;
+}
+
+.section-label::after {
+  content: "";
+  width: 56px;
+  height: 1px;
+  margin-left: 6px;
+  background: linear-gradient(90deg, rgba(186, 215, 247, 0.35), transparent);
+}
+
+.metric-value {
+  font-feature-settings: "tnum" on;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+/* Reading text moves from mono to the sans for legibility */
+.hero-tagline,
+.citation-content,
+.exp-role,
+.contact-info-val,
+.play-caption,
+.toast-msg,
+.project-detail-close-btn {
+  font-family: var(--font-sans);
+}
+
+.hero-tagline {
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+}
+
+.citation-content {
+  font-size: 0.98rem;
+}
+
+.exp-role {
+  font-weight: 500;
+}
+
+.contact-info-val {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+/* Small mono labels read lighter at weight 500 */
+.mini-card-badge,
+.project-num-badge,
+.project-block-title,
+.telemetry-title,
+.edu-institution,
+.badge-item,
+.citation-badge,
+.skill-chip,
+.stack-chip,
+.mini-tag {
+  font-weight: 500;
+}
+
+/* --- Frosted glass surfaces ----------------------------------------------- */
+.hero-telemetry,
+.about-card,
+.skill-category-card,
+.project-mini-card,
+.citation-card,
+.award-item,
+.exp-card,
+.edu-card,
+.contact-card {
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-edge);
+  border-radius: var(--radius-card);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+}
+
+.skill-category-card,
+.project-mini-card,
+.award-item,
+.edu-card,
+.contact-link-card {
+  transition:
+    opacity 0.8s var(--ease-out),
+    translate 0.8s var(--ease-out),
+    transform 0.45s var(--ease-out),
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.45s var(--ease-out);
+}
+
+.skill-category-card:hover,
+.project-mini-card:hover,
+.edu-card:hover {
+  background: var(--glass-fill);
+  border-color: var(--glass-edge-hover);
+  box-shadow: var(--glass-shadow-hover);
+  transform: translateY(-4px);
+}
+
+.award-item:hover {
+  background: var(--glass-fill);
+  box-shadow: var(--glass-shadow-hover);
+}
+
+/* Nested surfaces: lighter tint, no extra blur */
+.metric-box,
+.citation-content,
+.hero-tagline,
+.contact-link-card {
+  background: rgba(186, 214, 247, 0.035);
+  border: 1px solid rgba(186, 215, 247, 0.08);
+  border-radius: 10px;
+  box-shadow: inset 0 1px 0 rgba(216, 236, 248, 0.05);
+}
+
+.contact-link-card:hover {
+  background: rgba(186, 214, 247, 0.07);
+  border-color: var(--glass-edge-hover);
+}
+
+.hero-telemetry::before {
+  height: 1px;
+  opacity: 0.8;
+}
+
+.project-detail-container,
+.modal-box {
+  background: linear-gradient(180deg, rgba(186, 214, 247, 0.05) 0%, rgba(186, 214, 247, 0.01) 100%), rgba(7, 12, 22, 0.94);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: var(--radius-card);
+  box-shadow:
+    inset 0 1px 0 rgba(216, 236, 248, 0.14),
+    inset 0 24px 48px rgba(168, 216, 245, 0.04),
+    0 32px 64px rgba(0, 0, 0, 0.7),
+    0 0 48px -12px rgba(56, 189, 248, 0.3);
+}
+
+.video-container {
+  border-radius: 12px;
+  border-color: rgba(186, 215, 247, 0.12);
+}
+
+/* Badges and chips share the 6px family */
+.skill-chip,
+.stack-chip,
+.mini-tag,
+.badge-item,
+.citation-badge,
+.exp-date {
+  border-radius: var(--radius-badge);
+}
+
+.skill-chip,
+.stack-chip {
+  background: rgba(186, 214, 247, 0.05);
+  border-color: rgba(186, 215, 247, 0.12);
+}
+
+/* --- Pill buttons --------------------------------------------------------- */
+.btn-primary,
+.btn-secondary,
+.btn-project-link {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  border-radius: var(--radius-full);
+  transition:
+    transform 0.35s var(--ease-out),
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.35s var(--ease-out),
+    color 0.2s ease;
+}
+
+.btn-primary {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 6px 22px -4px rgba(56, 189, 248, 0.45);
+}
+
+.btn-primary:hover {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), 0 10px 30px -4px rgba(56, 189, 248, 0.6);
+}
+
+.btn-secondary,
+.btn-project-link {
+  background: rgba(186, 214, 247, 0.06);
+  border: 1px solid var(--glass-edge);
+  box-shadow: inset 0 1px 0 rgba(216, 236, 248, 0.08);
+}
+
+.btn-secondary:hover,
+.btn-project-link:hover {
+  background: rgba(186, 214, 247, 0.12);
+  border-color: var(--glass-edge-hover);
+  transform: translateY(-2px);
+}
+
+.btn-project-link.primary-action {
+  background: rgba(56, 189, 248, 0.12);
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.btn-project-link svg,
+.btn-primary svg,
+.btn-secondary svg {
+  transition: transform 0.35s var(--ease-out);
+}
+
+.btn-project-link:hover svg,
+.btn-primary:hover svg,
+.btn-secondary:hover svg {
+  transform: translateX(2px);
+}
+
+.lang-toggle,
+.lang-btn {
+  border-radius: var(--radius-full);
+}
+
+.lang-toggle {
+  background: rgba(186, 214, 247, 0.05);
+  border-color: var(--glass-edge);
+}
+
+.lang-btn {
+  font-weight: 500;
+}
+
+.mobile-menu-btn {
+  border-radius: 10px;
+  background: rgba(186, 214, 247, 0.05);
+  border-color: var(--glass-edge);
+}
+
+.site-header {
+  background: rgba(7, 13, 23, 0.72);
+  border-bottom-color: rgba(186, 215, 247, 0.08);
+}
+
+/* --- Motion: hero entrance & scroll reveal -------------------------------- */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    translate: 0 18px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.hero-content > *,
+.hero-telemetry {
+  animation: rise-in 0.9s var(--ease-out) both;
+}
+
+.hero-content > :nth-child(2) { animation-delay: 0.08s; }
+.hero-content > :nth-child(3) { animation-delay: 0.16s; }
+.hero-content > :nth-child(4) { animation-delay: 0.24s; }
+.hero-content > :nth-child(5) { animation-delay: 0.32s; }
+.hero-telemetry { animation-delay: 0.3s; }
+
+/* Added by setupScrollReveal() only when JS runs, so content never hides without it */
+.reveal {
+  transition:
+    opacity 0.8s var(--ease-out),
+    translate 0.8s var(--ease-out);
+}
+
+.reveal:not(.is-visible) {
+  opacity: 0;
+  translate: 0 22px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-content > *,
+  .hero-telemetry {
+    animation: none;
+  }
+
+  .reveal:not(.is-visible) {
+    opacity: 1;
+    translate: none;
+  }
+}
+
+/* Blur behind every card is costly on phones; keep the tint, drop the blur */
+@media (max-width: 768px) {
+  .hero-telemetry,
+  .about-card,
+  .skill-category-card,
+  .project-mini-card,
+  .citation-card,
+  .award-item,
+  .exp-card,
+  .edu-card,
+  .contact-card {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: linear-gradient(180deg, rgba(186, 214, 247, 0.05) 0%, rgba(186, 214, 247, 0.015) 100%), rgba(9, 15, 27, 0.86);
+  }
 }
 
 /* ==========================================================================

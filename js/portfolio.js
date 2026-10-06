@@ -830,6 +830,37 @@ function setupCircuitBackground() {
   }
 }
 
+// Scroll Reveal: fade cards up as they enter the viewport, staggered within each grid
+function setupScrollReveal() {
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const targets = document.querySelectorAll(
+    '.section-head, .about-card, .skill-category-card, .project-mini-card, ' +
+    '.citation-card, .award-item, .exp-card, .edu-card, .contact-card'
+  );
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      el.classList.add('is-visible');
+      observer.unobserve(el);
+      // Drop the stagger delay once revealed so hover transitions stay instant
+      setTimeout(() => { el.style.transitionDelay = ''; }, 1200);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  targets.forEach(el => {
+    const kind = el.classList[0];
+    const siblings = [...el.parentElement.children].filter(c => c.classList.contains(kind));
+    const index = Math.min(siblings.indexOf(el), 5);
+    if (index > 0) el.style.transitionDelay = `${index * 70}ms`;
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+}
+
 // Initialize on DOM Ready
 document.addEventListener('DOMContentLoaded', () => {
   // Check stored language or default to en
@@ -852,6 +883,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupMobileNav();
   setupEmailCopy();
   setupScrollSpy();
+  setupScrollReveal();
 });
 
 })();
