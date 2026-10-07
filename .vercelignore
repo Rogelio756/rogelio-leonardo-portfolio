@@ -1,0 +1,9 @@
+# Only the static site is published (index.html, css/, js/, assets/, cv/).
+# Leftovers from the AI Studio scaffold and unused files stay in the repo but are not served.
+server.js
+package.json
+package-lock.json
+metadata.json
+README.md
+.env.example
+src/
