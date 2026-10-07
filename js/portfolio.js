@@ -15,11 +15,38 @@ const PLAIN_CITATION = window.PLAIN_CITATION || '';
 
 let currentLang = 'en';
 
+// Only explicit EN/ES clicks are stored. The old 'preferred_lang' key was written on every
+// page load, so it can't tell a real choice from the old English default and is ignored.
+// Storage can throw (private mode, blocked site data); language still works without it.
+const LANG_CHOICE_KEY = 'lang_choice';
+
+function readSavedLang() {
+  try { return localStorage.getItem(LANG_CHOICE_KEY); } catch (e) { return null; }
+}
+
+function saveLang(lang) {
+  try { localStorage.setItem(LANG_CHOICE_KEY, lang); } catch (e) { /* not persisted */ }
+}
+
+// An explicit EN/ES choice wins; otherwise follow the browser (any es-* locale -> Spanish)
+function detectLanguage() {
+  const saved = readSavedLang();
+  if (saved && I18N_DATA[saved]) return saved;
+
+  const preferred = navigator.languages && navigator.languages.length
+    ? navigator.languages
+    : [navigator.language || 'en'];
+  for (const locale of preferred) {
+    const base = String(locale).toLowerCase().split('-')[0];
+    if (I18N_DATA[base]) return base;
+  }
+  return 'en';
+}
+
 function setLanguage(lang) {
   if (!I18N_DATA[lang]) return;
   currentLang = lang;
   document.documentElement.lang = lang;
-  localStorage.setItem('preferred_lang', lang);
 
   // Update button classes
   document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -845,18 +872,16 @@ function setupScrollReveal() {
 
 // Initialize on DOM Ready
 document.addEventListener('DOMContentLoaded', () => {
-  // Check stored language or default to en
-  const savedLang = localStorage.getItem('preferred_lang') || 'en';
-  
-  // Set up language toggle buttons
+  // Set up language toggle buttons (only an explicit click is remembered)
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const selected = btn.dataset.lang;
       setLanguage(selected);
+      saveLang(selected);
     });
   });
 
-  setLanguage(savedLang);
+  setLanguage(detectLanguage());
   setupCircuitBackground();
   setupProjectsCarousel();
   setupVideoEmbeds();
