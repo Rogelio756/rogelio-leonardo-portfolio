@@ -180,6 +180,10 @@
     gallery_robot_alt: "Rogelio next to a collaborative robot arm with a dexterous hand",
 
     // Road risk system demo
+    video_label_demo: "System demo",
+    video_label_pres: "Team presentation",
+    link_presentation: "Presentation",
+    aria_play_p3_pres: "Play the Samsung Innovation Campus team presentation",
     btn_watch_system_demo: "Watch System Demo",
     play_system_demo: "Play System Demo",
     link_demo_video: "Demo",
@@ -442,6 +446,10 @@
     gallery_robot_alt: "Rogelio junto a un brazo robótico colaborativo con mano diestra",
 
     // Road risk system demo
+    video_label_demo: "Demo del sistema",
+    video_label_pres: "Presentación del equipo",
+    link_presentation: "Presentación",
+    aria_play_p3_pres: "Reproducir la presentación del equipo (Samsung Innovation Campus)",
     btn_watch_system_demo: "Ver demo del sistema",
     play_system_demo: "Ver demo del sistema",
     link_demo_video: "Demo",
