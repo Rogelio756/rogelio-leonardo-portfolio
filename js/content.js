@@ -179,6 +179,11 @@
     gallery_robot_caption: "Hands-on with collaborative robotics",
     gallery_robot_alt: "Rogelio next to a collaborative robot arm with a dexterous hand",
 
+    // Road risk system demo
+    btn_watch_system_demo: "Watch System Demo",
+    play_system_demo: "Play System Demo",
+    link_demo_video: "Demo",
+
     // Recruiter review fixes
     lbl_role: "My Role:",
     p1_role: "Owned the full lifecycle: dataset curation, training, ONNX export, INT8 quantization, HEF compilation, deployment and validation.",
@@ -258,7 +263,7 @@
     aria_view_p4: "View Project: IoT Plant-Care System",
     aria_close_project: "Close Project View",
     aria_play_p1: "Play CAMAXTLI Live Demo Video",
-    aria_play_p3: "Play Samsung Innovation Campus Road Risk Video",
+    aria_play_p3: "Play the road risk system demo: object detection and semantic segmentation",
     aria_play_p4: "Play IoT Plant-Care Video",
     aria_close_modal: "Close modal"
   },
@@ -436,6 +441,11 @@
     gallery_robot_caption: "Explorando robótica colaborativa",
     gallery_robot_alt: "Rogelio junto a un brazo robótico colaborativo con mano diestra",
 
+    // Road risk system demo
+    btn_watch_system_demo: "Ver demo del sistema",
+    play_system_demo: "Ver demo del sistema",
+    link_demo_video: "Demo",
+
     // Recruiter review fixes
     lbl_role: "Mi rol:",
     p1_role: "Responsable de todo el ciclo: curaduría de datos, entrenamiento, exportación a ONNX, cuantización INT8, compilación HEF, despliegue y validación.",
@@ -515,7 +525,7 @@
     aria_view_p4: "Ver proyecto: Sistema IoT de Cuidado de Plantas",
     aria_close_project: "Cerrar vista del proyecto",
     aria_play_p1: "Reproducir demo en vivo de CAMAXTLI",
-    aria_play_p3: "Reproducir video de Riesgo Vial (Samsung Innovation Campus)",
+    aria_play_p3: "Reproducir demo del sistema de riesgo vial: detección de objetos y segmentación semántica",
     aria_play_p4: "Reproducir video del sistema IoT de cuidado de plantas",
     aria_close_modal: "Cerrar ventana"
   }
