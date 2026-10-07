@@ -2473,6 +2473,33 @@ html {
   color: var(--text-dim);
 }
 
+/* --- Recruiter review: plain-language paper summary, ownership callout --- */
+.citation-summary {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  border-left: 2px solid var(--accent-cyan);
+  padding: 4px 0 4px 16px;
+  margin-bottom: 18px;
+}
+
+.citation-summary strong {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.role-block {
+  background: rgba(56, 189, 248, 0.05);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+}
+
+.highlight-icon svg,
+.category-icon svg {
+  display: block;
+}
+
 /* ==========================================================================
    RESPONSIVE DESIGN BREAKPOINTS
    ========================================================================== */

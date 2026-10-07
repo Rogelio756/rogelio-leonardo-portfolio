@@ -23,7 +23,7 @@
     hero_title: "Rogelio Leonardo Mendez Macias",
     hero_alias: "",
     hero_subtitle: "Embedded Computer Vision & Edge AI Engineer",
-    hero_tagline: "INT8 Quantization & NPU Deployment (Hailo-8, IMX500) · YOLOv8 · PyTorch · ONNX · ADAS & Autonomous Systems",
+    hero_tagline: "INT8 Quantization & NPU Deployment (Hailo-8) · YOLOv8 · PyTorch · ONNX · ADAS & Autonomous Systems",
     badge_1: "Published Author (Springer LNCS)",
     badge_2: "1st Place National Hackathon (IBM-judged)",
     badge_3: "Falling Walls Lab Finalist",
@@ -97,7 +97,7 @@
     // Project 2
     p2_title: "FloodSense",
     p2_prob: "Real-time hydrological intelligence system built in 48 hours for a national AI hackathon. 3-agent architecture: an XGBoost flood classifier, a risk regressor, and an alert-generation layer powered by IBM watsonx/Granite.",
-    p2_res: "ROC-AUC 0.86 (classifier), R²=0.999 (regressor); covers 532 zones across 16 Mexico City boroughs with 6-hour anticipation, trained on 591,706 historical flood records from CONAGUA (1877-2024). Won 1st place (IBM-judged) and was selected for ADIP I+D+i incubation.",
+    p2_res: "ROC-AUC 0.86 (classifier), R²=0.999 (regressor); covers 532 zones across 16 Mexico City boroughs with 6-hour anticipation, trained on 591,706 historical flood records from CONAGUA (1877-2024). Won 1st place (IBM-judged) and was selected for R&D incubation by ADIP, Mexico City's Digital Agency for Public Innovation.",
 
     // Project 3
     p3_title: "AI-Powered Road Risk Intelligence (Samsung Innovation Campus, 2025-2026 cohort)",
@@ -152,7 +152,7 @@
     award_hackathon_type: "1st Place",
     award_hackathon_title: "Hackathon Concienc.IA 2026",
     award_hackathon_org: "Young AI Leaders CDMX Hub × Tec de Monterrey CCM · Judged by IBM",
-    award_hackathon_desc: "FloodSense: multi-agent flood-risk prediction for Mexico City's 16 boroughs. Selected for ADIP I+D+i incubation.",
+    award_hackathon_desc: "FloodSense: multi-agent flood-risk prediction for Mexico City's 16 boroughs. Selected for R&D incubation by ADIP, Mexico City's Digital Agency for Public Innovation.",
     award_fwl_type: "Finalist",
     award_fwl_title: "Falling Walls Lab Mexico",
     award_fwl_org: "Mexico City · Competing to represent Mexico",
@@ -178,6 +178,15 @@
     gallery_mcpr_alt: "Rogelio holding his MCPR 2026 certificate of presentation",
     gallery_robot_caption: "Hands-on with collaborative robotics",
     gallery_robot_alt: "Rogelio next to a collaborative robot arm with a dexterous hand",
+
+    // Recruiter review fixes
+    lbl_role: "My Role:",
+    p1_role: "Owned the full lifecycle: dataset curation, training, ONNX export, INT8 quantization, HEF compilation, deployment and validation.",
+    pub_summary: "<strong>In short:</strong> a complete vehicle-perception and license-plate-recognition system running in real time on low-cost embedded hardware (Raspberry Pi 5 + Hailo-8 NPU): 30–58 FPS detection, &gt;93% OCR precision and 230 ms end-to-end latency, with the model compressed 88% through INT8 quantization.",
+    lang_label: "Languages",
+    lang_title: "Spanish · English",
+    lang_levels: "Spanish: native · English: A2",
+    lang_detail: "Presented the MCPR 2026 talk in English; reads technical documentation in English.",
 
     // Hero quick access
     ql_heading: "QUICK ACCESS",
@@ -271,7 +280,7 @@
     hero_title: "Rogelio Leonardo Mendez Macias",
     hero_alias: "",
     hero_subtitle: "Ingeniero en Visión Computacional Embebida y Edge AI",
-    hero_tagline: "Cuantización INT8 y Despliegue en NPUs (Hailo-8, IMX500) · YOLOv8 · PyTorch · ONNX · ADAS y Sistemas Autónomos",
+    hero_tagline: "Cuantización INT8 y Despliegue en NPU (Hailo-8) · YOLOv8 · PyTorch · ONNX · ADAS y Sistemas Autónomos",
     badge_1: "Autor Publicado (Springer LNCS)",
     badge_2: "1.er Lugar Hackathon Nacional (Juez IBM)",
     badge_3: "Finalista Falling Walls Lab",
@@ -345,7 +354,7 @@
     // Project 2
     p2_title: "FloodSense",
     p2_prob: "Sistema de inteligencia hidrológica en tiempo real desarrollado en 48 horas para un hackathon nacional de IA. Arquitectura de 3 agentes: clasificador de inundaciones XGBoost, regresor de riesgo y capa generadora de alertas con IBM watsonx/Granite.",
-    p2_res: "ROC-AUC 0.86 (clasificador), R²=0.999 (regresor); cobertura de 532 zonas en las 16 alcaldías de la CDMX con 6 horas de anticipación, entrenado con 591,706 registros históricos de inundación de CONAGUA (1877-2024). Ganador del 1.er lugar (evaluado por IBM) y seleccionado para incubación ADIP I+D+i.",
+    p2_res: "ROC-AUC 0.86 (clasificador), R²=0.999 (regresor); cobertura de 532 zonas en las 16 alcaldías de la CDMX con 6 horas de anticipación, entrenado con 591,706 registros históricos de inundación de CONAGUA (1877-2024). Ganador del 1.er lugar (evaluado por IBM) y seleccionado para incubación de I+D+i por la ADIP (Agencia Digital de Innovación Pública de la CDMX).",
 
     // Project 3
     p3_title: "Inteligencia de Riesgo Vial con IA (Samsung Innovation Campus, cohorte 2025-2026)",
@@ -400,7 +409,7 @@
     award_hackathon_type: "1.er Lugar",
     award_hackathon_title: "Hackathon Concienc.IA 2026",
     award_hackathon_org: "Young AI Leaders CDMX Hub × Tec de Monterrey CCM · Evaluado por IBM",
-    award_hackathon_desc: "FloodSense: predicción multiagente de riesgo de inundación para las 16 alcaldías de la CDMX. Seleccionado para incubación I+D+i de la ADIP.",
+    award_hackathon_desc: "FloodSense: predicción multiagente de riesgo de inundación para las 16 alcaldías de la CDMX. Seleccionado para incubación de I+D+i por la ADIP (Agencia Digital de Innovación Pública de la CDMX).",
     award_fwl_type: "Finalista",
     award_fwl_title: "Falling Walls Lab México",
     award_fwl_org: "Ciudad de México · Compitiendo por representar a México",
@@ -426,6 +435,15 @@
     gallery_mcpr_alt: "Rogelio sosteniendo su certificado de presentación de MCPR 2026",
     gallery_robot_caption: "Explorando robótica colaborativa",
     gallery_robot_alt: "Rogelio junto a un brazo robótico colaborativo con mano diestra",
+
+    // Recruiter review fixes
+    lbl_role: "Mi rol:",
+    p1_role: "Responsable de todo el ciclo: curaduría de datos, entrenamiento, exportación a ONNX, cuantización INT8, compilación HEF, despliegue y validación.",
+    pub_summary: "<strong>En pocas palabras:</strong> un sistema completo de percepción vehicular y reconocimiento de placas que corre en tiempo real en hardware embebido de bajo costo (Raspberry Pi 5 + NPU Hailo-8): detección a 30–58 FPS, precisión OCR &gt;93 % y 230 ms de latencia de extremo a extremo, con el modelo comprimido 88 % mediante cuantización INT8.",
+    lang_label: "Idiomas",
+    lang_title: "Español · Inglés",
+    lang_levels: "Español: nativo · Inglés: A2",
+    lang_detail: "Presenté la ponencia de MCPR 2026 en inglés y leo documentación técnica en inglés.",
 
     // Hero quick access
     ql_heading: "ACCESO RÁPIDO",
