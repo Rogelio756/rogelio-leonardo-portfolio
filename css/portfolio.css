@@ -1753,6 +1753,34 @@ img {
   flex-shrink: 0;
 }
 
+/* Official brand marks in their brand colors */
+.contact-icon-email {
+  color: var(--accent-cyan);
+}
+
+.contact-icon-linkedin {
+  color: #0A66C2;
+  background: rgba(10, 102, 194, 0.12);
+}
+
+.contact-icon-github {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.contact-icon-orcid {
+  color: #A6CE39;
+  background: rgba(166, 206, 57, 0.1);
+}
+
+.contact-link-card:hover .contact-icon {
+  transform: scale(1.06);
+}
+
+.contact-icon {
+  transition: transform 0.3s var(--ease-out);
+}
+
 .contact-info-label {
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -2383,18 +2411,24 @@ html {
 /* ==========================================================================
    RESPONSIVE DESIGN BREAKPOINTS
    ========================================================================== */
-@media (max-width: 1024px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 36px;
+/* Header: keep every label on one line; the Spanish menu is ~170px wider than English */
+.nav-link,
+.nav-brand {
+  white-space: nowrap;
+}
+
+@media (max-width: 1280px) {
+  .brand-alias {
+    display: none;
+  }
+
+  .nav-menu {
+    gap: 18px;
   }
 }
 
-@media (max-width: 768px) {
-  :root {
-    --nav-height: 60px;
-  }
-
+/* Below 1100px the full menu no longer fits in Spanish: switch to the dropdown */
+@media (max-width: 1100px) {
   .nav-menu {
     position: fixed;
     top: var(--nav-height);
@@ -2416,6 +2450,19 @@ html {
 
   .mobile-menu-btn {
     display: block;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 60px;
   }
 
   .section {

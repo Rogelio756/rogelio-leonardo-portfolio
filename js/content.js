@@ -253,11 +253,11 @@
 
   es: {
     // Topbar & Nav
-    nav_about: "Acerca de",
+    nav_about: "Perfil",
     nav_skills: "Habilidades",
     nav_projects: "Proyectos",
     nav_publications: "Publicaciones",
-    nav_awards: "Reconocimientos",
+    nav_awards: "Premios",
     nav_experience: "Experiencia",
     nav_education: "Educación",
     nav_contact: "Contacto",
