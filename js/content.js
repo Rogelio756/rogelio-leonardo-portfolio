@@ -133,11 +133,6 @@
     pub_copied_btn: "Copied!",
 
     // Awards Items
-    award_1: "<strong>Finalist, Falling Walls Lab (Mexico City)</strong> — competing to represent Mexico, presenting the ADAS project",
-    award_2: "<strong>1st Place, Hackathon Concienc.IA 2026</strong> (Young AI Leaders CDMX Hub × Tec de Monterrey CCM, IBM-judged) — FloodSense",
-    award_3: "<strong>MUTVI Recognition</strong> — UAM International Multidisciplinary Colloquium on Information Visualization, oral presentation \"El copiloto que nunca duerme\" · <a href=\"https://youtu.be/nesc0EuF2kk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"award-link\">Watch talk ↗</a>",
-    award_4: "<strong>Presenter, NEO International Congress (2025)</strong> — distributed AI architecture and real-time perception pipelines",
-    award_5: "<strong>Presented IoT project in front of Samsung senior executive leadership</strong> — Santander Reto Universitario (2024)",
 
     // Experience
     exp_company: "Grupo Modelo (AB InBev)",
@@ -167,6 +162,31 @@
     cv_modal_btn_download: "Download PDF",
     cv_modal_preview: "Preview PDF in New Window",
     toast_copied: "Copied to clipboard!",
+
+    // Awards (structured)
+    award_hackathon_type: "1st Place",
+    award_hackathon_title: "Hackathon Concienc.IA 2026",
+    award_hackathon_org: "Young AI Leaders CDMX Hub × Tec de Monterrey CCM · Judged by IBM",
+    award_hackathon_desc: "FloodSense: multi-agent flood-risk prediction for Mexico City's 16 boroughs. Selected for ADIP I+D+i incubation.",
+    award_fwl_type: "Finalist",
+    award_fwl_title: "Falling Walls Lab Mexico",
+    award_fwl_org: "Mexico City · Competing to represent Mexico",
+    award_fwl_desc: "Pitching the edge-AI ADAS research behind my Springer LNCS paper.",
+    award_mutvi_type: "Oral Presentation",
+    award_mutvi_title: "MUTVI Recognition",
+    award_mutvi_org: "UAM International Multidisciplinary Colloquium on Information Visualization",
+    award_mutvi_desc: "“El copiloto que nunca duerme” (The co-pilot that never sleeps).",
+    award_neo_type: "Speaker",
+    award_neo_title: "NEO 2025",
+    award_neo_org: "International Workshop on Numerical and Evolutionary Optimization · Tijuana",
+    award_neo_desc: "Distributed AI architecture and real-time perception pipelines.",
+    award_santander_type: "Executive Pitch",
+    award_santander_title: "Santander Reto Universitario",
+    award_santander_org: "Presented to Samsung senior executive leadership",
+    award_santander_desc: "IoT plant-care system for horticulture, built at Samsung Innovation Campus.",
+    award_link_demo: "Live demo ↗",
+    award_link_talk: "Watch talk ↗",
+    award_link_video: "Watch video ↗",
 
     // About gallery
     gallery_mcpr_caption: "Certificate of presentation · MCPR 2026, Ciudad Juárez",
@@ -348,11 +368,6 @@
     pub_copied_btn: "¡Copiado!",
 
     // Awards Items
-    award_1: "<strong>Finalista, Falling Walls Lab (Ciudad de México)</strong> — compitiendo por representar a México, presentando el proyecto ADAS",
-    award_2: "<strong>1.er Lugar, Hackathon Concienc.IA 2026</strong> (Young AI Leaders CDMX Hub × Tec de Monterrey CCM, evaluación IBM) — FloodSense",
-    award_3: "<strong>Reconocimiento MUTVI</strong> — Coloquio Internacional Multidisciplinario de Visualización de Información de la UAM, ponencia oral \"El copiloto que nunca duerme\" · <a href=\"https://youtu.be/nesc0EuF2kk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"award-link\">Ver ponencia ↗</a>",
-    award_4: "<strong>Ponente, Congreso Internacional NEO (2025)</strong> — arquitectura de IA distribuida y pipelines de percepción en tiempo real",
-    award_5: "<strong>Presentación de proyecto IoT ante la alta dirección ejecutiva de Samsung</strong> — Santander Reto Universitario (2024)",
 
     // Experience
     exp_company: "Grupo Modelo (AB InBev)",
@@ -382,6 +397,31 @@
     cv_modal_btn_download: "Descargar PDF",
     cv_modal_preview: "Ver PDF en Nueva Pestaña",
     toast_copied: "¡Copiado al portapapeles!",
+
+    // Awards (structured)
+    award_hackathon_type: "1.er Lugar",
+    award_hackathon_title: "Hackathon Concienc.IA 2026",
+    award_hackathon_org: "Young AI Leaders CDMX Hub × Tec de Monterrey CCM · Evaluado por IBM",
+    award_hackathon_desc: "FloodSense: predicción multiagente de riesgo de inundación para las 16 alcaldías de la CDMX. Seleccionado para incubación I+D+i de la ADIP.",
+    award_fwl_type: "Finalista",
+    award_fwl_title: "Falling Walls Lab México",
+    award_fwl_org: "Ciudad de México · Compitiendo por representar a México",
+    award_fwl_desc: "Presentando la investigación de ADAS con edge AI detrás de mi artículo en Springer LNCS.",
+    award_mutvi_type: "Ponencia Oral",
+    award_mutvi_title: "Reconocimiento MUTVI",
+    award_mutvi_org: "Coloquio Internacional Multidisciplinario de Visualización de Información, UAM",
+    award_mutvi_desc: "“El copiloto que nunca duerme”.",
+    award_neo_type: "Ponente",
+    award_neo_title: "NEO 2025",
+    award_neo_org: "Taller Internacional de Optimización Numérica y Evolutiva · Tijuana",
+    award_neo_desc: "Arquitectura de IA distribuida y pipelines de percepción en tiempo real.",
+    award_santander_type: "Pitch Ejecutivo",
+    award_santander_title: "Santander Reto Universitario",
+    award_santander_org: "Presentado ante la alta dirección ejecutiva de Samsung",
+    award_santander_desc: "Sistema IoT de cuidado de plantas para horticultura, desarrollado en Samsung Innovation Campus.",
+    award_link_demo: "Demo en vivo ↗",
+    award_link_talk: "Ver ponencia ↗",
+    award_link_video: "Ver video ↗",
 
     // About gallery
     gallery_mcpr_caption: "Certificado de presentación · MCPR 2026, Ciudad Juárez",
