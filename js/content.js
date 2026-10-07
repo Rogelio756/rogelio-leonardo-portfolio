@@ -31,21 +31,6 @@
     cta_view_projects: "View Projects",
 
     // Telemetry Box
-    telemetry_title: "HARDWARE PIPELINE METRICS",
-    telemetry_status: "SYSTEM OPTIMAL",
-    metric_hailo_val: "30–58",
-    metric_hailo_unit: "FPS",
-    metric_hailo_label: "Hailo-8 Edge Perception",
-    metric_lat_val: "230",
-    metric_lat_unit: "ms",
-    metric_lat_label: "End-to-End Latency",
-    metric_comp_val: "88%",
-    metric_comp_unit: "INT8",
-    metric_comp_label: "Model Compression",
-    metric_ocr_val: ">93%",
-    metric_ocr_unit: "Acc.",
-    metric_ocr_label: "Central OCR Precision",
-    telemetry_footnote: "Verified in hardware benchmarks & Springer LNCS peer-reviewed paper",
 
     // Section Titles
     sec_about_label: "PROFILE // BACKGROUND",
@@ -194,6 +179,24 @@
     gallery_robot_caption: "Hands-on with collaborative robotics",
     gallery_robot_alt: "Rogelio next to a collaborative robot arm with a dexterous hand",
 
+    // Hero quick access
+    ql_heading: "QUICK ACCESS",
+    ql_demo: "Watch the ADAS demo",
+    ql_demo_sub: "CAMAXTLI · YouTube",
+    ql_paper: "Read the Springer paper",
+    ql_paper_sub: "MCPR 2026 · Peer-reviewed",
+    ql_code: "Browse the ADAS code",
+    ql_code_sub: "GitHub · Python",
+    ql_linkedin: "LinkedIn",
+    ql_github: "GitHub",
+    ql_email: "Email",
+    ql_orcid: "ORCID",
+    ql_proof_label: "Measured on hardware",
+    ql_m_latency: "latency",
+    ql_m_fps: "on Hailo-8",
+    ql_m_comp: "smaller (INT8)",
+    ql_m_ocr: "OCR precision",
+
     // Recruiter quick-scan
     mini_p1_result: "230 ms end-to-end · 30–58 FPS on Hailo-8 · Peer-reviewed (Springer LNCS)",
     mini_p2_result: "1st place (IBM-judged) · 16 boroughs · 6-hour early warning",
@@ -276,21 +279,6 @@
     cta_view_projects: "Ver Proyectos",
 
     // Telemetry Box
-    telemetry_title: "MÉTRICAS DE HARDWARE & DESPLIEGUE",
-    telemetry_status: "SISTEMA ÓPTIMO",
-    metric_hailo_val: "30–58",
-    metric_hailo_unit: "FPS",
-    metric_hailo_label: "Percepción Edge Hailo-8",
-    metric_lat_val: "230",
-    metric_lat_unit: "ms",
-    metric_lat_label: "Latencia End-to-End",
-    metric_comp_val: "88%",
-    metric_comp_unit: "INT8",
-    metric_comp_label: "Compresión de Modelo",
-    metric_ocr_val: ">93%",
-    metric_ocr_unit: "Prec.",
-    metric_ocr_label: "Precisión OCR Central",
-    telemetry_footnote: "Verificado en banco de hardware y publicación arbitrada en Springer LNCS",
 
     // Section Titles
     sec_about_label: "PERFIL // TRAYECTORIA",
@@ -438,6 +426,24 @@
     gallery_mcpr_alt: "Rogelio sosteniendo su certificado de presentación de MCPR 2026",
     gallery_robot_caption: "Explorando robótica colaborativa",
     gallery_robot_alt: "Rogelio junto a un brazo robótico colaborativo con mano diestra",
+
+    // Hero quick access
+    ql_heading: "ACCESO RÁPIDO",
+    ql_demo: "Ver demo del ADAS",
+    ql_demo_sub: "CAMAXTLI · YouTube",
+    ql_paper: "Leer artículo en Springer",
+    ql_paper_sub: "MCPR 2026 · Arbitrado",
+    ql_code: "Explorar código del ADAS",
+    ql_code_sub: "GitHub · Python",
+    ql_linkedin: "LinkedIn",
+    ql_github: "GitHub",
+    ql_email: "Correo",
+    ql_orcid: "ORCID",
+    ql_proof_label: "Medido en hardware",
+    ql_m_latency: "de latencia",
+    ql_m_fps: "en Hailo-8",
+    ql_m_comp: "más ligero (INT8)",
+    ql_m_ocr: "precisión OCR",
 
     // Recruiter quick-scan
     mini_p1_result: "230 ms de extremo a extremo · 30–58 FPS en Hailo-8 · Arbitrado (Springer LNCS)",

@@ -495,61 +495,12 @@ img {
   gap: 8px;
 }
 
-.telemetry-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--accent-emerald);
-}
 
-.telemetry-metrics {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
 
-.metric-box {
-  background: var(--bg-surface-1);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: var(--radius-sm);
-  padding: 12px;
-}
 
-.metric-value {
-  font-family: var(--font-mono);
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  line-height: 1.2;
-}
 
-.metric-unit {
-  font-size: 0.75rem;
-  color: var(--accent-cyan);
-  margin-left: 2px;
-}
 
-.metric-label {
-  font-size: 0.72rem;
-  color: var(--text-dim);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-top: 4px;
-}
 
-.telemetry-footnote {
-  margin-top: 16px;
-  padding-top: 12px;
-  border-top: 1px dashed rgba(255, 255, 255, 0.07);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--text-dim);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
 
 /* ==========================================================================
    GLOBAL SECTION ARCHITECTURE
@@ -1981,11 +1932,6 @@ html {
   background: linear-gradient(90deg, rgba(186, 215, 247, 0.35), transparent);
 }
 
-.metric-value {
-  font-feature-settings: "tnum" on;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-}
 
 /* Reading text moves from mono to the sans for legibility */
 .hero-tagline,
@@ -2078,7 +2024,6 @@ html {
 }
 
 /* Nested surfaces: lighter tint, no extra blur */
-.metric-box,
 .citation-content,
 .hero-tagline,
 .contact-link-card {
@@ -2298,24 +2243,8 @@ html {
   transform: translateY(-1px);
 }
 
-.hero-socials {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 18px;
-  margin-top: 4px;
-}
 
-.hero-social {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.88rem;
-  color: var(--text-muted);
-}
 
-.hero-social:hover {
-  color: var(--accent-cyan);
-}
 
 /* Key outcome visible without opening the project */
 .mini-card-result {
@@ -2386,14 +2315,6 @@ html {
     padding: 4px 8px;
   }
 
-  .hero-social span {
-    display: none;
-  }
-
-  .hero-social svg {
-    width: 22px;
-    height: 22px;
-  }
 }
 
 /* Very small phones (≤360px): tighter gutters, text-only CV button */
@@ -2406,6 +2327,150 @@ html {
   .nav-brand .brand-dot {
     display: none;
   }
+}
+
+/* --- Hero quick access card --------------------------------------------- */
+.ql-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ql-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(186, 214, 247, 0.04);
+  border: 1px solid rgba(186, 215, 247, 0.1);
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.35s var(--ease-out);
+}
+
+.ql-row:hover {
+  background: rgba(56, 189, 248, 0.08);
+  border-color: rgba(56, 189, 248, 0.4);
+  transform: translateX(3px);
+}
+
+.ql-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-cyan);
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+}
+
+.ql-row:first-child .ql-icon {
+  color: #F87171;
+  background: rgba(248, 113, 113, 0.1);
+  border-color: rgba(248, 113, 113, 0.3);
+}
+
+.ql-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex-grow: 1;
+}
+
+.ql-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #FFFFFF;
+}
+
+.ql-sub {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+
+.ql-arrow {
+  color: var(--text-dim);
+  flex-shrink: 0;
+  transition: color 0.2s ease, transform 0.35s var(--ease-out);
+}
+
+.ql-row:hover .ql-arrow {
+  color: var(--accent-cyan);
+  transform: translateX(3px);
+}
+
+.ql-socials {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.ql-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 4px;
+  border-radius: 10px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: rgba(186, 214, 247, 0.03);
+  border: 1px solid rgba(186, 215, 247, 0.08);
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.ql-social:hover {
+  color: #FFFFFF;
+  background: rgba(186, 214, 247, 0.08);
+  border-color: rgba(186, 215, 247, 0.22);
+}
+
+.ql-linkedin svg { color: #0A66C2; }
+.ql-github svg { color: #FFFFFF; }
+.ql-email svg { color: var(--accent-cyan); }
+.ql-orcid svg { color: #A6CE39; }
+
+/* Headline metrics kept as a compact proof strip */
+.ql-proof {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.08);
+}
+
+.ql-proof-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-emerald);
+}
+
+.ql-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 16px;
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent-cyan);
+}
+
+.ql-metrics strong {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  font-feature-settings: "tnum" on;
+}
+
+.ql-metrics em {
+  font-style: normal;
+  color: var(--text-dim);
 }
 
 /* ==========================================================================
