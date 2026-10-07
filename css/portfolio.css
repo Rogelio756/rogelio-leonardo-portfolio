@@ -1648,7 +1648,7 @@ img {
    ========================================================================== */
 .education-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: 24px;
 }
 
@@ -2244,6 +2244,139 @@ html {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     background: linear-gradient(180deg, rgba(186, 214, 247, 0.05) 0%, rgba(186, 214, 247, 0.015) 100%), rgba(9, 15, 27, 0.86);
+  }
+}
+
+/* ==========================================================================
+   RECRUITER QUICK-SCAN: header CV button, hero contact links, card shortcuts
+   ========================================================================== */
+.nav-cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #070D17;
+  background: var(--accent-cyan);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 4px 14px -4px rgba(56, 189, 248, 0.5);
+  transition: transform 0.3s var(--ease-out), background 0.2s ease;
+}
+
+.nav-cv-btn:hover {
+  background: #7DD3FC;
+  transform: translateY(-1px);
+}
+
+.hero-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 4px;
+}
+
+.hero-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.hero-social:hover {
+  color: var(--accent-cyan);
+}
+
+/* Key outcome visible without opening the project */
+.mini-card-result {
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: #E2E8F0;
+  border-left: 2px solid var(--accent-cyan);
+  padding-left: 10px;
+  margin-bottom: 14px;
+}
+
+.mini-card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.mini-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-main);
+  background: rgba(186, 214, 247, 0.06);
+  border: 1px solid var(--glass-edge);
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.mini-link:hover {
+  background: rgba(56, 189, 248, 0.14);
+  border-color: rgba(56, 189, 248, 0.45);
+  color: var(--accent-cyan);
+}
+
+.mini-link-video svg {
+  color: #F87171;
+}
+
+@media (max-width: 768px) {
+  .nav-cv-btn {
+    padding: 6px 12px;
+  }
+
+  /* Free header space on phones: name, CV, language and menu must fit one row */
+  .brand-alias {
+    display: none;
+  }
+
+  .nav-container {
+    gap: 12px;
+  }
+
+  .nav-brand {
+    white-space: nowrap;
+    font-size: 0.85rem;
+    gap: 8px;
+  }
+
+  .nav-actions {
+    gap: 6px;
+  }
+
+  .lang-btn {
+    padding: 4px 8px;
+  }
+
+  .hero-social span {
+    display: none;
+  }
+
+  .hero-social svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* Very small phones (≤360px): tighter gutters, text-only CV button */
+@media (max-width: 360px) {
+  .nav-container {
+    padding: 0 14px;
+  }
+
+  .nav-cv-btn svg,
+  .nav-brand .brand-dot {
+    display: none;
   }
 }
 

@@ -20,7 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Main Stylesheet (bump ?v= here and on the scripts below whenever css/js change, so cached copies refresh) -->
-  <link rel="stylesheet" href="css/portfolio.css?v=20261007">
+  <link rel="stylesheet" href="css/portfolio.css?v=20261007f">
 </head>
 <body data-page="home">
 
@@ -39,17 +39,21 @@
       <!-- Navigation Links -->
       <ul class="nav-menu" id="nav-menu">
         <li><a href="#about" class="nav-link" data-i18n="nav_about" id="link-about">About</a></li>
-        <li><a href="#skills" class="nav-link" data-i18n="nav_skills" id="link-skills">Skills</a></li>
         <li><a href="#projects" class="nav-link" data-i18n="nav_projects" id="link-projects">Projects</a></li>
         <li><a href="#publications" class="nav-link" data-i18n="nav_publications" id="link-publications">Publications</a></li>
         <li><a href="#awards" class="nav-link" data-i18n="nav_awards" id="link-awards">Awards</a></li>
         <li><a href="#experience" class="nav-link" data-i18n="nav_experience" id="link-experience">Experience</a></li>
+        <li><a href="#skills" class="nav-link" data-i18n="nav_skills" id="link-skills">Skills</a></li>
         <li><a href="#education" class="nav-link" data-i18n="nav_education" id="link-education">Education</a></li>
         <li><a href="#contact" class="nav-link" data-i18n="nav_contact" id="link-contact">Contact</a></li>
       </ul>
 
       <!-- Action Controls: Language Toggle & Mobile Button -->
       <div class="nav-actions">
+        <a href="#cv" class="nav-cv-btn trigger-cv-modal" id="nav-cv-btn">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <span data-i18n="nav_cv">CV</span>
+        </a>
         <div class="lang-toggle" role="group" aria-label="Language Selector" data-i18n-aria="aria_lang_selector" id="lang-switcher">
           <button class="lang-btn active" data-lang="en" id="btn-lang-en">EN</button>
           <button class="lang-btn" data-lang="es" id="btn-lang-es">ES</button>
@@ -76,7 +80,7 @@
           <div class="hero-content">
             <div class="hero-edge-badge">
               <span class="brand-dot"></span>
-              <span data-i18n="hero_status">EDGE NPU DEPLOYED</span>
+              <span data-i18n="hero_status">Open to full-time roles · Dec 2026 · Mexico City</span>
             </div>
 
             <div class="hero-title-group">
@@ -122,6 +126,12 @@
                 </svg>
                 <span data-i18n="cta_view_projects">View Projects</span>
               </a>
+            </div>
+            <!-- Direct contact (recruiter shortcut) -->
+            <div class="hero-socials">
+              <a href="https://www.linkedin.com/in/rogelio-leonardo-mendez-macias/" target="_blank" rel="noopener noreferrer" class="hero-social" aria-label="LinkedIn"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><span>LinkedIn</span></a>
+              <a href="https://github.com/Rogelio756" target="_blank" rel="noopener noreferrer" class="hero-social" aria-label="GitHub"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg><span>GitHub</span></a>
+              <a href="mailto:rogelioleonardo18@gmail.com" class="hero-social" aria-label="Email"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><span>rogelioleonardo18@gmail.com</span></a>
             </div>
           </div>
 
@@ -232,91 +242,7 @@
       </div>
     </section>
 
-    <!-- 3. SKILLS SECTION (4 Grouped Categories as Chips) -->
-    <section class="section" id="skills">
-      <div class="container">
-        <div class="section-head">
-          <div class="section-label" data-i18n="sec_skills_label">SYSTEM ARCHITECTURE // TOOLCHAIN</div>
-          <h2 class="section-title" data-i18n="sec_skills_title">Technical Skills</h2>
-        </div>
-
-        <div class="skills-grid" id="skills-grid">
-          
-          <!-- Category 1: Edge AI & Model Optimization -->
-          <div class="skill-category-card" id="skill-cat-1">
-            <div class="category-header">
-              <div class="category-icon">🧠</div>
-              <h3 class="category-title" data-i18n="cat_1_title">Edge AI & Model Optimization</h3>
-            </div>
-            <div class="chips-container">
-              <span class="skill-chip">YOLOv8</span>
-              <span class="skill-chip">PyTorch</span>
-              <span class="skill-chip">PyTorch Geometric</span>
-              <span class="skill-chip">OpenCV</span>
-              <span class="skill-chip">SegFormer</span>
-              <span class="skill-chip">ONNX</span>
-              <span class="skill-chip" data-i18n="skill_int8">INT8 Quantization</span>
-              <span class="skill-chip" data-i18n="skill_hef">HEF Compilation</span>
-              <span class="skill-chip">Hailo-8 NPU</span>
-              <span class="skill-chip">Sony IMX500</span>
-              <span class="skill-chip">CUDA</span>
-            </div>
-          </div>
-
-          <!-- Category 2: Embedded Systems & MLOps -->
-          <div class="skill-category-card" id="skill-cat-2">
-            <div class="category-header">
-              <div class="category-icon">⚙️</div>
-              <h3 class="category-title" data-i18n="cat_2_title">Embedded Systems & MLOps</h3>
-            </div>
-            <div class="chips-container">
-              <span class="skill-chip">Raspberry Pi 5 (Linux)</span>
-              <span class="skill-chip">Docker</span>
-              <span class="skill-chip">MQTT</span>
-              <span class="skill-chip" data-i18n="skill_rest">REST APIs</span>
-              <span class="skill-chip">Frigate NVR</span>
-              <span class="skill-chip">Node-RED</span>
-              <span class="skill-chip">InfluxDB</span>
-              <span class="skill-chip">Grafana</span>
-            </div>
-          </div>
-
-          <!-- Category 3: Systems Fundamentals (Differentiator) -->
-          <div class="skill-category-card" id="skill-cat-3">
-            <div class="category-header differentiator">
-              <div class="category-icon">🔬</div>
-              <h3 class="category-title" data-i18n="cat_3_title">Systems Fundamentals (differentiator)</h3>
-            </div>
-            <div class="chips-container">
-              <span class="skill-chip" data-i18n="skill_control">Control Theory (BIBO stability, transfer functions)</span>
-              <span class="skill-chip" data-i18n="skill_queueing">Queueing Theory</span>
-              <span class="skill-chip" data-i18n="skill_pid">PID / Ziegler-Nichols tuning</span>
-            </div>
-          </div>
-
-          <!-- Category 4: Languages & Tools -->
-          <div class="skill-category-card" id="skill-cat-4">
-            <div class="category-header">
-              <div class="category-icon">💻</div>
-              <h3 class="category-title" data-i18n="cat_4_title">Languages & Tools</h3>
-            </div>
-            <div class="chips-container">
-              <span class="skill-chip" data-i18n="skill_python">Python (Advanced)</span>
-              <span class="skill-chip">MATLAB</span>
-              <span class="skill-chip">NumPy</span>
-              <span class="skill-chip">Pandas</span>
-              <span class="skill-chip">SQL</span>
-              <span class="skill-chip">LaTeX</span>
-              <span class="skill-chip">Jupyter</span>
-              <span class="skill-chip">Git/GitHub</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. FEATURED PROJECTS SECTION -->
+    <!-- 3. FEATURED PROJECTS SECTION -->
     <section class="section" id="projects">
       <div class="container">
         <div class="section-head projects-section-head">
@@ -345,11 +271,16 @@
             <div class="mini-card-badge" data-i18n="mini_p1_badge">PROJECT 01 // THESIS & SPRINGER</div>
             <h3 class="mini-card-title" data-i18n="mini_p1_title">Cognitive ADAS System</h3>
             <p class="mini-card-sub" data-i18n="mini_p1_sub">Hailo-8 NPU · Distributed Perception · OCR & LLM</p>
+            <p class="mini-card-result" data-i18n="mini_p1_result">230 ms end-to-end · 30–58 FPS on Hailo-8 · Peer-reviewed (Springer LNCS)</p>
             <div class="mini-card-tags">
               <span class="mini-tag">Hailo-8 NPU</span>
               <span class="mini-tag">INT8</span>
               <span class="mini-tag">MQTT</span>
-              <span class="mini-tag video-tag" data-i18n="tag_video_demo">▶ Video Demo</span>
+            </div>
+            <div class="mini-card-links">
+              <a href="https://youtu.be/n2k4fdbCWAk" target="_blank" rel="noopener noreferrer" class="mini-link mini-link-video"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span data-i18n="link_video">Video</span></a>
+              <a href="https://github.com/Rogelio756/camaxtli-adas/tree/feat/copiloto/nodes/copiloto" target="_blank" rel="noopener noreferrer" class="mini-link mini-link-code"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg><span data-i18n="link_code">Code</span></a>
+              <a href="https://link.springer.com/chapter/10.1007/978-3-032-28393-1_22" target="_blank" rel="noopener noreferrer" class="mini-link mini-link-paper"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg><span data-i18n="link_paper">Paper</span></a>
             </div>
             <div class="mini-card-footer">
               <span class="mini-card-cta" data-i18n="mini_cta_explore">Explore Project &amp; Video</span>
@@ -362,11 +293,15 @@
             <div class="mini-card-badge" data-i18n="mini_p2_badge">PROJECT 02 // 1ST PLACE IBM HACKATHON</div>
             <h3 class="mini-card-title">FloodSense</h3>
             <p class="mini-card-sub" data-i18n="mini_p2_sub">XGBoost & IBM watsonx / Granite · Real-time Hydrology</p>
+            <p class="mini-card-result" data-i18n="mini_p2_result">1st place (IBM-judged) · 16 boroughs · 6-hour early warning</p>
             <div class="mini-card-tags">
               <span class="mini-tag">XGBoost</span>
               <span class="mini-tag">watsonx</span>
               <span class="mini-tag">Granite</span>
-              <span class="mini-tag live-tag" data-i18n="tag_live_demo">● Live Demo</span>
+            </div>
+            <div class="mini-card-links">
+              <a href="https://floodsensetec.vercel.app" target="_blank" rel="noopener noreferrer" class="mini-link mini-link-demo"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg><span data-i18n="link_demo">Live demo</span></a>
+              <a href="https://github.com/Rogelio756/hackaton_agentes_concienc_ia" target="_blank" rel="noopener noreferrer" class="mini-link mini-link-code"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg><span data-i18n="link_code">Code</span></a>
             </div>
             <div class="mini-card-footer">
               <span class="mini-card-cta" data-i18n="mini_cta_live">Explore Project &amp; Demo</span>
@@ -379,11 +314,15 @@
             <div class="mini-card-badge" data-i18n="mini_p3_badge">PROJECT 03 // SAMSUNG INNOVATION CAMPUS</div>
             <h3 class="mini-card-title" data-i18n="mini_p3_title">AI Road Risk Intelligence</h3>
             <p class="mini-card-sub" data-i18n="mini_p3_sub">RiskLSTM & YOLOv8 · BDD100K / BDDA · Temporal Modeling</p>
+            <p class="mini-card-result" data-i18n="mini_p3_result">My role: RiskLSTM · Pearson r = 0.916 on 61k images</p>
             <div class="mini-card-tags">
               <span class="mini-tag">YOLOv8n</span>
               <span class="mini-tag">RiskLSTM</span>
               <span class="mini-tag">PyTorch</span>
-              <span class="mini-tag video-tag" data-i18n="tag_video_demo">▶ Video Demo</span>
+            </div>
+            <div class="mini-card-links">
+              <a href="https://youtu.be/okWomtA6sG8" target="_blank" rel="noopener noreferrer" class="mini-link mini-link-video"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span data-i18n="link_video">Video</span></a>
+              <a href="https://github.com/Rogelio756/Equipo8-Grupo8-SIC-2025-/tree/estrategia-1" target="_blank" rel="noopener noreferrer" class="mini-link mini-link-code"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg><span data-i18n="link_code">Code</span></a>
             </div>
             <div class="mini-card-footer">
               <span class="mini-card-cta" data-i18n="mini_cta_explore">Explore Project &amp; Video</span>
@@ -396,11 +335,14 @@
             <div class="mini-card-badge" data-i18n="mini_p4_badge">PROJECT 04 // SAMSUNG INNOVATION 2024</div>
             <h3 class="mini-card-title" data-i18n="mini_p4_title">IoT Plant-Care System</h3>
             <p class="mini-card-sub" data-i18n="mini_p4_sub">Dual-MCU & Telemetry · Horticulture Automation</p>
+            <p class="mini-card-result" data-i18n="mini_p4_result">Pitched to Samsung senior leadership</p>
             <div class="mini-card-tags">
               <span class="mini-tag" data-i18n="tag_iot_sensors">IoT Sensors</span>
               <span class="mini-tag" data-i18n="tag_microcontrollers">Microcontrollers</span>
               <span class="mini-tag" data-i18n="tag_telemetry">Telemetry</span>
-              <span class="mini-tag video-tag" data-i18n="tag_video_demo">▶ Video Demo</span>
+            </div>
+            <div class="mini-card-links">
+              <a href="https://youtu.be/k8NVMMZ8zes" target="_blank" rel="noopener noreferrer" class="mini-link mini-link-video"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span data-i18n="link_video">Video</span></a>
             </div>
             <div class="mini-card-footer">
               <span class="mini-card-cta" data-i18n="mini_cta_explore">Explore Project &amp; Video</span>
@@ -473,7 +415,7 @@
                     <span data-i18n="btn_springer_paper">Springer LNCS Paper</span>
                     <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                   </a>
-                  <a href="https://github.com/Rogelio756/camaxtli-adas" target="_blank" rel="noopener noreferrer" class="btn-project-link" id="p1-gh-link">
+                  <a href="https://github.com/Rogelio756/camaxtli-adas/tree/feat/copiloto/nodes/copiloto" target="_blank" rel="noopener noreferrer" class="btn-project-link" id="p1-gh-link">
                     <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
                     <span data-i18n="btn_view_github">View on GitHub</span>
                   </a>
@@ -577,7 +519,7 @@
                 </div>
 
                 <div class="project-actions">
-                  <a href="https://github.com/Rogelio756/Equipo8-Grupo8-SIC-2025-" target="_blank" rel="noopener noreferrer" class="btn-project-link primary-action" id="p3-gh-link">
+                  <a href="https://github.com/Rogelio756/Equipo8-Grupo8-SIC-2025-/tree/estrategia-1" target="_blank" rel="noopener noreferrer" class="btn-project-link primary-action" id="p3-gh-link">
                     <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
                     <span data-i18n="btn_view_github">View on GitHub</span>
                   </a>
@@ -665,7 +607,7 @@
       </div>
     </section>
 
-    <!-- 5. PUBLICATIONS SECTION (Academic Citation Format) -->
+    <!-- 4. PUBLICATIONS SECTION (Academic Citation Format) -->
     <section class="section" id="publications">
       <div class="container">
         <div class="section-head">
@@ -720,7 +662,7 @@
       </div>
     </section>
 
-    <!-- 6. AWARDS & RECOGNITION SECTION (Separate Section) -->
+    <!-- 5. AWARDS & RECOGNITION SECTION (Separate Section) -->
     <section class="section" id="awards">
       <div class="container">
         <div class="section-head">
@@ -790,7 +732,7 @@
       </div>
     </section>
 
-    <!-- 7. PROFESSIONAL EXPERIENCE SECTION -->
+    <!-- 6. PROFESSIONAL EXPERIENCE SECTION -->
     <section class="section" id="experience">
       <div class="container">
         <div class="section-head">
@@ -810,6 +752,90 @@
           <p class="exp-desc" data-i18n="exp_desc">
             Built Python + SQL automation pipelines that reduced reporting workload by 5+ hours/week; self-initiated a PPE-detection computer vision prototype for industrial safety, beyond assigned scope.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. SKILLS SECTION (4 Grouped Categories as Chips) -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label" data-i18n="sec_skills_label">SYSTEM ARCHITECTURE // TOOLCHAIN</div>
+          <h2 class="section-title" data-i18n="sec_skills_title">Technical Skills</h2>
+        </div>
+
+        <div class="skills-grid" id="skills-grid">
+          
+          <!-- Category 1: Edge AI & Model Optimization -->
+          <div class="skill-category-card" id="skill-cat-1">
+            <div class="category-header">
+              <div class="category-icon">🧠</div>
+              <h3 class="category-title" data-i18n="cat_1_title">Edge AI & Model Optimization</h3>
+            </div>
+            <div class="chips-container">
+              <span class="skill-chip">YOLOv8</span>
+              <span class="skill-chip">PyTorch</span>
+              <span class="skill-chip">PyTorch Geometric</span>
+              <span class="skill-chip">OpenCV</span>
+              <span class="skill-chip">SegFormer</span>
+              <span class="skill-chip">ONNX</span>
+              <span class="skill-chip" data-i18n="skill_int8">INT8 Quantization</span>
+              <span class="skill-chip" data-i18n="skill_hef">HEF Compilation</span>
+              <span class="skill-chip">Hailo-8 NPU</span>
+              <span class="skill-chip">Sony IMX500</span>
+              <span class="skill-chip">CUDA</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Embedded Systems & MLOps -->
+          <div class="skill-category-card" id="skill-cat-2">
+            <div class="category-header">
+              <div class="category-icon">⚙️</div>
+              <h3 class="category-title" data-i18n="cat_2_title">Embedded Systems & MLOps</h3>
+            </div>
+            <div class="chips-container">
+              <span class="skill-chip">Raspberry Pi 5 (Linux)</span>
+              <span class="skill-chip">Docker</span>
+              <span class="skill-chip">MQTT</span>
+              <span class="skill-chip" data-i18n="skill_rest">REST APIs</span>
+              <span class="skill-chip">Frigate NVR</span>
+              <span class="skill-chip">Node-RED</span>
+              <span class="skill-chip">InfluxDB</span>
+              <span class="skill-chip">Grafana</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Systems Fundamentals (Differentiator) -->
+          <div class="skill-category-card" id="skill-cat-3">
+            <div class="category-header differentiator">
+              <div class="category-icon">🔬</div>
+              <h3 class="category-title" data-i18n="cat_3_title">Systems Fundamentals (differentiator)</h3>
+            </div>
+            <div class="chips-container">
+              <span class="skill-chip" data-i18n="skill_control">Control Theory (BIBO stability, transfer functions)</span>
+              <span class="skill-chip" data-i18n="skill_queueing">Queueing Theory</span>
+              <span class="skill-chip" data-i18n="skill_pid">PID / Ziegler-Nichols tuning</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Languages & Tools -->
+          <div class="skill-category-card" id="skill-cat-4">
+            <div class="category-header">
+              <div class="category-icon">💻</div>
+              <h3 class="category-title" data-i18n="cat_4_title">Languages & Tools</h3>
+            </div>
+            <div class="chips-container">
+              <span class="skill-chip" data-i18n="skill_python">Python (Advanced)</span>
+              <span class="skill-chip">MATLAB</span>
+              <span class="skill-chip">NumPy</span>
+              <span class="skill-chip">Pandas</span>
+              <span class="skill-chip">SQL</span>
+              <span class="skill-chip">LaTeX</span>
+              <span class="skill-chip">Jupyter</span>
+              <span class="skill-chip">Git/GitHub</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -945,7 +971,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="js/content.js?v=20261007"></script>
-  <script src="js/portfolio.js?v=20261007"></script>
+  <script src="js/content.js?v=20261007f"></script>
+  <script src="js/portfolio.js?v=20261007f"></script>
 </body>
 </html>

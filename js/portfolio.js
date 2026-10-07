@@ -278,13 +278,15 @@ function setupProjectsCarousel() {
     modalBody.innerHTML = '';
   }
 
-  // Click on Mini Cards
+  // Click on Mini Cards (quick links inside a card navigate on their own)
   miniCards.forEach((card, idx) => {
-    card.addEventListener('click', () => {
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('a')) return;
       openProjectModal(idx);
     });
 
     card.addEventListener('keydown', (e) => {
+      if (e.target.closest('a')) return;
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         openProjectModal(idx);

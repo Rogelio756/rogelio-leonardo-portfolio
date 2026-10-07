@@ -19,7 +19,7 @@
     nav_cv: "CV",
 
     // Hero
-    hero_status: "EDGE NPU DEPLOYED",
+    hero_status: "Open to full-time roles · Dec 2026 · Mexico City",
     hero_title: "Rogelio Leonardo Mendez Macias",
     hero_alias: "",
     hero_subtitle: "Embedded Computer Vision & Edge AI Engineer",
@@ -194,6 +194,16 @@
     gallery_robot_caption: "Hands-on with collaborative robotics",
     gallery_robot_alt: "Rogelio next to a collaborative robot arm with a dexterous hand",
 
+    // Recruiter quick-scan
+    mini_p1_result: "230 ms end-to-end · 30–58 FPS on Hailo-8 · Peer-reviewed (Springer LNCS)",
+    mini_p2_result: "1st place (IBM-judged) · 16 boroughs · 6-hour early warning",
+    mini_p3_result: "My role: RiskLSTM · Pearson r = 0.916 on 61k images",
+    mini_p4_result: "Pitched to Samsung senior leadership",
+    link_video: "Video",
+    link_code: "Code",
+    link_demo: "Live demo",
+    link_paper: "Paper",
+
     // Labels, chips & accessibility text
     tag_video_demo: "▶ Video Demo",
     tag_live_demo: "● Live Demo",
@@ -254,7 +264,7 @@
     nav_cv: "CV",
 
     // Hero
-    hero_status: "EDGE NPU DESPLEGADA",
+    hero_status: "Disponible para tiempo completo · Dic 2026 · CDMX",
     hero_title: "Rogelio Leonardo Mendez Macias",
     hero_alias: "",
     hero_subtitle: "Ingeniero en Visión Computacional Embebida y Edge AI",
@@ -428,6 +438,16 @@
     gallery_mcpr_alt: "Rogelio sosteniendo su certificado de presentación de MCPR 2026",
     gallery_robot_caption: "Explorando robótica colaborativa",
     gallery_robot_alt: "Rogelio junto a un brazo robótico colaborativo con mano diestra",
+
+    // Recruiter quick-scan
+    mini_p1_result: "230 ms de extremo a extremo · 30–58 FPS en Hailo-8 · Arbitrado (Springer LNCS)",
+    mini_p2_result: "1.er lugar (evaluación IBM) · 16 alcaldías · alerta con 6 h de anticipación",
+    mini_p3_result: "Mi rol: RiskLSTM · Pearson r = 0.916 en 61 mil imágenes",
+    mini_p4_result: "Presentado ante la alta dirección de Samsung",
+    link_video: "Video",
+    link_code: "Código",
+    link_demo: "Demo",
+    link_paper: "Artículo",
 
     // Labels, chips & accessibility text
     tag_video_demo: "▶ Demo en video",
