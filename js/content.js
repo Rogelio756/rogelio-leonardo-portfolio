@@ -168,6 +168,12 @@
     cv_modal_preview: "Preview PDF in New Window",
     toast_copied: "Copied to clipboard!",
 
+    // About gallery
+    gallery_mcpr_caption: "Certificate of presentation · MCPR 2026, Ciudad Juárez",
+    gallery_mcpr_alt: "Rogelio holding his MCPR 2026 certificate of presentation",
+    gallery_robot_caption: "Hands-on with collaborative robotics",
+    gallery_robot_alt: "Rogelio next to a collaborative robot arm with a dexterous hand",
+
     // Labels, chips & accessibility text
     tag_video_demo: "▶ Video Demo",
     tag_live_demo: "● Live Demo",
@@ -376,6 +382,12 @@
     cv_modal_btn_download: "Descargar PDF",
     cv_modal_preview: "Ver PDF en Nueva Pestaña",
     toast_copied: "¡Copiado al portapapeles!",
+
+    // About gallery
+    gallery_mcpr_caption: "Certificado de presentación · MCPR 2026, Ciudad Juárez",
+    gallery_mcpr_alt: "Rogelio sosteniendo su certificado de presentación de MCPR 2026",
+    gallery_robot_caption: "Explorando robótica colaborativa",
+    gallery_robot_alt: "Rogelio junto a un brazo robótico colaborativo con mano diestra",
 
     // Labels, chips & accessibility text
     tag_video_demo: "▶ Demo en video",
