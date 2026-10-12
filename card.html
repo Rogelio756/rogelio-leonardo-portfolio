@@ -85,6 +85,26 @@
     footer { text-align: center; }
     footer a { color: var(--dim); font-size: 13px; text-decoration: none; }
     footer a:hover { color: var(--cyan); }
+    .gate { margin-top: 22px; text-align: left; display: flex; flex-direction: column; gap: 12px; }
+    .gate h2 { font: 600 17px/1.3 "Space Grotesk", "Inter", sans-serif; text-align: center; margin-bottom: 2px; }
+    .gate label { display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: var(--muted); }
+    .gate input:not([type="checkbox"]), .gate select, .gate textarea {
+      width: 100%; min-height: 46px; border-radius: 12px; border: 1px solid var(--edge);
+      background: rgba(7, 13, 23, 0.7); color: var(--text); font: 16px/1.3 "Inter", sans-serif;
+      padding: 11px 12px; outline: none; -webkit-appearance: none; appearance: none;
+    }
+    .gate textarea { resize: vertical; min-height: 64px; }
+    .gate select { background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+      background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50%; background-size: 5px 5px; background-repeat: no-repeat; padding-right: 34px; }
+    .gate input:focus, .gate select:focus, .gate textarea:focus { border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.18); }
+    .gate .consent { flex-direction: row; align-items: flex-start; gap: 10px; font-size: 12.5px; line-height: 1.45; color: var(--dim); }
+    .gate .consent input { width: 20px; height: 20px; margin-top: 1px; accent-color: var(--cyan); flex: none; }
+    .gate .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+    .gate .err { color: #FCA5A5; font-size: 13px; min-height: 0; }
+    .gate .err:empty { display: none; }
+    .btn[disabled] { opacity: 0.6; pointer-events: none; }
+    .thanks { color: var(--cyan); font-size: 14.5px; font-weight: 500; text-align: center; }
+    .actions[hidden], .gate[hidden], .thanks[hidden] { display: none; }
     .toast {
       position: fixed; left: 50%; bottom: max(20px, env(safe-area-inset-bottom));
       transform: translateX(-50%) translateY(20px); opacity: 0;
@@ -112,7 +132,29 @@
         <span data-i18n="proof3">1er lugar hackathon (jurado IBM)</span>
       </div>
 
-      <div class="actions">
+      <form class="gate" id="gate" novalidate>
+        <h2 data-i18n="gateTitle">Regístrate para ver mi trabajo y guardar mi contacto</h2>
+        <label><span data-i18n="fName">Nombre *</span><input name="nombre" autocomplete="name" required maxlength="120"></label>
+        <label><span data-i18n="fEmail">Correo *</span><input name="correo" type="email" autocomplete="email" inputmode="email" required maxlength="160"></label>
+        <label><span data-i18n="fContact">LinkedIn o teléfono</span><input name="contacto" maxlength="200"></label>
+        <label><span data-i18n="fCompany">Empresa o institución</span><input name="empresa" autocomplete="organization" maxlength="160"></label>
+        <label><span data-i18n="fTopic">¿De qué te gustaría hablar?</span>
+          <select name="tema">
+            <option value="Colaboración técnica" data-i18n="t1">Colaboración técnica</option>
+            <option value="Oportunidad laboral" data-i18n="t2">Oportunidad laboral</option>
+            <option value="Investigación" data-i18n="t3">Investigación</option>
+            <option value="Solo conectar" data-i18n="t4" selected>Solo conectar</option>
+          </select>
+        </label>
+        <label><span data-i18n="fComment">Comentario</span><textarea name="comentario" rows="2" maxlength="1000"></textarea></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <label class="consent"><input type="checkbox" name="consent" required><span data-i18n="privacy">Acepto que Rogelio use estos datos solo para darme seguimiento; no se comparten. Para borrarlos: rogelioleonardo18@gmail.com.</span></label>
+        <p class="err" id="err" role="alert"></p>
+        <button class="btn primary" type="submit" id="submit"><span data-i18n="submit">Registrarme y continuar</span></button>
+      </form>
+
+      <div class="actions" id="actions" hidden>
+        <p class="thanks" id="thanks" data-i18n="thanks">¡Gracias! Te escribo pronto.</p>
         <a class="btn primary" href="assets/rogelio-mendez.vcf" download="Rogelio-Mendez.vcf" data-track="guardar_contacto">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
           <span data-i18n="save">Guardar contacto</span>
@@ -138,72 +180,103 @@
       </div>
     </section>
 
-    <section class="card leave" aria-labelledby="leave-title">
-      <h2 id="leave-title" data-i18n="leaveTitle">¿Seguimos en contacto?</h2>
-      <p data-i18n="leaveText">Déjame tus datos en 30 segundos y te escribo para continuar la conversación.</p>
-      <a class="btn" id="leave-btn" href="#" target="_blank" rel="noopener" data-track="dejar_datos">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg>
-        <span data-i18n="leaveBtn">Dejar mis datos</span>
-      </a>
-      <p class="privacy" data-i18n="privacy">Solo uso tus datos para darte seguimiento; no los comparto. Para borrarlos, escríbeme a rogelioleonardo18@gmail.com.</p>
-    </section>
-
     <footer><a href="./">rogelio-mendez.vercel.app</a></footer>
   </main>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script>
-    // Pega aquí el enlace de tu Google Form. Mientras esté vacío, el botón abre un correo prellenado.
-    const FORM_URL = "";
-
     const T = {
       es: {
         pitch: "Llevo la visión por computadora del paper al hardware, y lo mido.",
         proof1: "Autor Springer LNCS", proof2: "230 ms en NPU Hailo-8", proof3: "1er lugar hackathon (jurado IBM)",
+        gateTitle: "Regístrate para ver mi trabajo y guardar mi contacto",
+        fName: "Nombre *", fEmail: "Correo *", fContact: "LinkedIn o teléfono", fCompany: "Empresa o institución",
+        fTopic: "¿De qué te gustaría hablar?", t1: "Colaboración técnica", t2: "Oportunidad laboral", t3: "Investigación", t4: "Solo conectar",
+        fComment: "Comentario",
+        privacy: "Acepto que Rogelio use estos datos solo para darme seguimiento; no se comparten. Para borrarlos: rogelioleonardo18@gmail.com.",
+        submit: "Registrarme y continuar", sending: "Enviando…",
+        thanks: "¡Gracias! Te escribo pronto.",
+        errName: "Escribe tu nombre.", errEmail: "Escribe un correo válido.", errConsent: "Marca la casilla de privacidad para continuar.",
+        errSend: "No pude guardar tus datos, pero puedes continuar. Si quieres, escríbeme a rogelioleonardo18@gmail.com.",
         save: "Guardar contacto", linkedin: "Conectar en LinkedIn", demo: "Ver demo", portfolio: "Portafolio completo",
-        leaveTitle: "¿Seguimos en contacto?",
-        leaveText: "Déjame tus datos en 30 segundos y te escribo para continuar la conversación.",
-        leaveBtn: "Dejar mis datos",
-        privacy: "Solo uso tus datos para darte seguimiento; no los comparto. Para borrarlos, escríbeme a rogelioleonardo18@gmail.com.",
-        saved: "Abre el archivo descargado para guardar el contacto.",
-        mailSubject: "Nos conocimos — mis datos",
-        mailBody: "Hola Rogelio,\n\nNombre:\nEmpresa o institución:\nLinkedIn o teléfono:\nMe gustaría hablar de:\n"
+        saved: "Abre el archivo descargado para guardar el contacto."
       },
       en: {
         pitch: "I take computer vision from the paper to the hardware, and I measure it.",
         proof1: "Springer LNCS author", proof2: "230 ms on Hailo-8 NPU", proof3: "1st place hackathon (IBM-judged)",
+        gateTitle: "Sign up to see my work and save my contact",
+        fName: "Name *", fEmail: "Email *", fContact: "LinkedIn or phone", fCompany: "Company or institution",
+        fTopic: "What would you like to talk about?", t1: "Technical collaboration", t2: "Job opportunity", t3: "Research", t4: "Just connect",
+        fComment: "Comment",
+        privacy: "I agree that Rogelio uses these details only to follow up; they are not shared. To delete them: rogelioleonardo18@gmail.com.",
+        submit: "Sign up and continue", sending: "Sending…",
+        thanks: "Thank you! I'll reach out soon.",
+        errName: "Please enter your name.", errEmail: "Please enter a valid email.", errConsent: "Please check the privacy box to continue.",
+        errSend: "I couldn't save your details, but you can continue. Feel free to email rogelioleonardo18@gmail.com.",
         save: "Save contact", linkedin: "Connect on LinkedIn", demo: "Watch demo", portfolio: "Full portfolio",
-        leaveTitle: "Let's stay in touch",
-        leaveText: "Leave your details in 30 seconds and I'll reach out to continue our conversation.",
-        leaveBtn: "Leave my details",
-        privacy: "I only use your details to follow up; I don't share them. To delete them, email rogelioleonardo18@gmail.com.",
-        saved: "Open the downloaded file to save the contact.",
-        mailSubject: "We met — my details",
-        mailBody: "Hi Rogelio,\n\nName:\nCompany or institution:\nLinkedIn or phone:\nI'd like to talk about:\n"
+        saved: "Open the downloaded file to save the contact."
       }
     };
 
-    let lang = (navigator.language || "es").toLowerCase().startsWith("es") ? "es" : "en";
-    try { const saved = localStorage.getItem("card-lang"); if (saved === "es" || saved === "en") lang = saved; } catch (e) {}
+    const store = {
+      get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+      set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+    };
 
-    const leaveBtn = document.getElementById("leave-btn");
+    let lang = (navigator.language || "es").toLowerCase().startsWith("es") ? "es" : "en";
+    if (store.get("card-lang") === "es" || store.get("card-lang") === "en") lang = store.get("card-lang");
+    const src = (new URLSearchParams(location.search).get("src") || "directo").toLowerCase();
+
+    const form = document.getElementById("gate");
+    const actions = document.getElementById("actions");
+    const err = document.getElementById("err");
+    const submitBtn = document.getElementById("submit");
+
     function apply() {
       document.documentElement.lang = lang;
       document.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = T[lang][el.dataset.i18n]; });
       document.querySelectorAll("[data-set-lang]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.setLang === lang)));
-      if (FORM_URL) {
-        leaveBtn.href = FORM_URL;
-      } else {
-        leaveBtn.href = "mailto:rogelioleonardo18@gmail.com?subject=" + encodeURIComponent(T[lang].mailSubject) + "&body=" + encodeURIComponent(T[lang].mailBody);
-        leaveBtn.removeAttribute("target");
-      }
     }
     document.querySelectorAll("[data-set-lang]").forEach(b => b.addEventListener("click", () => {
-      lang = b.dataset.setLang;
-      try { localStorage.setItem("card-lang", lang); } catch (e) {}
-      apply();
+      lang = b.dataset.setLang; store.set("card-lang", lang); apply();
     }));
+
+    function unlock(showThanks) {
+      form.hidden = true;
+      actions.hidden = false;
+      document.getElementById("thanks").hidden = !showThanks;
+    }
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      err.textContent = "";
+      const d = Object.fromEntries(new FormData(form).entries());
+      if (!d.nombre || !d.nombre.trim()) { err.textContent = T[lang].errName; return; }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test((d.correo || "").trim())) { err.textContent = T[lang].errEmail; return; }
+      if (!form.consent.checked) { err.textContent = T[lang].errConsent; return; }
+      submitBtn.disabled = true;
+      submitBtn.querySelector("span").textContent = T[lang].sending;
+      try {
+        const r = await fetch("/api/lead", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ ...d, consent: true, origen: src, idioma: lang })
+        });
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        store.set("card-registered", "1");
+        unlock(true);
+        track("registro");
+      } catch (ex) {
+        err.textContent = T[lang].errSend;
+        setTimeout(() => unlock(false), 2500);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.querySelector("span").textContent = T[lang].submit;
+      }
+    });
+
     apply();
+    if (store.get("card-registered") === "1") unlock(false);
 
     const toast = document.getElementById("toast");
     document.querySelector('[data-track="guardar_contacto"]').addEventListener("click", () => {
@@ -213,10 +286,10 @@
     });
 
     // Eventos para analítica (Umami), si se instala después.
-    document.querySelectorAll("[data-track]").forEach(el => el.addEventListener("click", () => {
-      const src = new URLSearchParams(location.search).get("src") || "directo";
-      if (window.umami && typeof window.umami.track === "function") window.umami.track(el.dataset.track, { src });
-    }));
+    function track(name) {
+      if (window.umami && typeof window.umami.track === "function") window.umami.track(name, { src });
+    }
+    document.querySelectorAll("[data-track]").forEach(el => el.addEventListener("click", () => track(el.dataset.track)));
   </script>
 </body>
 </html>
