@@ -1,6 +1,5 @@
-# Original phone photos contain GPS/EXIF metadata; publish only the stripped web versions
-assets/images/mcpr1.jpg
-assets/images/robot_roy.jpg
+# Original photos/scans (phone photos carry GPS/EXIF); only the optimized web copies are published
+assets/images/originales/
 
 # Original credential badge downloads; the optimized copies live in assets/images/credenciales/
 assets/images/credenciales/originales/

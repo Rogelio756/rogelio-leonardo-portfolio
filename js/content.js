@@ -189,6 +189,7 @@
     link_demo_video: "Demo",
 
     // Recruiter review fixes
+    pub_cover_alt: "Cover of Pattern Recognition: MCPR 2026 proceedings, Springer LNCS 16623",
     lbl_role: "My Role:",
     p1_role: "Owned the full lifecycle: dataset curation, training, ONNX export, INT8 quantization, HEF compilation, deployment and validation.",
     pub_summary: "<strong>In short:</strong> a complete vehicle-perception and license-plate-recognition system running in real time on low-cost embedded hardware (Raspberry Pi 5 + Hailo-8 NPU): 30–58 FPS detection, &gt;93% OCR precision and 230 ms end-to-end latency, with the model compressed 88% through INT8 quantization.",
@@ -471,6 +472,7 @@
     link_demo_video: "Demo",
 
     // Recruiter review fixes
+    pub_cover_alt: "Portada de Pattern Recognition: memorias de MCPR 2026, Springer LNCS 16623",
     lbl_role: "Mi rol:",
     p1_role: "Responsable de todo el ciclo: curaduría de datos, entrenamiento, exportación a ONNX, cuantización INT8, compilación HEF, despliegue y validación.",
     pub_summary: "<strong>En pocas palabras:</strong> un sistema completo de percepción vehicular y reconocimiento de placas que corre en tiempo real en hardware embebido de bajo costo (Raspberry Pi 5 + NPU Hailo-8): detección a 30–58 FPS, precisión OCR &gt;93 % y 230 ms de latencia de extremo a extremo, con el modelo comprimido 88 % mediante cuantización INT8.",
