@@ -846,7 +846,7 @@ function setupScrollReveal() {
 
   const targets = document.querySelectorAll(
     '.section-head, .about-card, .skill-category-card, .project-mini-card, ' +
-    '.citation-card, .award-item, .exp-card, .edu-card, .contact-card'
+    '.citation-card, .award-item, .exp-card, .edu-card, .contact-card, .cred-card'
   );
 
   const observer = new IntersectionObserver((entries) => {
