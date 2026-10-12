@@ -197,6 +197,17 @@
     lang_levels: "Spanish: native · English: A2",
     lang_detail: "Presented the MCPR 2026 talk in English; reads technical documentation in English.",
 
+    // Verified credentials
+    cred_label: "Verified credentials",
+    cred_sic_title: "Samsung Innovation Campus 2023 · UDEM · 2024",
+    cred_sic_aria: "Verify: Samsung Innovation Campus 2023 · UDEM · 2024",
+    cred_ceneval_title: "Leadership (SIC) – Intermediate · CENEVAL · 2026",
+    cred_ceneval_aria: "Verify: Leadership (SIC) – Intermediate · CENEVAL · 2026",
+    cred_ibm_title: "Enterprise Design Thinking Practitioner · IBM SkillsBuild · 2026",
+    cred_ibm_aria: "Verify: Enterprise Design Thinking Practitioner · IBM SkillsBuild · 2026",
+    cred_branding_title: "Personal Branding · UDEM · 2024",
+    cred_branding_aria: "Verify: Personal Branding · UDEM · 2024",
+
     // Hero quick access
     ql_heading: "QUICK ACCESS",
     ql_demo: "Watch the ADAS demo",
@@ -462,6 +473,17 @@
     lang_title: "Español · Inglés",
     lang_levels: "Español: nativo · Inglés: A2",
     lang_detail: "Presenté la ponencia de MCPR 2026 en inglés y leo documentación técnica en inglés.",
+
+    // Verified credentials
+    cred_label: "Credenciales verificadas",
+    cred_sic_title: "Samsung Innovation Campus 2023 · UDEM · 2024",
+    cred_sic_aria: "Verificar: Samsung Innovation Campus 2023 · UDEM · 2024",
+    cred_ceneval_title: "Liderazgo SIC – Intermedio · CENEVAL · 2026",
+    cred_ceneval_aria: "Verificar: Liderazgo SIC – Intermedio · CENEVAL · 2026",
+    cred_ibm_title: "Enterprise Design Thinking Practitioner · IBM SkillsBuild · 2026",
+    cred_ibm_aria: "Verificar: Enterprise Design Thinking Practitioner · IBM SkillsBuild · 2026",
+    cred_branding_title: "Branding Personal · UDEM · 2024",
+    cred_branding_aria: "Verificar: Branding Personal · UDEM · 2024",
 
     // Hero quick access
     ql_heading: "ACCESO RÁPIDO",

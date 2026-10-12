@@ -2195,6 +2195,7 @@ html {
 .hero-content > :nth-child(3) { animation-delay: 0.16s; }
 .hero-content > :nth-child(4) { animation-delay: 0.24s; }
 .hero-content > :nth-child(5) { animation-delay: 0.32s; }
+.hero-content > :nth-child(6) { animation-delay: 0.4s; }
 .hero-telemetry { animation-delay: 0.3s; }
 
 /* Added by setupScrollReveal() only when JS runs, so content never hides without it */
@@ -2516,6 +2517,57 @@ html {
 .highlight-icon svg,
 .category-icon svg {
   display: block;
+}
+
+/* --- Hero verified credentials ------------------------------------------- */
+.cred-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+}
+
+.cred-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-emerald);
+}
+
+.cred-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cred-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(186, 214, 247, 0.05);
+  border: 1px solid var(--glass-edge);
+  transition: transform 0.35s var(--ease-out), border-color 0.25s ease, background 0.25s ease;
+}
+
+.cred-badge img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.cred-badge:hover,
+.cred-badge:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(16, 185, 129, 0.55);
+  background: rgba(16, 185, 129, 0.08);
 }
 
 /* ==========================================================================
