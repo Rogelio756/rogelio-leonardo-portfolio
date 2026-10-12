@@ -51,7 +51,7 @@
     sec_contact_title: "Get In Touch",
 
     // About Content
-    about_p1: "Electronics Engineering student at UAM Azcapotzalco (graduating Dec 2026), specializing in embedded computer vision and edge AI for real-time perception systems. My research on on-device vehicle perception was peer-reviewed and published in Springer LNCS at MCPR 2026, and I recently won 1st place in a national AI hackathon judged by IBM. My background in control theory and queueing theory shapes how I design real-time embedded systems, not just how I train models. Currently a finalist at Falling Walls Lab, competing to represent Mexico.",
+    about_p1: "Electronics Engineering student at UAM Azcapotzalco (graduating Dec 2026), specializing in embedded computer vision and edge AI for real-time perception systems. My research on on-device vehicle perception was peer-reviewed and published in Springer LNCS at MCPR 2026, and I recently won 1st place in a national AI hackathon judged by IBM. My background in control theory and queueing theory shapes how I design real-time embedded systems, not just how I train models. I also pitched this work as a national finalist at Falling Walls Lab Mexico 2026.",
     about_hl_1: "Specialized in Edge AI, NPU Deployment & Real-time Vision",
     about_hl_2: "Springer LNCS Author & 1st Place National Hackathon Winner",
     about_hl_3: "Strong engineering foundation in Control & Queueing Theory",
@@ -155,7 +155,7 @@
     award_hackathon_desc: "FloodSense: multi-agent flood-risk prediction for Mexico City's 16 boroughs. Selected for R&D incubation by ADIP, Mexico City's Digital Agency for Public Innovation.",
     award_fwl_type: "Finalist",
     award_fwl_title: "Falling Walls Lab Mexico",
-    award_fwl_org: "Mexico City · Competing to represent Mexico",
+    award_fwl_org: "Mexico City · National final · Sep 2026",
     award_fwl_desc: "Pitching the edge-AI ADAS research behind my Springer LNCS paper.",
     award_mutvi_type: "Oral Presentation",
     award_mutvi_title: "MUTVI Recognition",
@@ -172,6 +172,8 @@
     award_link_demo: "Live demo ↗",
     award_link_talk: "Watch talk ↗",
     award_link_video: "Watch video ↗",
+    award_link_abstracts: "Book of abstracts ↗",
+    award_link_news: "UAM news article ↗",
 
     // About gallery
     gallery_mcpr_caption: "Certificate of presentation · MCPR 2026, Ciudad Juárez",
@@ -190,10 +192,10 @@
 
     // Publications: venues timeline
     venue_label: "Presented at",
-    venue_neo_meta: "Tijuana · Sep 2025",
+    venue_neo_meta: "Tijuana · Sep 2025 · Abstract ↗",
     venue_mutvi_meta: "UAM · May 2026 · Talk ↗",
     venue_mcpr_meta: "Ciudad Juárez · Jun 2026 · Paper ↗",
-    venue_fwl_meta: "Mexico City · Finalist 2026",
+    venue_fwl_meta: "Mexico City · Sep 2026 · UAM news ↗",
 
     // Recruiter review fixes
     pub_cover_alt: "Cover of Pattern Recognition: MCPR 2026 proceedings, Springer LNCS 16623",
@@ -341,7 +343,7 @@
     sec_contact_title: "Contacto",
 
     // About Content
-    about_p1: "Estudiante de Ingeniería Electrónica en la UAM Azcapotzalco (egreso dic 2026), especializado en visión computacional embebida y edge AI para sistemas de percepción en tiempo real. Mi investigación sobre percepción vehicular en el dispositivo fue arbitrada y publicada en Springer LNCS en MCPR 2026, y recientemente gané el primer lugar en un hackathon nacional de IA juzgado por IBM. Mi formación en teoría de control y teoría de colas define cómo diseño sistemas embebidos en tiempo real, no solo cómo entreno modelos. Actualmente soy finalista en Falling Walls Lab, compitiendo por representar a México.",
+    about_p1: "Estudiante de Ingeniería Electrónica en la UAM Azcapotzalco (egreso dic 2026), especializado en visión computacional embebida y edge AI para sistemas de percepción en tiempo real. Mi investigación sobre percepción vehicular en el dispositivo fue arbitrada y publicada en Springer LNCS en MCPR 2026, y recientemente gané el primer lugar en un hackathon nacional de IA juzgado por IBM. Mi formación en teoría de control y teoría de colas define cómo diseño sistemas embebidos en tiempo real, no solo cómo entreno modelos. También presenté este trabajo como finalista nacional en Falling Walls Lab México 2026.",
     about_hl_1: "Especialista en Edge AI, Despliegue en NPUs y Visión en Tiempo Real",
     about_hl_2: "Autor en Springer LNCS y Ganador de 1.er Lugar en Hackathon Nacional",
     about_hl_3: "Sólida formación en Teoría de Control y Teoría de Colas",
@@ -445,7 +447,7 @@
     award_hackathon_desc: "FloodSense: predicción multiagente de riesgo de inundación para las 16 alcaldías de la CDMX. Seleccionado para incubación de I+D+i por la ADIP (Agencia Digital de Innovación Pública de la CDMX).",
     award_fwl_type: "Finalista",
     award_fwl_title: "Falling Walls Lab México",
-    award_fwl_org: "Ciudad de México · Compitiendo por representar a México",
+    award_fwl_org: "Ciudad de México · Final nacional · sep 2026",
     award_fwl_desc: "Presentando la investigación de ADAS con edge AI detrás de mi artículo en Springer LNCS.",
     award_mutvi_type: "Ponencia Oral",
     award_mutvi_title: "Reconocimiento MUTVI",
@@ -462,6 +464,8 @@
     award_link_demo: "Demo en vivo ↗",
     award_link_talk: "Ver ponencia ↗",
     award_link_video: "Ver video ↗",
+    award_link_abstracts: "Libro de resúmenes ↗",
+    award_link_news: "Nota de la UAM ↗",
 
     // About gallery
     gallery_mcpr_caption: "Certificado de presentación · MCPR 2026, Ciudad Juárez",
@@ -480,10 +484,10 @@
 
     // Publications: venues timeline
     venue_label: "Presentado en",
-    venue_neo_meta: "Tijuana · sep 2025",
+    venue_neo_meta: "Tijuana · sep 2025 · Resumen ↗",
     venue_mutvi_meta: "UAM · may 2026 · Ponencia ↗",
     venue_mcpr_meta: "Ciudad Juárez · jun 2026 · Artículo ↗",
-    venue_fwl_meta: "CDMX · Finalista 2026",
+    venue_fwl_meta: "CDMX · sep 2026 · Nota UAM ↗",
 
     // Recruiter review fixes
     pub_cover_alt: "Portada de Pattern Recognition: memorias de MCPR 2026, Springer LNCS 16623",
