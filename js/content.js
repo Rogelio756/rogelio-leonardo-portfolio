@@ -188,6 +188,13 @@
     play_system_demo: "Play System Demo",
     link_demo_video: "Demo",
 
+    // Publications: venues timeline
+    venue_label: "Presented at",
+    venue_neo_meta: "Tijuana · Sep 2025",
+    venue_mutvi_meta: "UAM · May 2026 · Talk ↗",
+    venue_mcpr_meta: "Ciudad Juárez · Jun 2026 · Paper ↗",
+    venue_fwl_meta: "Mexico City · Finalist 2026",
+
     // Recruiter review fixes
     pub_cover_alt: "Cover of Pattern Recognition: MCPR 2026 proceedings, Springer LNCS 16623",
     lbl_role: "My Role:",
@@ -470,6 +477,13 @@
     btn_watch_system_demo: "Ver demo del sistema",
     play_system_demo: "Ver demo del sistema",
     link_demo_video: "Demo",
+
+    // Publications: venues timeline
+    venue_label: "Presentado en",
+    venue_neo_meta: "Tijuana · sep 2025",
+    venue_mutvi_meta: "UAM · may 2026 · Ponencia ↗",
+    venue_mcpr_meta: "Ciudad Juárez · jun 2026 · Artículo ↗",
+    venue_fwl_meta: "CDMX · Finalista 2026",
 
     // Recruiter review fixes
     pub_cover_alt: "Portada de Pattern Recognition: memorias de MCPR 2026, Springer LNCS 16623",

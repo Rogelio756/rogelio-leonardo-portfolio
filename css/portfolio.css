@@ -2492,6 +2492,112 @@ html {
 }
 
 /* --- Recruiter review: plain-language paper summary, ownership callout --- */
+/* Venues timeline above the publication card */
+.venue-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.venue-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.venue-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.venue {
+  position: relative;
+}
+
+/* Arrow between consecutive venues */
+.venue + .venue::before {
+  content: "→";
+  position: absolute;
+  left: -22px;
+  top: 30px;
+  font-family: var(--font-mono);
+  color: rgba(56, 189, 248, 0.55);
+}
+
+.venue-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  padding: 14px 8px 12px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.35s var(--ease-out);
+}
+
+.venue-logo {
+  height: 56px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  margin-bottom: 8px;
+  opacity: 0.78;
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+.venue-logo-wordmark {
+  height: 26px;
+  margin: 15px 0 23px;
+}
+
+.venue-name {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #FFFFFF;
+}
+
+.venue-meta {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+}
+
+a.venue-inner:hover,
+a.venue-inner:focus-visible {
+  background: rgba(186, 214, 247, 0.05);
+  border-color: var(--glass-edge);
+  transform: translateY(-3px);
+}
+
+a.venue-inner:hover .venue-logo,
+a.venue-inner:focus-visible .venue-logo {
+  opacity: 1;
+  filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.45));
+}
+
+a.venue-inner .venue-meta {
+  color: var(--accent-cyan);
+}
+
+@media (max-width: 760px) {
+  .venue-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 20px;
+  }
+
+  .venue:nth-child(3)::before {
+    display: none;
+  }
+}
+
 /* Publication card: proceedings cover beside the citation */
 .citation-layout {
   display: grid;
