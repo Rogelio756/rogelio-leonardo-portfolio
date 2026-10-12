@@ -2520,9 +2520,9 @@ html {
   position: relative;
 }
 
-/* Arrow between consecutive venues */
+/* Arrow between consecutive venues: newest on the left, so time flows leftward */
 .venue + .venue::before {
-  content: "→";
+  content: "←";
   position: absolute;
   left: -22px;
   top: 30px;
