@@ -19,7 +19,7 @@
     nav_cv: "CV",
 
     // Hero
-    hero_status: "Open to full-time roles · Dec 2026 · Mexico City",
+    hero_status: "Graduating April 2027 · Open to aligned roles · Mexico City",
     hero_title: "Rogelio Leonardo Mendez Macias",
     hero_alias: "",
     hero_subtitle: "Embedded Computer Vision & Edge AI Engineer",
@@ -51,10 +51,10 @@
     sec_contact_title: "Get In Touch",
 
     // About Content
-    about_p1: "Electronics Engineering student at UAM Azcapotzalco (graduating Dec 2026), specializing in embedded computer vision and edge AI for real-time perception systems. My research on on-device vehicle perception was peer-reviewed and published in Springer LNCS at MCPR 2026, and I recently won 1st place in a national AI hackathon judged by IBM. My background in control theory and queueing theory shapes how I design real-time embedded systems, not just how I train models. I also pitched this work as a national finalist at Falling Walls Lab Mexico 2026.",
+    about_p1: "Electronics Engineering student at UAM Azcapotzalco (graduating April 2027), specializing in embedded computer vision and edge AI for real-time perception systems. My research on on-device vehicle perception was peer-reviewed and published in Springer LNCS at MCPR 2026, and I recently won 1st place in a national AI hackathon judged by IBM. My background in control theory and queueing theory shapes how I design real-time embedded systems, not just how I train models. I also pitched this work as a national finalist at Falling Walls Lab Mexico 2026.",
     about_hl_1: "Specialized in Edge AI, NPU Deployment & Real-time Vision",
     about_hl_2: "Springer LNCS Author & 1st Place National Hackathon Winner",
-    about_hl_3: "Strong engineering foundation in Control & Queueing Theory",
+    about_hl_3: "Cross-institutional teams: Tec, BUAP, IPN & UAZ",
 
     // Skills Categories
     cat_1_title: "Edge AI & Model Optimization",
@@ -128,7 +128,7 @@
     // Education
     edu_1_title: "B.Sc. Electronics Engineering",
     edu_1_inst: "Universidad Autónoma Metropolitana — Azcapotzalco, Mexico City",
-    edu_1_meta: "Expected: December 2026",
+    edu_1_meta: "Expected: April 2027",
     edu_1_spec: "Specialization: Edge AI, Computer Vision, Embedded Systems.",
     edu_2_title: "Samsung Innovation Campus",
     edu_2_inst: "Samsung Electronics & SIC Mexico",
@@ -136,7 +136,7 @@
     edu_2_spec: "Applied Deep Learning, Computer Vision pipelines, IoT & embedded architectures.",
 
     // Contact
-    contact_sub: "Available for embedded vision engineering, edge AI research collaborations, and full-time engineering roles starting late 2026.",
+    contact_sub: "Available for embedded vision engineering, edge AI research collaborations, and engineering roles. Graduating April 2027.",
     contact_cv_btn: "Download CV (PDF)",
     contact_copy_email: "Copy Email",
 
@@ -203,8 +203,8 @@
     p1_role: "Owned the full lifecycle: dataset curation, training, ONNX export, INT8 quantization, HEF compilation, deployment and validation.",
     pub_summary: "<strong>In short:</strong> a complete vehicle-perception and license-plate-recognition system running in real time on low-cost embedded hardware (Raspberry Pi 5 + Hailo-8 NPU): 30–58 FPS detection, &gt;93% OCR precision and 230 ms end-to-end latency, with the model compressed 88% through INT8 quantization.",
     lang_label: "Languages",
-    lang_title: "Spanish · English",
-    lang_levels: "Spanish: native · English: A2",
+    lang_title: "Spanish · English · German",
+    lang_levels: "Spanish: native · English: B1 reading & listening, A2 speaking · German: A1",
     lang_detail: "Presented the MCPR 2026 talk in English; reads technical documentation in English.",
 
     // Verified credentials
@@ -311,7 +311,7 @@
     nav_cv: "CV",
 
     // Hero
-    hero_status: "Disponible para tiempo completo · Dic 2026 · CDMX",
+    hero_status: "Titulación abril 2027 · Abierto a roles alineados · CDMX",
     hero_title: "Rogelio Leonardo Mendez Macias",
     hero_alias: "",
     hero_subtitle: "Ingeniero en Visión Computacional Embebida y Edge AI",
@@ -343,10 +343,10 @@
     sec_contact_title: "Contacto",
 
     // About Content
-    about_p1: "Estudiante de Ingeniería Electrónica en la UAM Azcapotzalco (egreso dic 2026), especializado en visión computacional embebida y edge AI para sistemas de percepción en tiempo real. Mi investigación sobre percepción vehicular en el dispositivo fue arbitrada y publicada en Springer LNCS en MCPR 2026, y recientemente gané el primer lugar en un hackathon nacional de IA juzgado por IBM. Mi formación en teoría de control y teoría de colas define cómo diseño sistemas embebidos en tiempo real, no solo cómo entreno modelos. También presenté este trabajo como finalista nacional en Falling Walls Lab México 2026.",
+    about_p1: "Estudiante de Ingeniería Electrónica en la UAM Azcapotzalco (titulación en abril 2027), especializado en visión computacional embebida y edge AI para sistemas de percepción en tiempo real. Mi investigación sobre percepción vehicular en el dispositivo fue arbitrada y publicada en Springer LNCS en MCPR 2026, y recientemente gané el primer lugar en un hackathon nacional de IA juzgado por IBM. Mi formación en teoría de control y teoría de colas define cómo diseño sistemas embebidos en tiempo real, no solo cómo entreno modelos. También presenté este trabajo como finalista nacional en Falling Walls Lab México 2026.",
     about_hl_1: "Especialista en Edge AI, Despliegue en NPUs y Visión en Tiempo Real",
     about_hl_2: "Autor en Springer LNCS y Ganador de 1.er Lugar en Hackathon Nacional",
-    about_hl_3: "Sólida formación en Teoría de Control y Teoría de Colas",
+    about_hl_3: "Equipos interinstitucionales: Tec, BUAP, IPN y UAZ",
 
     // Skills Categories
     cat_1_title: "Edge AI & Optimización de Modelos",
@@ -420,7 +420,7 @@
     // Education
     edu_1_title: "Licenciatura en Ingeniería Electrónica",
     edu_1_inst: "Universidad Autónoma Metropolitana — Azcapotzalco, Ciudad de México",
-    edu_1_meta: "Egreso previsto: Diciembre 2026",
+    edu_1_meta: "Titulación prevista: abril 2027",
     edu_1_spec: "Especialización: Edge AI, Visión Computacional, Sistemas Embebidos.",
     edu_2_title: "Samsung Innovation Campus",
     edu_2_inst: "Samsung Electronics & SIC México",
@@ -428,7 +428,7 @@
     edu_2_spec: "Deep Learning aplicado, pipelines de Visión Artificial, IoT y arquitecturas embebidas.",
 
     // Contact
-    contact_sub: "Disponible para ingeniería en visión embebida, colaboraciones de investigación en Edge AI y oportunidades laborales de tiempo completo a partir de finales de 2026.",
+    contact_sub: "Disponible para ingeniería en visión embebida, colaboraciones de investigación en Edge AI y oportunidades laborales. Titulación en abril 2027.",
     contact_cv_btn: "Descargar CV (PDF)",
     contact_copy_email: "Copiar Correo",
 
@@ -495,8 +495,8 @@
     p1_role: "Responsable de todo el ciclo: curaduría de datos, entrenamiento, exportación a ONNX, cuantización INT8, compilación HEF, despliegue y validación.",
     pub_summary: "<strong>En pocas palabras:</strong> un sistema completo de percepción vehicular y reconocimiento de placas que corre en tiempo real en hardware embebido de bajo costo (Raspberry Pi 5 + NPU Hailo-8): detección a 30–58 FPS, precisión OCR &gt;93 % y 230 ms de latencia de extremo a extremo, con el modelo comprimido 88 % mediante cuantización INT8.",
     lang_label: "Idiomas",
-    lang_title: "Español · Inglés",
-    lang_levels: "Español: nativo · Inglés: A2",
+    lang_title: "Español · Inglés · Alemán",
+    lang_levels: "Español: nativo · Inglés: B1 lectura y comprensión auditiva, A2 conversación · Alemán: A1",
     lang_detail: "Presenté la ponencia de MCPR 2026 en inglés y leo documentación técnica en inglés.",
 
     // Verified credentials
